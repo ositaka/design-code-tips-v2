@@ -5,7 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import CodePosts from "../components/CodePosts";
+import AllPosts from "../components/AllPosts";
 import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
@@ -57,7 +57,7 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       Latest stories
                     </h3>
-                    <CodePosts />
+                    <AllPosts />
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/blog">
                         Read more
