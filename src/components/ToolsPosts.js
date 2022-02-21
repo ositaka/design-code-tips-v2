@@ -34,7 +34,7 @@ class ToolsPostsTemplate extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <div className="post-meta">
                     <h3>
                       <Link
                         className="title has-text-primary is-size-4"
@@ -46,7 +46,7 @@ class ToolsPostsTemplate extends React.Component {
                     <p className="subtitle is-size-5 is-block">
                       {post.frontmatter.description}
                     </p>
-                  </p>
+                  </div>
                 </header>
               </article>
             </div>
