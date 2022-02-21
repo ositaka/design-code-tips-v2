@@ -1,9 +1,9 @@
 import * as React from "react";
 
 import Layout from "../../components/Layout";
-import CodePosts from "../../components/CodePosts";
+import InspirationPosts from "../../components/InspirationPosts";
 
-export default class CodeIndexPage extends React.Component {
+export default class InspirationIndexPage extends React.Component {
   render() {
     return (
       <Layout>
@@ -22,13 +22,13 @@ export default class CodeIndexPage extends React.Component {
               padding: "1rem",
             }}
           >
-            Code Posts
+            Latest "Inspiration" Stories
           </h1>
         </div>
         <section className="section">
           <div className="container">
             <div className="content">
-              <CodePosts />
+              <InspirationPosts />
             </div>
           </div>
         </section>

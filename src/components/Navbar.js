@@ -10,6 +10,7 @@ const Navbar = class extends React.Component {
       active: false,
       navBarActiveClass: "",
     };
+
   }
 
   toggleHamburger() {
@@ -35,6 +36,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
+        id="header"
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
@@ -63,23 +65,29 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/design">
+              <Link className="navbar-item" to="/design" activeClassName="active" partiallyActive={true}>
                 Design
               </Link>
-              <Link className="navbar-item" to="/code">
+              <Link className="navbar-item" to="/code" activeClassName="active" partiallyActive={true}>
                 Code
               </Link>
-              <Link className="navbar-item" to="/tools">
+              <Link className="navbar-item" to="/inspiration" activeClassName="active" partiallyActive={true}>
+                Inspiration
+              </Link>
+              <Link className="navbar-item" to="/tools" activeClassName="active" partiallyActive={true}>
                 Tools
               </Link>
-              <Link className="navbar-item" to="/podcasts">
+              <Link className="navbar-item" to="/podcasts" activeClassName="active" partiallyActive={true}>
                 Podcasts
               </Link>
-              <Link className="navbar-item" to="/about">
+              <Link className="navbar-item" to="/about" activeClassName="active">
                 About
               </Link>
-              <Link className="navbar-item" to="/subscribe">
+              <Link className="navbar-item" to="/subscribe" activeClassName="active">
                 Subscribe
+              </Link>
+              <Link className="navbar-item" to="/disclaimer" activeClassName="active">
+                Disclaimer
               </Link>
               ---
               <Link className="navbar-item" to="/contact">
@@ -89,7 +97,7 @@ const Navbar = class extends React.Component {
                 Form Examples
               </Link>
             </div>
-            <div className="navbar-end has-text-centered">
+            <div className="navbar has-text-centered">
               <a
                 className="navbar-item"
                 href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"

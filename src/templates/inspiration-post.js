@@ -6,12 +6,8 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
-deckDeckGoHighlightElement();
-
-
 // eslint-disable-next-line
-export const CodePostTemplate = ({
+export const InspirationPostTemplate = ({
   content,
   contentComponent,
   description,
@@ -38,7 +34,7 @@ export const CodePostTemplate = ({
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
                   ))}
                 </ul>
@@ -51,7 +47,7 @@ export const CodePostTemplate = ({
   );
 };
 
-CodePostTemplate.propTypes = {
+InspirationPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -59,17 +55,17 @@ CodePostTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const CodePost = ({ data }) => {
+const InspirationPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <CodePostTemplate
+      <InspirationPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Code">
+          <Helmet titleTemplate="%s | Inspiration">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -84,16 +80,16 @@ const CodePost = ({ data }) => {
   );
 };
 
-CodePost.propTypes = {
+InspirationPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 };
 
-export default CodePost;
+export default InspirationPost;
 
 export const pageQuery = graphql`
-  query CodePostByID($id: String!) {
+  query InspirationPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

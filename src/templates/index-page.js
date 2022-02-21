@@ -1,89 +1,96 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import AllPosts from "../components/AllPosts";
-import FullWidthImage from "../components/FullWidthImage";
+import InspirationPosts from "../components/InspirationPosts";
+import ToolsPosts from "../components/ToolsPosts";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  title,
   heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
 }) => {
-  const heroImage = getImage(image) || image;
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
+            <h1 className="title is-size-1">{heading}</h1>
+          </div>
+          <div className="section">
             <div className="columns">
-              <div className="column is-10 is-offset-1">
+              <div className="column is-12">
                 <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h2 className="subtitle">{mainpitch.description}</h2>
-                    </div>
-                  </div>
                   <div className="columns">
-                    <div className="column is-12">
+                    <div className="column is-8">
                       <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
+                        Latest posts
                       </h3>
-                      <p>{description}</p>
+                    </div>
+                    <div className="column is-4">
+                      <Link to="/posts">
+                        View all
+                      </Link>
                     </div>
                   </div>
-                  <Features gridItems={intro.blurbs} />
+                  <AllPosts />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="columns">
+              <div className="column is-12">
+                <div className="content">
                   <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
+                    <div className="column is-8">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        Latest on inspiration
+                      </h3>
+                    </div>
+                    <div className="column is-4">
+                      <Link to="/inspiration">
+                        View all
                       </Link>
                     </div>
                   </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h3>
-                    <AllPosts />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
+                  <InspirationPosts />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="columns">
+              <div className="column is-12">
+                <div className="content">
+                  <div className="columns">
+                    <div className="column is-8">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        Latest free tools
+                      </h3>
+                    </div>
+                    <div className="column is-4">
+                      <Link to="/tools">
+                        View all
                       </Link>
                     </div>
                   </div>
+                  <ToolsPosts />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 };
 
 const IndexPage = ({ data }) => {
@@ -92,13 +99,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -119,30 +121,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
