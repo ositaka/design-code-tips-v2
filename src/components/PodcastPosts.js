@@ -51,8 +51,8 @@ class PodcastPostsTemplate extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                  <Link className="button" to={post.frontmatter.link} target="_blank" rel="noopener">
+                    Go to Podcast → {post.frontmatter.link}
                   </Link>
                 </p>
               </article>
@@ -103,6 +103,7 @@ export default function PodcastPosts() {
 
                     }
                   }
+                  link
                 }
               }
             }

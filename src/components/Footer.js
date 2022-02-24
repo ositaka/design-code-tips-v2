@@ -6,6 +6,7 @@ import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
+import MailchimpForm from "./MailchimpForm";
 
 const Footer = class extends React.Component {
   render() {
@@ -61,6 +62,8 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                   </ul>
+
+                  <MailchimpForm />
                 </section>
               </div>
               <div className="column is-4 social">

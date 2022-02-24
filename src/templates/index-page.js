@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import AllPosts from "../components/AllPosts";
 import InspirationPosts from "../components/InspirationPosts";
 import ToolsPosts from "../components/ToolsPosts";
+import PodcastPosts from "../components/PodcastPosts";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -70,7 +71,7 @@ export const IndexPageTemplate = ({
                   <div className="columns">
                     <div className="column is-8">
                       <h3 className="has-text-weight-semibold is-size-2">
-                        Latest free tools
+                        Featured free tools
                       </h3>
                     </div>
                     <div className="column is-4">
@@ -91,28 +92,36 @@ export const IndexPageTemplate = ({
                   <div className="columns">
                     <div className="column is-8">
                       <h3 className="has-text-weight-semibold is-size-2">
-                        Browse all topics and tags
+                        Featured podcasts
                       </h3>
                     </div>
                     <div className="column is-4">
-                      <Link to="/tools">
+                      <Link to="/podcasts">
                         View all
                       </Link>
                     </div>
                   </div>
-                  {/* {console.log("test", tags)}
-                  {tags && tags.length ? (
-                    <div style={{ marginTop: `4rem` }}>
-                      <ul className="taglist">
-                        {tags.map((tag) => (
-                          <li key={tag.node.frontmatter.tags + `tag`}>
-                            <Link to={`/tags/${kebabCase(tag)}/`}>#{tag.node.frontmatter.tags}</Link>
-                          </li>
-                        ))}
-                      </ul>
+                  <PodcastPosts />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="section">
+            <div className="columns">
+              <div className="column is-12">
+                <div className="content">
+                  <div className="columns">
+                    <div className="column is-8">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        Browse all topics and tags
+                      </h3>
                     </div>
-                  ) : null} */}
-                  {console.log("tags group", tags)}
+                    <div className="column is-4">
+                      <Link to="/tags">
+                        View all
+                      </Link>
+                    </div>
+                  </div>
                   <ul className="taglist">
                     {tags.map((tag) => (
                       <li key={tag.fieldValue}>
