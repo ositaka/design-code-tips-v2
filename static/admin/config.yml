@@ -9,8 +9,8 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-media_folder: static/img
-public_folder: /img
+media_folder: 'static/img'
+public_folder: '/img'
 
 collections:
   - name: 'design'
@@ -18,8 +18,8 @@ collections:
     folder: 'src/pages/design'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    media_folder: static/img/design
-    public_folder: /img/design
+    media_folder: 'static/img/design'
+    public_folder: '/img/design'
     fields:
       - {
           label: 'Template Key',
@@ -40,8 +40,8 @@ collections:
     folder: 'src/pages/code'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    media_folder: static/img/code
-    public_folder: /img/code
+    media_folder: 'static/img/code'
+    public_folder: '/img/code'
     fields:
       - {
           label: 'Template Key',
@@ -62,8 +62,8 @@ collections:
     folder: 'src/pages/tools'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    media_folder: static/img/tools
-    public_folder: /img/tools
+    media_folder: 'static/img/tools'
+    public_folder: '/img/tools'
     fields:
       - {
           label: 'Template Key',
@@ -84,8 +84,8 @@ collections:
     folder: 'src/pages/podcasts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    media_folder: static/img/pocasts
-    public_folder: /img/pocasts
+    media_folder: 'static/img/pocasts'
+    public_folder: '/img/pocasts'
     fields:
       - {
           label: 'Template Key',
