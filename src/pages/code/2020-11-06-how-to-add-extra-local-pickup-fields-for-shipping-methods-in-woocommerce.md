@@ -8,6 +8,7 @@ description: Learn how to add extra fields options for the "Local Pickup" shippi
 tags:
   - Web-dev
   - WooCommerce
+video: test.mp4
 ---
 
 This post is helpful if you want to add extra options on "Local Pickup" shipping methods. You must add this code on your `functions.php` file.

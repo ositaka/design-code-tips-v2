@@ -3,14 +3,14 @@ templateKey: podcast-post
 title: ???? — The Changelog
 date: 2020-01-04T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/podcasts/the-changelog.png
+featuredimage: /media/podcasts/the-changelog.png
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 link: https://changelog.com/podcast
 tags:
   - Web Development
 ---
 
-![The Changelog Podcast (cover)](/img/podcasts/the-changelog.png)
+![The Changelog Podcast (cover)](/media/podcasts/the-changelog.png)
 
 https://changelog.com/podcast
 

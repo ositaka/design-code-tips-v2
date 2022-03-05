@@ -9,6 +9,7 @@ tags:
   - Code
   - SVG Animation
   - Figma
+video: test.mp4
 ---
 
 The post will be available soon.
