@@ -11,6 +11,7 @@ export const PodcastPostTemplate = ({
   content,
   contentComponent,
   description,
+  link,
   tags,
   title,
   helmet,
@@ -27,6 +28,7 @@ export const PodcastPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <p>Link to podcast: <Link to={link} target="_blank" rel="noopener noreferrer">{link}</Link></p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -64,6 +66,7 @@ const PodcastPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        link={post.frontmatter.link}
         helmet={
           <Helmet titleTemplate="%s | Podcast">
             <title>{`${post.frontmatter.title}`}</title>
@@ -97,6 +100,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        link
         tags
       }
     }

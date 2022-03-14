@@ -1,10 +1,11 @@
 ---
 templateKey: tools-post
 title: 'HandBrake: Open Source Video Transcoder'
-date: 2019-07-04T15:04:10.000Z
+date: 2021-07-04T15:04:10.000Z
 featuredpost: true
-featuredimage: /media/tools/handbrake.png
+featuredimage: /media/handbrake.png
 description: HandBrake is a tool you can use to convert video for the web.
+link: https://handbrake.fr/
 tags:
   - Video
   - Web
@@ -13,7 +14,7 @@ tags:
   - Compression Tools
 ---
 
-![handbrake](/media/tools/handbrake.png)
+![handbrake](/media/handbrake.png)
 
 ## What is HandBrake?
 
