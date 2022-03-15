@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({
                       </h3>
                     </div>
                     <div className="column is-4">
-                      <Link to="/posts">
+                      <Link to="/all-posts">
                         View all
                       </Link>
                     </div>

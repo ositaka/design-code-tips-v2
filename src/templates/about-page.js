@@ -1,15 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ sitetitle, title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <section className="section section--gradient">
+      <Helmet title={`${title} | ${sitetitle}`} />
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -27,6 +29,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 AboutPageTemplate.propTypes = {
+  sitetitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -39,6 +42,7 @@ const AboutPage = ({ data }) => {
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
+        sitetitle={data.site.siteMetadata.title}
         title={post.frontmatter.title}
         content={post.html}
       />
@@ -54,6 +58,11 @@ export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from "react-helmet";
 import { Link, graphql, StaticQuery } from 'gatsby'
 import { kebabCase } from "lodash";
 
@@ -8,9 +9,11 @@ class CodePostsTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     const tags = data.allMarkdownRemark.group
+    const title = data.site.siteMetadata.title
 
     return (
       <>
+        <Helmet title={`Code | ${title}`} />
         <div className="columns is-multiline">
           {posts &&
             posts.map(({ node: post }) => (
@@ -85,6 +88,11 @@ export default function CodePosts() {
     <StaticQuery
       query={graphql`
         query CodePostsQuery {
+          site {
+            siteMetadata {
+              title
+            }
+          }
           allMarkdownRemark(
             sort: {order: DESC, fields: [frontmatter___date]}
             filter: {frontmatter: {templateKey: {eq: "code-post"}}}
