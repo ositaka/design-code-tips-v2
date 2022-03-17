@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from "react-helmet";
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { kebabCase } from "lodash";
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class PodcastPostsTemplate extends React.Component {
@@ -13,56 +14,54 @@ class PodcastPostsTemplate extends React.Component {
     return (
       <>
         <Helmet title={`Podcasts | ${title}`} />
-        <div className="columns is-multiline">
-          {posts &&
-            posts.map(({ node: post }) => (
-              <div className="is-parent column is-6" key={post.id}>
-                <article
-                  className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
-                    }`}
-                >
-                  <header>
-                    {post.frontmatter.featuredimage ? (
-                      <div className="featured-thumbnail">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                            width:
-                              post.frontmatter.featuredimage.childImageSharp
-                                .gatsbyImageData.width,
-                            height:
-                              post.frontmatter.featuredimage.childImageSharp
-                                .gatsbyImageData.height,
-                          }}
-                        />
-                      </div>
-                    ) : null}
-                    <p className="post-meta">
-                      <Link
-                        className="title has-text-primary is-size-4"
-                        to={post.fields.slug}
-                      >
+        <section className="section">
+          <div className="cards-list">
+            {posts &&
+              posts.map(({ node: post }) => (
+                <Link to={post.fields.slug} >
+                  <div className="card" key={post.id}>
+                    <div className='post-image'>
+                      {post.frontmatter.featuredimage ? (
+                        <div className="featured-thumbnail">
+                          <PreviewCompatibleImage
+                            imageInfo={{
+                              image: post.frontmatter.featuredimage,
+                              alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                              width:
+                                post.frontmatter.featuredimage.childImageSharp
+                                  .gatsbyImageData.width,
+                              height:
+                                post.frontmatter.featuredimage.childImageSharp
+                                  .gatsbyImageData.height,
+                            }}
+                          />
+                        </div>
+                      ) : null}
+                    </div>
+                    <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
+                      <h3 className="post-title title-h3">
                         {post.frontmatter.title}
-                      </Link>
-                      <span> &bull; </span>
-                      <span className="subtitle is-size-5 is-block">
-                        {post.frontmatter.date}
-                      </span>
-                    </p>
-                  </header>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button" to={post.frontmatter.link} target="_blank" rel="noopener">
-                      Go to Podcast → {post.frontmatter.link}
-                    </Link>
-                  </p>
-                </article>
-              </div>
-            ))}
-        </div>
+                      </h3>
+                      <div className='post-details has-image'>
+                        <span className="post-date">
+                          {post.frontmatter.date}
+                        </span>
+                        {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                          <ul className="post-tags">
+                            {post.frontmatter.tags.map((tag) => (
+                              <li key={tag + `tag`}>
+                                <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
+                    </article>
+                  </div>
+                </Link>
+              ))}
+          </div>
+        </section>
       </>
     )
   }
@@ -106,7 +105,7 @@ export default function PodcastPosts() {
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 120
+                        width: 420
                         quality: 100
                         layout: CONSTRAINED
                       )

@@ -132,15 +132,6 @@ $black: #2b2523
 
 // @import "~bulma"
 
-body,
-button,
-input,
-textarea
-  font-family: "Quicksand", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
-
-.secondary-font
-  font-family: "Operator Mono Medium Italic", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
-
 // // Temporary fixes
 // .blog-list-item.notification
 //   padding: 2rem
@@ -159,54 +150,169 @@ textarea
 //     margin: 0 0 1em
 
 
-// Variables
+body,
+button,
+input,
+textarea
+  font-family: "Quicksand", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  font-size: 1.5rem
+  line-height: 2.4rem
+
+.secondary-font
+  font-family: "Operator Mono Medium Italic", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+
+
+  // Variables
+$font-regular: 400
+$font-bold: 700
+
 // Dark Theme
 $dark__background: #2a2a2a
+$dark__background-lighter: #585858
 $dark__text-color: #fff
 
 // Light Theme
 $light__background: #fff
+$light__background-lighter: #f3f3f3
 $light__text-color: #2a2a2a
 
 // Responsive typogrphy
 html
   font-size: calc(100vw / 1728 * 10)
+  hyphens: auto
   line-height: 1
   margin: auto
   max-width: 94.5%
   -webkit-font-smoothing: antialiased
 
-  .navbar
-    align-items: center
+.navbar
+  align-items: center
+  display: flex
+  justify-content: space-between
+  margin: 4rem 0 14.8rem
+
+  #logo 
+    margin: 0
+    svg
+      margin-top: -0.5rem
+      width: 10.6rem
+
+  .navbar-item
+    font-size: 2.25rem
+    font-weight: 600
+    margin: 0 2.9rem
+    text-decoration: none
+  .navbar-item.active
+    border-bottom: 10px solid white
+
+  .navbar-col
+    width: 15%
+  .navbar-col.navbar-menu
+    text-align: center
+    width: 70%
+  .navbar-col.navbar-secondary
+    text-align: right
+    .navbar-item
+      margin-left: 1.45rem
+      margin-right: 0
+
+.container
+  margin: auto
+  max-width: 112rem
+
+.page-title
+  margin: 3.7rem
+  margin-bottom: 12rem
+  max-width: 71rem
+
+.section
+  margin-bottom: 13.2rem
+  .section-title
     display: flex
     justify-content: space-between
-    margin: 4rem 0
+    margin: 3.7rem 3.7rem 2.55rem
+  .section-title-link
+    font-size: 1.78rem
+    font-weight: $font-bold
+    margin-top: 0.74rem
 
-    #logo 
-      margin: 0
-      svg
-        width: 10.6rem
+.cards-list
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  gap: 2rem
+  a
+    text-decoration: none
+  .card
+    height: 100%
+    width: 36rem
+    .post
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: calc(100% - 5.9rem)
+      padding: 2.9rem 3.8rem 3rem
+    .post-title
+      margin-bottom: 2rem
+      min-height: 10.5rem
+    .post-details
+      display: flex
+      justify-content: space-between
+      -webkit-font-smoothing: none
+      .post-date
+        font-size: 1.2rem
+        font-weight: $font-regular
+        width: 12.6rem
+      .post-tags
+        font-size: 1.2rem
+        font-weight: $font-bold
+        list-style: none
+        margin: 0
+        max-width: 14rem
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        li
+          display: inline
+          a
+            margin-left: 0.5rem
+    .post-details.has-image
+      height: 100%
 
-    .navbar-item
-      font-size: 2.25rem
-      font-weight: 600
-      margin: 0 2.9rem
-      text-decoration: none
-    .navbar-item.active
-      border-bottom: 10px solid white
+.cards-list.two-columns
+  grid-template-columns: 1fr 1fr
 
-    .navbar-col
-      width: 15%
-    .navbar-col.navbar-menu
-      text-align: center
-      width: 70%
-    .navbar-col.navbar-secondary
-      text-align: right
-      .navbar-item
-        margin-left: 1.45rem
-        margin-right: 0
+.tags-list
+  columns: 3
+  -webkit-columns: 3
+  -moz-columns: 3
+  list-style: none
+  a
+    font-weight: 600
+    text-decoration: none
+    span
+      font-weight: $font-regular
+  a:hover
+    text-decoration: underline
 
 
+
+
+// Typography
+h1, h2, h3, h4, h5, h6
+  margin: 0
+.title-h1
+  font-size: 4.76rem
+  line-height: 5.92rem
+.title-h2
+  font-size: 2.38rem
+  line-height: 3.4rem
+  font-weight: $font-regular
+.title-h3
+  font-size: 2.765rem
+  line-height: 3.5rem
+
+
+// Themes
 .dark-theme
   background-color: $dark__background
   color: $dark__text-color
@@ -215,8 +321,11 @@ html
       fill: $dark__background
     .light-color
       fill: $dark__text-color
+  a,
   .navbar-item
     color: $dark__text-color
+  .card
+    background: $dark__background-lighter
 
 .light-theme
   background-color: $light__background
@@ -226,5 +335,8 @@ html
       fill: $light__background
     .light-color
       fill: $light__text-color
+  a,
   .navbar-item
     color: $light__text-color
+  .card
+    background: $light__background-lighter

@@ -13,7 +13,7 @@ class ToolsPostsTemplate extends React.Component {
     return (
       <>
         <Helmet title={`Tools | ${title}`} />
-        <div className="columns is-multiline">
+        <div className="cards-list two-columns">
           {posts &&
             posts.map(({ node: post }) => (
               <div className="is-parent column is-6" key={post.id}>

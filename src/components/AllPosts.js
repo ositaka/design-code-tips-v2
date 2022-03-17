@@ -9,42 +9,34 @@ class AllPostsTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="cards-list">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
-                  }`}
-              >
-                <header>
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+            <Link to={post.fields.slug} >
+              <div className="card" key={post.id}>
+                <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
+                  <h3 className="post-title title-h3">
+                    {post.frontmatter.title}
+                  </h3>
+                  <div className='post-details'>
+                    <span className="post-date">
                       {post.frontmatter.date}
                     </span>
-                  </p>
-                </header>
-                {post.frontmatter.tags && post.frontmatter.tags.length ? (
-                  <div style={{ marginTop: `4rem` }}>
-                    <ul className="taglist">
-                      {post.frontmatter.tags.map((tag) => (
-                        <li key={tag + `tag`}>
-                          <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
-                        </li>
-                      ))}
-                    </ul>
+                    {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                      <ul className="post-tags">
+                        {post.frontmatter.tags.map((tag) => (
+                          <li key={tag + `tag`}>
+                            <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </div>
-                ) : null}
-              </article>
-            </div>
-          ))}
+                </article>
+              </div>
+            </Link>
+          ))
+        }
       </div>
     )
   }
@@ -71,7 +63,6 @@ export default function AllPosts() {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 400)
                 id
                 fields {
                   slug

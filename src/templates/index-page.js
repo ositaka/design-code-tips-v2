@@ -17,126 +17,72 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <h1 className="title is-size-1">{heading}</h1>
-          </div>
-          <div className="section">
-            <div className="columns">
-              <div className="column is-12">
-                <div className="content">
-                  <div className="columns">
-                    <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
-                        Latest posts
-                      </h3>
-                    </div>
-                    <div className="column is-4">
-                      <Link to="/all-posts">
-                        View all
-                      </Link>
-                    </div>
-                  </div>
-                  <AllPosts />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="section">
-            <div className="columns">
-              <div className="column is-12">
-                <div className="content">
-                  <div className="columns">
-                    <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
-                        Latest on inspiration
-                      </h3>
-                    </div>
-                    <div className="column is-4">
-                      <Link to="/inspiration">
-                        View all
-                      </Link>
-                    </div>
-                  </div>
-                  <InspirationPosts />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="section">
-            <div className="columns">
-              <div className="column is-12">
-                <div className="content">
-                  <div className="columns">
-                    <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
-                        Featured free tools
-                      </h3>
-                    </div>
-                    <div className="column is-4">
-                      <Link to="/tools">
-                        View all
-                      </Link>
-                    </div>
-                  </div>
-                  <ToolsPosts />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="section">
-            <div className="columns">
-              <div className="column is-12">
-                <div className="content">
-                  <div className="columns">
-                    <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
-                        Featured podcasts
-                      </h3>
-                    </div>
-                    <div className="column is-4">
-                      <Link to="/podcasts">
-                        View all
-                      </Link>
-                    </div>
-                  </div>
-                  <PodcastPosts />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="section">
-            <div className="columns">
-              <div className="column is-12">
-                <div className="content">
-                  <div className="columns">
-                    <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
-                        Browse all topics and tags
-                      </h3>
-                    </div>
-                    <div className="column is-4">
-                      <Link to="/tags">
-                        View all
-                      </Link>
-                    </div>
-                  </div>
-                  <ul className="taglist">
-                    {tags.map((tag) => (
-                      <li key={tag.fieldValue}>
-                        <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                          {tag.fieldValue} ({tag.totalCount})
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="page-title">
+        <h1 className="title-h1">{heading}</h1>
+      </div>
+      <section className="section">
+        <div className="section-title">
+          <h2 className="title-h2 secondary-font">
+            Latest posts
+          </h2>
+          <Link to="/all-posts" className="section-title-link">
+            View all
+          </Link>
         </div>
-      </section >
+        <AllPosts />
+      </section>
+      <section className="section">
+        <div className="section-title">
+          <h2 className="title-h2 secondary-font">
+            Latest on inspiration
+          </h2>
+          <Link to="/inspiration">
+            View all
+          </Link>
+        </div>
+        <InspirationPosts />
+      </section>
+      <section className="section">
+        <div className="section-title">
+          <h2 className="title-h2 secondary-font">
+            Featured free tools
+          </h2>
+          <Link to="/tools">
+            View all
+          </Link>
+        </div>
+        <ToolsPosts />
+      </section>
+      <section className="section">
+        <div className="section-title">
+          <h2 className="title-h2 secondary-font">
+            Featured podcasts
+          </h2>
+          <Link to="/podcasts">
+            View all
+          </Link>
+        </div>
+        <PodcastPosts />
+      </section>
+      <section className="section">
+        <div className="section-title">
+          <h2 className="title-h2 secondary-font">
+            Browse all topics and tags
+          </h2>
+          <Link to="/tags">
+            View all
+          </Link>
+        </div>
+        <ul className="tags-list">
+          {tags.map((tag) => (
+            <li key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} <span>({tag.totalCount})</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div >
   );
 };

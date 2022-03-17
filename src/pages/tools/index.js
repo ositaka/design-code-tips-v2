@@ -2,36 +2,23 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import ToolsPosts from "../../components/ToolsPosts";
+import ToolsTags from "../../components/ToolsTags";
 
 export default class ToolsIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
-          className="full-width-image-container margin-top-0"
-          style={{
-            backgroundImage: `url('/media/blog-index.jpg')`,
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-              backgroundColor: "#f40",
-              color: "white",
-              padding: "1rem",
-            }}
-          >
-            Latest "Tools" Stories
-          </h1>
+        <div className="page-title">
+          <h1 className="title-h1">You are browsing all "Tools" Posts</h1>
         </div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <ToolsPosts />
-            </div>
-          </div>
-        </section>
+        <div className="container">
+          <section className="section">
+            <ToolsPosts />
+          </section>
+          <section className="section">
+            <ToolsTags />
+          </section>
+        </div>
       </Layout>
     );
   }
