@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="columns">
                     <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2">
+                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
                         Latest posts
                       </h3>
                     </div>
@@ -49,7 +49,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="columns">
                     <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2">
+                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
                         Latest on inspiration
                       </h3>
                     </div>
@@ -70,7 +70,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="columns">
                     <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2">
+                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
                         Featured free tools
                       </h3>
                     </div>
@@ -91,7 +91,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="columns">
                     <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2">
+                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
                         Featured podcasts
                       </h3>
                     </div>
@@ -112,7 +112,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="columns">
                     <div className="column is-8">
-                      <h3 className="has-text-weight-semibold is-size-2">
+                      <h3 className="has-text-weight-semibold is-size-2 secondary-font">
                         Browse all topics and tags
                       </h3>
                     </div>

@@ -5,6 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.0.0",
+    "@fontsource/quicksand": "^4.5.4",
     "bulma": "^0.9.0",
     "gatsby": "^4.0.0",
     "gatsby-plugin-feed-generator": "^2.0.5",
