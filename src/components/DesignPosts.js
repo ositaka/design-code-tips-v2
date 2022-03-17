@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from "react-helmet";
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { kebabCase } from "lodash";
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class DesignPostsTemplate extends React.Component {
@@ -17,8 +16,8 @@ class DesignPostsTemplate extends React.Component {
         <div className="cards-list">
           {posts &&
             posts.map(({ node: post }) => (
-              <Link to={post.fields.slug} >
-                <div className="card" key={post.id}>
+              <Link to={post.fields.slug} key={post.id}>
+                <div className="card">
                   <div className='post-image'>
                     {post.frontmatter.featuredimage ? (
                       <div className="featured-thumbnail">
@@ -49,7 +48,7 @@ class DesignPostsTemplate extends React.Component {
                         <ul className="post-tags">
                           {post.frontmatter.tags.map((tag) => (
                             <li key={tag + `tag`}>
-                              <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                              #{tag}
                             </li>
                           ))}
                         </ul>

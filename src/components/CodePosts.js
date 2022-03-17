@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from "react-helmet";
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { kebabCase } from "lodash";
 
 class CodePostsTemplate extends React.Component {
   render() {
@@ -16,8 +15,8 @@ class CodePostsTemplate extends React.Component {
         <div className="cards-list">
           {posts &&
             posts.map(({ node: post }) => (
-              <Link to={post.fields.slug} >
-                <div className="card" key={post.id}>
+              <Link to={post.fields.slug} key={post.id}>
+                <div className="card">
                   <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
                     <h3 className="post-title title-h3">
                       {post.frontmatter.title}
@@ -30,7 +29,7 @@ class CodePostsTemplate extends React.Component {
                         <ul className="post-tags">
                           {post.frontmatter.tags.map((tag) => (
                             <li key={tag + `tag`}>
-                              <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
+                              #{tag}
                             </li>
                           ))}
                         </ul>
