@@ -2,6 +2,7 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import "@fontsource/quicksand/400.css"
 import "@fontsource/quicksand/700.css"
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
@@ -15,7 +16,7 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang="en" className="dark-theme" />
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -53,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div className="container">{children}</div>
       <Footer />
     </div>
   );
