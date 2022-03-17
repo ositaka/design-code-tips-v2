@@ -150,6 +150,27 @@ $black: #2b2523
 //     margin: 0 0 1em
 
 
+// Responsive
+$tablet-width: 768px
+$desktop-width: 1024px
+$large-desktop-width: 1600px
+
+@mixin phone
+  @media (max-width: #{$tablet-width - 1px})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+@mixin desktop
+  @media (min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1px})
+    @content
+
+@mixin large-desktop
+  @media (min-width: #{$large-desktop-width})
+    @content
+
 body,
 button,
 input,
@@ -184,7 +205,16 @@ html
   margin: auto
   max-width: 94.5%
   -webkit-font-smoothing: antialiased
+  @include tablet
+    font-size: calc(100vw / 1024 * 10)
+  @include phone
+    font-size: calc(100vw / 460 * 10)
 
+img,
+picture,
+video
+  max-width: 100%
+  
 .navbar
   align-items: center
   display: flex
@@ -210,20 +240,33 @@ html
   .navbar-col.navbar-menu
     text-align: center
     width: 70%
+    @include phone
+      display: none /* ------------------------------- TEMPORARY ------------------- */
   .navbar-col.navbar-secondary
     text-align: right
+    @include phone
+      display: none /* ------------------------------- TEMPORARY ------------------- */
     .navbar-item
       margin-left: 1.45rem
       margin-right: 0
 
 .container
   margin: auto
-  max-width: 112rem
+  @include large-desktop
+    max-width: 112rem
+  @include desktop
+    max-width: 142rem
+  @include tablet
+    max-width: 90%
+  @include phone
+    max-width: 100%
 
 .page-title
   margin: 3.7rem
   margin-bottom: 12rem
   max-width: 71rem
+  @include phone
+    max-width: 90%
 
 .section
   margin-bottom: 13.2rem
@@ -238,13 +281,18 @@ html
 
 .cards-list
   display: grid
-  grid-template-columns: 1fr 1fr 1fr
   gap: 2rem
+  grid-template-columns: 1fr 1fr 1fr
+  @include tablet
+    grid-template-columns: 1fr 1fr
+  @include phone
+    grid-template-columns: 1fr
+
   a
     text-decoration: none
   .card
     height: 100%
-    width: 36rem
+    // width: 36rem
     .post
       display: flex
       flex-direction: column
@@ -280,12 +328,23 @@ html
 
 .cards-list.two-columns
   grid-template-columns: 1fr 1fr
+  @include phone
+    grid-template-columns: 1fr
 
 .tags-list
   columns: 3
   -webkit-columns: 3
   -moz-columns: 3
   list-style: none
+  @include tablet
+    columns: 2
+    -webkit-columns: 2
+    -moz-columns: 2
+  @include phone
+    columns: 1
+    -webkit-columns: 1
+    -moz-columns: 1
+
   a
     font-weight: 600
     text-decoration: none
@@ -310,6 +369,8 @@ h1, h2, h3, h4, h5, h6
 .title-h3
   font-size: 2.765rem
   line-height: 3.5rem
+
+
 
 
 // Themes
