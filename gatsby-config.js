@@ -1,3 +1,5 @@
+const { lazy } = require("react");
+
 module.exports = {
   siteMetadata: {
     title: 'Design & Code (tips)',
@@ -46,7 +48,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: 'gatsby-remark-relative-images-v2',
             options: {
               name: 'uploads',
             },
@@ -58,6 +60,9 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 2048,
+              withWebp: true,
+              tracedSVG: true,
+              loading: "lazy",
             },
           },
           {
