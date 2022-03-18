@@ -147,6 +147,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Design & Code - tips`,
+        short_name: `D&C tips`,
+        start_url: `/`,
+        background_color: `#2a2a2a`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: `src/media/favicon-50.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
