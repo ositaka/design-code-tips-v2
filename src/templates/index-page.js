@@ -36,7 +36,7 @@ export const IndexPageTemplate = ({
           <h2 className="title-h2 secondary-font">
             Latest on inspiration
           </h2>
-          <Link to="/inspiration">
+          <Link to="/inspiration" className="section-title-link">
             View all
           </Link>
         </div>
@@ -47,7 +47,7 @@ export const IndexPageTemplate = ({
           <h2 className="title-h2 secondary-font">
             Featured free tools
           </h2>
-          <Link to="/tools">
+          <Link to="/tools" className="section-title-link">
             View all
           </Link>
         </div>
@@ -58,7 +58,7 @@ export const IndexPageTemplate = ({
           <h2 className="title-h2 secondary-font">
             Featured podcasts
           </h2>
-          <Link to="/podcasts">
+          <Link to="/podcasts" className="section-title-link">
             View all
           </Link>
         </div>
@@ -69,9 +69,6 @@ export const IndexPageTemplate = ({
           <h2 className="title-h2 secondary-font">
             Browse all topics and tags
           </h2>
-          <Link to="/tags">
-            View all
-          </Link>
         </div>
         <ul className="tags-list">
           {tags.map((tag) => (

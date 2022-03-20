@@ -70,6 +70,19 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-video',
+            options: {
+              width: '100%',
+              height: 'auto',
+              preload: 'auto',
+              muted: false,
+              autoplay: false,
+              playsinline: true,
+              controls: true,
+              loop: true,
+            },
+          },
+          {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               terminal: 'carbon',
