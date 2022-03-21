@@ -13,41 +13,37 @@ class AllPostsListTemplate extends React.Component {
     return (
       <>
         <Helmet title={`All Posts | ${title}`} />
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
-                  }`}
-              >
-                <header>
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                {post.frontmatter.tags && post.frontmatter.tags.length ? (
-                  <div style={{ marginTop: `4rem` }}>
-                    <ul className="taglist">
-                      {post.frontmatter.tags.map((tag) => (
-                        <li key={tag + `tag`}>
-                          <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-              </article>
-            </div>
-          ))}
+        <ul className="list">
+          {posts &&
+            posts.map(({ node: post }) => (
+              <li key={post.id} className="list-post">
+                <Link to={post.fields.slug}>
+                  <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
+                    <div className='post-info'>
+                      <h3 className="post-title title-h3">
+                        {post.frontmatter.title}
+                      </h3>
+                      <div className='post-details'>
+                        <span className="post-date">
+                          {post.frontmatter.date}
+                        </span>
+                        {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                          <ul className="post-tags">
+                            {post.frontmatter.tags.map((tag) => (
+                              <li key={tag + `tag`}>
+                                #{tag}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
+                    </div>
+                  </article>
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
       </>
     )
   }

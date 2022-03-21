@@ -1,6 +1,6 @@
 ---
 templateKey: code-post
-title: WooCommerce — Redirect users by role to specific URL
+title: 'WooCommerce: Redirect users by role to specific URL'
 date: 2021-04-08 12:25
 featuredpost: false
 featuredImage: /assets/woocommerce-logo.png

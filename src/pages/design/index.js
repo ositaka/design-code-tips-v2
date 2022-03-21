@@ -19,7 +19,7 @@ export default class DesignIndexPage extends React.Component {
             <DesignTags />
           </section>
         </div>
-      </Layout >
+      </Layout>
     );
   }
 }

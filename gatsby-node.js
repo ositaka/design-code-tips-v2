@@ -46,16 +46,31 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
+
+
     // Tag pages:
     let tags = []
+    let codetags = []
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach((edge) => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+      const isCodePost = edge.node.frontmatter.templateKey == 'code-post'
+
+      if (isCodePost) {
+        if (_.get(edge, `node.frontmatter.tags`)) {
+          codetags = codetags.concat(edge.node.frontmatter.tags)
+        }
+
+      } else {
+        if (_.get(edge, `node.frontmatter.tags`)) {
+          tags = tags.concat(edge.node.frontmatter.tags)
+        }
+
       }
+
     })
     // Eliminate duplicate tags
     tags = _.uniq(tags)
+    codetags = _.uniq(codetags)
 
     // Make tag pages
     tags.forEach((tag) => {
@@ -64,6 +79,17 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
+        context: {
+          tag,
+        },
+      })
+    })
+    codetags.forEach((tag) => {
+      const tagPath = `/code/tags/${_.kebabCase(tag)}/`
+
+      createPage({
+        path: tagPath,
+        component: path.resolve(`src/templates/code-tags.js`),
         context: {
           tag,
         },

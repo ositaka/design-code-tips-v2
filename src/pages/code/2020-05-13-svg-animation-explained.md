@@ -6,10 +6,8 @@ featuredpost: false
 featuredImage: /assets/svg-animation.png
 description: This is my description
 tags:
-  - Code
   - SVG Animation
   - Figma
-video: test.mp4
 ---
 
 The post will be available soon.

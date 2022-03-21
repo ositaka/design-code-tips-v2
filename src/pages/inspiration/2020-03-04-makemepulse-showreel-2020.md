@@ -13,4 +13,4 @@ tags:
 
 ## © 2020 [makemepulse.com](https://www.makemepulse.com)
 
-I hope this video gives you some nice inspiration, in case you are making a showreel and you need great references of professional showreels made by top-notch agencies and studios.
+I hope this video gives you some nice inspiration and ideas, in case you are making a showreel, and you need great references of professional showreels made by top-notch agencies and studios.

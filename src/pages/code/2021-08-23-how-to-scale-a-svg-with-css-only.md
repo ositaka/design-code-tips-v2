@@ -6,7 +6,6 @@ featuredpost: false
 featuredImage: /assets/css.png
 description: Learn how to automatically scale a SVG with CSS.
 tags:
-  - Web-dev
   - CSS
   - SVG
 ---
@@ -40,7 +39,8 @@ Then add the respective CSS for the HTML class:
 }
 ```
 
-##Here is the result!
+## Here is the result!
+
 (you can resize your browser's window to see the magic happening)
 
 <iframe src="https://codepen.io/ositaka/full/MWmwWeP" frameborder="0" allowfullscreen="false" width="100%" height="600px"> </iframe>

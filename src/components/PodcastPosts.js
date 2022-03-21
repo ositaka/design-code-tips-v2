@@ -17,8 +17,8 @@ class PodcastPostsTemplate extends React.Component {
           <div className="cards-list">
             {posts &&
               posts.map(({ node: post }) => (
-                <Link to={post.fields.slug} key={post.id}>
-                  <div className="card">
+                <Link to={post.fields.slug} key={post.id} className="card has-image">
+                  <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
                     <div className='post-image'>
                       {post.frontmatter.featuredimage ? (
                         <div className="featured-thumbnail">
@@ -37,11 +37,11 @@ class PodcastPostsTemplate extends React.Component {
                         </div>
                       ) : null}
                     </div>
-                    <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
+                    <div className='post-info'>
                       <h3 className="post-title title-h3">
                         {post.frontmatter.title}
                       </h3>
-                      <div className='post-details has-image'>
+                      <div className='post-details'>
                         <span className="post-date">
                           {post.frontmatter.date}
                         </span>
@@ -55,8 +55,8 @@ class PodcastPostsTemplate extends React.Component {
                           </ul>
                         ) : null}
                       </div>
-                    </article>
-                  </div>
+                    </div>
+                  </article>
                 </Link>
               ))}
           </div>

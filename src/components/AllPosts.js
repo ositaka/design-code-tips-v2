@@ -11,9 +11,9 @@ class AllPostsTemplate extends React.Component {
       <div className="cards-list">
         {posts &&
           posts.map(({ node: post }) => (
-            <Link to={post.fields.slug} key={post.id}>
-              <div className="card">
-                <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
+            <Link to={post.fields.slug} key={post.id} className="card">
+              <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
+                <div className='post-info'>
                   <h3 className="post-title title-h3">
                     {post.frontmatter.title}
                   </h3>
@@ -31,8 +31,8 @@ class AllPostsTemplate extends React.Component {
                       </ul>
                     ) : null}
                   </div>
-                </article>
-              </div>
+                </div>
+              </article>
             </Link>
           ))
         }

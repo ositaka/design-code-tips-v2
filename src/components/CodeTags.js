@@ -18,7 +18,7 @@ class CodeTagsTemplate extends React.Component {
         <ul className="tags-list">
           {tags.map((tag) => (
             <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <Link to={`/code/tags/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} <span>({tag.totalCount})</span>
               </Link>
             </li>
