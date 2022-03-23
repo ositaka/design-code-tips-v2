@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from "react-helmet";
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { kebabCase } from 'lodash'
 
 class AllPostsListTemplate extends React.Component {
   render() {

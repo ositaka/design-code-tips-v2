@@ -9,7 +9,7 @@ tags:
   - Website
 ---
 
-`video: title: "2Advanced Studios — Flash website in 2003": /media/2advanced-flash-website-v4-2003.mp4`
+`video({ title="2Advanced Studios — Flash website in 2003", src="/media/2advanced-flash-website-v4-2003.mp4" })`
 
 ## © 2003 ADvanced Studios
 

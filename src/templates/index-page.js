@@ -5,8 +5,8 @@ import { kebabCase } from "lodash";
 
 import Layout from "../components/Layout";
 import AllPosts from "../components/AllPosts";
-import InspirationPosts from "../components/InspirationPosts";
-import ToolsPosts from "../components/ToolsPosts";
+import HomeInspirationPosts from "../components/HomeInspirationPosts";
+import HomeToolsPosts from "../components/HomeToolsPosts";
 import PodcastPosts from "../components/PodcastPosts";
 
 // eslint-disable-next-line
@@ -40,7 +40,7 @@ export const IndexPageTemplate = ({
             View all
           </Link>
         </div>
-        <InspirationPosts />
+        <HomeInspirationPosts />
       </section>
       <section className="section">
         <div className="section-title">
@@ -51,7 +51,7 @@ export const IndexPageTemplate = ({
             View all
           </Link>
         </div>
-        <ToolsPosts />
+        <HomeToolsPosts />
       </section>
       <section className="section">
         <div className="section-title">

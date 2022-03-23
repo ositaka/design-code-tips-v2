@@ -9,7 +9,7 @@ tags:
   - Video
 ---
 
-`video: title: "Creative Nights — Showreel 2020": /media/creative-nights__showreel-2020.mp4`
+`video({ title="Creative Nights — Showreel 2020", src="/media/creative-nights__showreel-2020.mp4" })`
 
 ## © 2020 [creative-nights.com](https://www.creative-nights.com/)
 

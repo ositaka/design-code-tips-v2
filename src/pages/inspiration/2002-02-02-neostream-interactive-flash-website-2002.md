@@ -9,7 +9,7 @@ tags:
   - Website
 ---
 
-`video: title: "Neostream Interactive — Flash website in 2002": /media/neostream-interactive-flash-website-in-2002.mp4`
+`video({ title="Neostream Interactive — Flash website in 2002", src="/media/neostream-interactive-flash-website-in-2002.mp4" })`
 
 ## © 2002 Neostream Interactive
 

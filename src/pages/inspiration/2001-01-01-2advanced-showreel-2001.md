@@ -9,7 +9,7 @@ tags:
   - Video
 ---
 
-`video: title: "2Advanced Studios — Showreel 2001": /media/2advanced__showreel-2001.mp4`
+`video({ title="2Advanced Studios — Showreel 2001", src="/media/2advanced__showreel-2001.mp4" })`
 
 ## © 2001 2Advanced Studios
 

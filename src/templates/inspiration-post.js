@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
@@ -17,13 +18,20 @@ export const InspirationPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
 
+  useEffect(() => {
+    const video = document.getElementsByTagName('video')[0]
+    video.muted = false
+    video.disablePictureInPicture = true
+    video.controlsList = "nodownload noremoteplayback noplaybackrate"
+  })
+
   return (
     <section className="section">
       {helmet || ""}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className="title-h1">
               {title}
             </h1>
             <p>{description}</p>

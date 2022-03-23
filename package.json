@@ -6,6 +6,7 @@
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.0.0",
     "@fontsource/quicksand": "^4.5.4",
+    "@stayradiated/gatsby-remark-video": "^2.4.0",
     "gatsby": "^4.0.0",
     "gatsby-plugin-feed-generator": "^2.0.5",
     "gatsby-plugin-image": "^2.0.0",
@@ -25,7 +26,6 @@
     "gatsby-remark-images": "^6.0.0",
     "gatsby-remark-relative-images-v2": "^0.1.5",
     "gatsby-remark-responsive-iframe": "^5.10.0",
-    "gatsby-remark-video": "^1.2.5",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-remark": "^5.0.0",
     "gatsby-transformer-sharp": "^4.0.0",

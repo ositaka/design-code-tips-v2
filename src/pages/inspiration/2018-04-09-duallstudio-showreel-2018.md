@@ -9,7 +9,7 @@ tags:
   - Video
 ---
 
-`video: title: "Duall Studio — Showreel 2018": /media/duallstudio__showreel-2018.mp4`
+`video({ title="Duall Studio — Showreel 2018", src="/media/duallstudio__showreel-2018.mp4" })`
 
 ## © 2018 [duallstudio.com](https://duallstudio.com)
 

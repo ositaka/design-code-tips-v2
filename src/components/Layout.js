@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -9,14 +10,21 @@ import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+import { useDarkMode } from "./ThemeSwitcher";
 deckDeckGoHighlightElement();
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
+  const [theme] = useDarkMode();
+  // Burger Menu 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleBurger = () => setIsMenuOpen(p => !p);
+
   return (
     <div>
       <Helmet>
-        <html lang="en" className="dark-theme" />
+        <html lang="en" className={theme === 'light-theme' ? 'light-theme' : 'dark-theme'} />
+        {/* <html lang="en" className="dark-theme" /> */}
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -53,7 +61,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}media/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <Navbar open={isMenuOpen} toggle={toggleBurger} />
       <div className="container">{children}</div>
       <Footer />
     </div>

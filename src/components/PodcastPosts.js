@@ -14,7 +14,7 @@ class PodcastPostsTemplate extends React.Component {
       <>
         <Helmet title={`Podcasts | ${title}`} />
         <section className="section">
-          <div className="cards-list">
+          <div className="cards-list four-columns">
             {posts &&
               posts.map(({ node: post }) => (
                 <Link to={post.fields.slug} key={post.id} className="card has-image">

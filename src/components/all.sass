@@ -341,12 +341,19 @@ video
         will-change: transform
     :hover
       .featured-thumbnail
-        transform: scale(1.3)
+        transform: scale(1.2)
 
 .cards-list.two-columns
   grid-template-columns: 1fr 1fr
   @include phone
     grid-template-columns: 1fr
+
+.cards-list.four-columns
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  @include tablet
+    grid-template-columns: 1fr 1fr 1fr
+  @include phone
+    grid-template-columns: 1fr 1fr
 
 .tags-list
   columns: 3

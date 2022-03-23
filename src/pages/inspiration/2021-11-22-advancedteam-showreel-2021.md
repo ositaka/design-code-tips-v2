@@ -9,7 +9,7 @@ tags:
   - Video
 ---
 
-`video: title: "Advanced Team — Showreel 2021": /media/advanced-team__showreel-2021.mp4`
+`video({ title="Advanced Team — Showreel 2021", src="/media/advanced-team__showreel-2021.mp4" })`
 
 ## © 2021 [advanced.team](https://www.advanced.team)
 

@@ -9,7 +9,7 @@ tags:
   - Video
 ---
 
-`video: title: "Cuberto — Showreel 2018": /media/cuberto__showreel-2018.mp4`
+`video({ title="Cuberto — Showreel 2018", src="/media/cuberto__showreel-2018.mp4" })`
 
 ## © 2018 [cuberto.com](https://www.cuberto.com)
 

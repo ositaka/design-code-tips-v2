@@ -9,7 +9,7 @@ tags:
   - Video
 ---
 
-`video: title: "Make Me Pulse — Showreel 2020": /media/makemepulse__showreel-2020.mp4`
+`video({ title="Make Me Pulse — Showreel 2020", src="/media/makemepulse__showreel-2020.mp4" })`
 
 ## © 2020 [makemepulse.com](https://www.makemepulse.com)
 
