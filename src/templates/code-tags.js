@@ -14,7 +14,6 @@ class CodeTagRoute extends React.Component {
       </li>
     ));
     const tag = this.props.pageContext.tag;
-    const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
     const tagHeader = `${totalCount} Code post${totalCount === 1 ? "" : "s"
       } tagged with “${tag}”`;
@@ -47,15 +46,10 @@ export default CodeTagRoute;
 
 export const CodeTagPageQuery = graphql`
   query CodeTagPage($tag: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       limit: 1000
-      sort: {fields: [frontmatter___date], order: DESC}
-      filter: {frontmatter: {tags: {in: [$tag]}, templateKey: {eq: "code-post"}}}
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: {in: [$tag]}, templateKey: {eq: "code-post"}} }
     ) {
       totalCount
       edges {

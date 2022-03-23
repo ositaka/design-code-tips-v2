@@ -10,16 +10,16 @@ tags:
   - CSS
 ---
 
-```CSS
+```css
 ::-webkit-scrollbar {
-    width: .625rem;
+  width: 0.625rem;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 100);
+  background: rgba(0, 0, 0, 100);
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(241, 241, 241, 100);
+  background: rgba(241, 241, 241, 100);
 }
 ```

@@ -29,13 +29,13 @@ You have to set a class on your HTML and just add the `viewBox` attribute on the
 
 Then add the respective CSS for the HTML class:
 
-```CSS
+```css
 .scaling-svg {
-  position: relative;
-  height:0;
-  width: 100%;
+  height: 0;
   padding: 0;
   padding-bottom: 100%;
+  position: relative;
+  width: 100%;
 }
 ```
 

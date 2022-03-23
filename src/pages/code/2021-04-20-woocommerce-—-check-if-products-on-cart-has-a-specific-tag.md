@@ -28,7 +28,7 @@ As you can see, I've mixed two different sources and finally got it working righ
 
 add_action( 'woocommerce_before_calculate_totals', 'checking_and_removing_items', 10, 1 );
 function checking_and_removing_items( $cart ) {
-	if( !is_checkout() && !is_cart() ) return;
+    if( !is_checkout() && !is_cart() ) return;
 
     if ( is_admin() && ! defined( 'DOING_AJAX' ) )
         return;
@@ -36,22 +36,21 @@ function checking_and_removing_items( $cart ) {
     if ( did_action( 'woocommerce_before_calculate_totals' ) >= 2 )
         return;
 
-    $custome_shipping_country = WC()->customer->get_shipping_country();
+    $customer_shipping_country = WC()->customer->get_shipping_country();
 
-    if( empty($custome_shipping_country) ){
+    if( empty($customer_shipping_country) ){
         $package = WC()->shipping->get_packages()[0];
         if( ! isset($package['destination']['country']) ) return;
-        $custome_shipping_country = $package['destination']['country'];
+        $customer_shipping_country = $package['destination']['country'];
     }
 
     // Only for NON BE customers
-    if( $custome_shipping_country == 'BE' ) return;
+    if( $customer_shipping_country == 'BE' ) return;
 
     // Iterate through each cart item
     $found = false;
     foreach( $cart->get_cart() as $cart_item_key => $cart_item )
-        // if( in_array( $cart_item['data']->get_id(), $products_ids ) ){
-		if( has_term( array('bottle-wine'), 'product_tag', $cart_item['product_id'] ) ) {
+        if( has_term( array('bottle-wine'), 'product_tag', $cart_item['product_id'] ) ) {
             $found = true;
             $cart->remove_cart_item( $cart_item_key ); // remove item
         }
