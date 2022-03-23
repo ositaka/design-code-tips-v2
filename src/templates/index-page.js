@@ -4,10 +4,10 @@ import { Link, graphql } from "gatsby";
 import { kebabCase } from "lodash";
 
 import Layout from "../components/Layout";
-import AllPosts from "../components/AllPosts";
+import HomeLatestPosts from "../components/HomeLatestPosts";
 import HomeInspirationPosts from "../components/HomeInspirationPosts";
 import HomeToolsPosts from "../components/HomeToolsPosts";
-import PodcastPosts from "../components/PodcastPosts";
+import HomePodcastPosts from "../components/HomePodcastPosts";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -29,7 +29,7 @@ export const IndexPageTemplate = ({
             View all
           </Link>
         </div>
-        <AllPosts />
+        <HomeLatestPosts />
       </section>
       <section className="section">
         <div className="section-title">
@@ -62,7 +62,7 @@ export const IndexPageTemplate = ({
             View all
           </Link>
         </div>
-        <PodcastPosts />
+        <HomePodcastPosts />
       </section>
       <section className="section">
         <div className="section-title">

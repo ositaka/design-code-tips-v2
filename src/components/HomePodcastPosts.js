@@ -1,18 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from "react-helmet";
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class PodcastPostsTemplate extends React.Component {
+class HomePodcastPostsTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const title = data.site.siteMetadata.title
 
     return (
       <>
-        <Helmet title={`Podcasts | ${title}`} />
         <section className="section">
           <div className="cards-list four-columns">
             {posts &&
@@ -66,7 +63,7 @@ class PodcastPostsTemplate extends React.Component {
   }
 }
 
-PodcastPosts.propTypes = {
+HomePodcastPosts.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -75,11 +72,11 @@ PodcastPosts.propTypes = {
 }
 
 
-export default function PodcastPosts() {
+export default function HomePodcastPosts() {
   return (
     <StaticQuery
       query={graphql`
-        query PodcastPostsQuery {
+        query HomePodcastPostsQuery {
           site {
             siteMetadata {
               title
@@ -87,7 +84,8 @@ export default function PodcastPosts() {
           }
           allMarkdownRemark(
             sort: { order: ASC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "podcast-post" } } }
+            filter: { frontmatter: { templateKey: { eq: "podcast-post" }, featuredpost: { eq: true } } }
+            limit: 4
           ) {
             edges {
               node {
@@ -118,7 +116,7 @@ export default function PodcastPosts() {
           }
         }
       `}
-      render={(data, count) => <PodcastPostsTemplate data={data} count={count} />}
+      render={(data, count) => <HomePodcastPostsTemplate data={data} count={count} />}
     />
   );
 }
