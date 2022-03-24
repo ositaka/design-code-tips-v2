@@ -84,16 +84,6 @@ export default function AllPostsList() {
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
                   featuredpost
-                  featuredimage {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 120
-                        quality: 100
-                        layout: CONSTRAINED
-                      )
-
-                    }
-                  }
                   tags
                 }
               }

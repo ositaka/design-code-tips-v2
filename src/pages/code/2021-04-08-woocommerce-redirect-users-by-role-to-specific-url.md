@@ -1,10 +1,10 @@
 ---
 templateKey: code-post
 title: 'WooCommerce: Redirect users by role to specific URL, after login in'
-date: 2021-04-08 12:25
+date: 2021-04-08T19:28:37.629Z
 featuredpost: false
 featuredimage: /assets/woocommerce-logo.png
-description: Learn how to redirect "subscribers" and "shop managers" to specific URLs, after login in to the wp-admin. This is great if you are developing a website, and you just want to show an "Under Construction" page.
+description: 'Learn how to redirect "subscribers" and "shop managers" to specific URLs, after login in to the wp-admin. This is great if you are developing a website, and you just want to show an "Under Construction" page.'
 tags:
   - Web Development
   - PHP

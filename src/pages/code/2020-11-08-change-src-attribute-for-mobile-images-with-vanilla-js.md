@@ -1,10 +1,10 @@
 ---
 templateKey: code-post
-title: Change SRC attribute for mobile images with Vanilla JS
-date: 2020-11-08 20:23
+title: 'Change SRC attribute for mobile images with Vanilla JS'
+date: 2020-11-08T19:28:37.629Z
 featuredpost: false
 featuredimage: /assets/js.png
-description: This snippet is a great solution to change the SRC of an <img> HTML element with vanilla JS.
+description: 'This snippet is a great solution to change the SRC of an <img> HTML element with vanilla JS.'
 tags:
   - Web Development
   - JavaScript

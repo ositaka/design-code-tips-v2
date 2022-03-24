@@ -16,7 +16,6 @@ tags:
 ## What is a QR Code?
 
 > A QR Code is a two-dimensional barcode that is readable by smartphones. It allows to encode over 4000 characters in a two dimensional barcode. QR Codes may be used to display text to the user, to open a URL, save a contact to the address book or to compose text messages. "QR Code" is a registered trademark of DENSO WAVE INCORPORATED.
-
 > To read QR Codes with a smartphone, you can just use the default camera app.
 
 ## What are Static QR Codes?

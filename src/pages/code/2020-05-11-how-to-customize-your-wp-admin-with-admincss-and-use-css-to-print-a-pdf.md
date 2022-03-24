@@ -1,7 +1,7 @@
 ---
 templateKey: code-post
-title: How to customize your /wp-admin with admin.css, and use CSS to print a PDF
-date: 2021-04-09 00:00
+title: 'How to customize your /wp-admin with admin.css, and use CSS to print a PDF'
+date: 2020-05-11T19:28:37.629Z
 featuredpost: true
 featuredimage: /assets/wordpress.png
 description: Learn how to customize your /wp-admin with admin.css and how to style the WooCommerce's "Overview analytics" page to be printed as PDF.

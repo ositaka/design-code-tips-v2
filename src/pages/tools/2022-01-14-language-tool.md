@@ -11,7 +11,7 @@ tags:
   - Web
 ---
 
-[![Language Tool (site overview)](/media/language-tool.png)](https://languagetool.org/ "Go to Language Tool's website")
+[![LanguageTool (site overview)](/media/language-tool.png)](https://languagetool.org/ "Go to LanguageTool's website")
 
 This tool is my spell checker of choice. With a great design and simplicity of usage, you will "enhance" all your texts from now on.
 
