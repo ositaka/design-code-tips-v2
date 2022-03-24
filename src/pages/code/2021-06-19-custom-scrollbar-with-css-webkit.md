@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: Custom Scrollbar with CSS (WebKit)
 date: 2021-06-19 14:29
@@ -22,4 +22,4 @@ tags:
 ::-webkit-scrollbar-track {
   background: rgba(241, 241, 241, 100);
 }
-``` -->
+```

@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: SVG Animation explained
 date: 2020-01-13 12:46
@@ -10,4 +10,4 @@ tags:
   - Figma
 ---
 
-The post will be available soon. -->
+The post will be available soon.

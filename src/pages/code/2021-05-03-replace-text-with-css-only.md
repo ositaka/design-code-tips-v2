@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: Replace text with CSS only
 date: 2021-05-03 11:20
@@ -25,4 +25,4 @@ a.download-lnk-pdf:before {
 }
 ```
 
-Please note that you can also archive this text replacement with JavaScript, but it requires a lot more of effort. -->
+Please note that you can also archive this text replacement with JavaScript, but it requires a lot more of effort.

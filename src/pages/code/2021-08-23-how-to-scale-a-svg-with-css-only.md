@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: How to scale a SVG with CSS only
 date: 2021-08-23 12:25
@@ -39,8 +39,8 @@ Then add the respective CSS for the HTML class:
 }
 ```
 
-## Here is the result!
+## Here is the result
 
 (you can resize your browser's window to see the magic happening)
 
-<iframe src="https://codepen.io/ositaka/full/MWmwWeP" frameborder="0" allowfullscreen="false" width="100%" height="600px"> </iframe> -->
+<iframe src="https://codepen.io/ositaka/full/MWmwWeP" frameborder="0" allowfullscreen="false" width="100%" height="600px"></iframe>

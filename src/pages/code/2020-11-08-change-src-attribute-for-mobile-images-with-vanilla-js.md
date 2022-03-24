@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: Change SRC attribute for mobile images with Vanilla JS
 date: 2020-11-08 20:23
@@ -10,7 +10,7 @@ tags:
   - JavaScript
 ---
 
-The snippet bellow is a great solution to change the SRC of an <img> html element with vanilla js.
+The snippet bellow is a great solution to change the SRC of an `<img>` html element with vanilla js.
 
 ```html
 <div class="image">
@@ -30,4 +30,4 @@ The snippet bellow is a great solution to change the SRC of an <img> html elemen
     }
   </script>
 </div>
-``` -->
+```

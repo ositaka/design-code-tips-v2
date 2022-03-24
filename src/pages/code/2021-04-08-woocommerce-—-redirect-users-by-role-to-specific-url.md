@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: 'WooCommerce: Redirect users by role to specific URL'
 date: 2021-04-08 12:25
@@ -11,7 +11,7 @@ tags:
   - WooCommerce
 ---
 
-# Visitor
+## Visitor
 
 The following snippet is great for when you are still developing the website and you might have a "**Under construction**" page, but you want to show the actual "private" website to your client or a friend.
 
@@ -34,7 +34,7 @@ function visitor_login_redirect( $redirect_to, $request, $user ) {
 add_filter( 'login_redirect', 'visitor_login_redirect', 10, 3 );
 ```
 
-# Shop Manager
+## Shop Manager
 
 The following snippet is great to use when you want to show both, the frontend and the backend (wp-admin) to your cliente. In this case, create a new user with "**Shop Manage**r" role and it will be redirected to the "**WooCommerce Orders**" page, after login in.
 
@@ -52,4 +52,4 @@ function shop_manager_login_redirect( $redirect_to, $request, $user ) {
     return $redirect_to;
 }
 add_filter( 'login_redirect', 'shop_manager_login_redirect', 10, 3 );
-``` -->
+```

@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: How to customize your /wp-admin with admin.css
 date: 2021-04-09 00:00
@@ -20,7 +20,7 @@ To keep things easy for the copy/paste, I will just provide one script. You must
 
 ```php
 /*  Add user role body class (admin)
-	=============================================================== */
+ =============================================================== */
 
 // front-end
 add_filter('body_class', function($classes) {
@@ -42,7 +42,7 @@ add_filter('admin_body_class', function($classes) {
 
 
 /*  Add admin.css to your theme or child-theme
-	=============================================================== */
+ =============================================================== */
 
 function admin_style() {
     wp_enqueue_style( 'admin_css', get_stylesheet_directory_uri() . '/admin.css', false, '1.0.0' );
@@ -266,4 +266,4 @@ For a last snippet I've got here an advanced example in how your own `admin.css`
 }
 ```
 
-Hope this might be helpful to someone else, as well it helps me. -->
+Hope this might be helpful to someone else, as well it helps me.

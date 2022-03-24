@@ -1,4 +1,4 @@
-<!-- ---
+---
 templateKey: code-post
 title: How to add extra "Local Pickup" fields for shipping methods in WooCommerce?
 date: 2020-11-06 23:08
@@ -15,7 +15,7 @@ This post is helpful if you want to add extra options on "Local Pickup" shipping
 
 ```php
 /*  Custom Shipping (select local pick-up)
-	=============================================================== */
+ =============================================================== */
 
 // Custom function that handle your settings
 function carrier_settings(){
@@ -210,9 +210,9 @@ function display_carrier_company_on_order_item_totals( $total_rows, $order, $tax
 
 ---
 
-Source: https://stackoverflow.com/questions/63191513/extra-carrier-field-for-shipping-methods-in-woocommerce-cart-and-checkout
+Source: <https://stackoverflow.com/questions/63191513/extra-carrier-field-for-shipping-methods-in-woocommerce-cart-and-checkout>
 
-# Hide delivery section on checkout page if "local pickup" is chosen
+## Hide delivery section on checkout page if "local pickup" is chosen
 
 ```php
 // hide delivery section on checkout page if "local pickup" is chosen
@@ -248,4 +248,4 @@ function disable_delivery_section_on_checkout_form( $available_gateways ) {
          });
       </script>
    <?php
-``` -->
+```
