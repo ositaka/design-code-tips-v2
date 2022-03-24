@@ -11,4 +11,4 @@ tags:
   - Web Development
 ---
 
-[![The Changelog Podcast (cover)](/media/syntax.png)](https://changelog.com/podcast/ 'Go to The Changelog Podcast website')
+[![The Changelog Podcast (cover)](/media/the-changelog.png)](https://changelog.com/podcast/ 'Go to The Changelog Podcast website')

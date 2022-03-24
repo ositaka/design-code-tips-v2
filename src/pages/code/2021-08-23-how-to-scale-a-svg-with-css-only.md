@@ -4,15 +4,15 @@ title: How to scale a SVG with CSS only
 date: 2021-08-23 12:25
 featuredpost: false
 featuredImage: /assets/css.png
-description: Learn how to automatically scale a SVG with CSS.
+description: Learn how to scale automatically a SVG with CSS.
 tags:
   - CSS
   - SVG
 ---
 
-In this post you can see how easy is to scale a SVG with CSS only.
+In this post you can see how easy it is to scale a SVG with CSS only.
 
-You have to set a class on your HTML and just add the `viewBox` attribute on the `<svg>` element, like so:
+You have to set a class (`.scaling-svg`) on your HTML and just leave the `viewBox` attribute on the `<svg>` element, removing all tge itger attrubytes, like this:
 
 ```html
 <div class="scaling-svg">
@@ -41,6 +41,6 @@ Then add the respective CSS for the HTML class:
 
 ## Here is the result
 
-(you can resize your browser's window to see the magic happening)
+You can resize your browser's window to see the magic happening.
 
 <iframe src="https://codepen.io/ositaka/full/MWmwWeP" frameborder="0" allowfullscreen="false" width="100%" height="600px"></iframe>

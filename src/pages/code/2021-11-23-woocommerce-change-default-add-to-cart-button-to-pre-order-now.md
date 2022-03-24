@@ -4,17 +4,15 @@ title: 'WooCommerce: Change default "Add to Cart" button text to "Pre-order Now"
 date: 2021-11-23 10:22
 featuredpost: false
 featuredImage: /assets/wordpress.png
-description: In this post you will learn how to change the default WooCommerce's "Add to Cart" button text to something else. In this example the new text will be "Pre-order now".
+description: In this post, you will learn how to change the default WooCommerce's "Add to Cart" button text to something else. In this example, the new text will be "Pre-order now".
 tags:
   - Web Development
   - WooCommerce
 ---
 
-In this post you will learn how to change the default WooCommerce's "Add to Cart" button text to something else. In this example, the new text will be "Pre-order now".
-
 ## You must add the following code on your `functions.php` file
 
-Make sure you replace the `$specific_ids` variable to use your desired product's ids. In this example we are using the following product's ids: `2413, 2414, 2415`
+Make sure you replace the `$specific_ids` variable to use your desired product's ids. In this example, we are using the following product's ids: `2413, 2414, 2415`
 
 ```php
 /*  Change default "Add to Cart" button text to "Pre-order Now"

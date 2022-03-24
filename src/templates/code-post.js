@@ -18,7 +18,6 @@ export const CodePostTemplate = ({
   tags,
   title,
   helmet,
-  video,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -32,12 +31,6 @@ export const CodePostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            {video ? console.log(video) : ''}
-            {video && video.length ? (
-              <video autoPlay loop muted disablePictureInPicture>
-                <source src={`/media/${video}`} type="video/mp4" />
-              </video>
-            ) : null}
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -64,7 +57,6 @@ CodePostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  video: PropTypes.string,
 };
 
 const CodePost = ({ data }) => {
@@ -87,7 +79,6 @@ const CodePost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        video={post.frontmatter.video}
       />
     </Layout>
   );
@@ -110,7 +101,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        video
         tags
       }
     }

@@ -1,6 +1,6 @@
 ---
 templateKey: code-post
-title: SVG Animation explained
+title: --- TO DO --- SVG Animation explained
 date: 2020-01-13 12:46
 featuredpost: false
 featuredImage: /assets/svg-animation.png

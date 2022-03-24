@@ -4,14 +4,14 @@ title: How to add HTML content on a specific page-id on WordPress?
 date: 2020-11-10 23:19
 featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
-description: How to add HTML content on a specific page-id on WordPress?
+description: See the post below to see how to do it.
 tags:
   - Web Development
   - WooCommerce
   - JavaScript
 ---
 
-Bellow is shown how to add a lightbox message on a specific page on WordPress. In this example for a wine section on the website [suninabox.eu](https://suninabox.eu), is there a conditional to check for the page-id `if( $post->ID == 2647)`. From here, is just a matter of writing down the desired code for the page.
+Below is shown how to add a lightbox message on a specific page on WordPress. In this example for a wine section on the website [suninabox.eu](https://suninabox.eu), is there a conditional to check for the page-id `if( $post->ID == 2647)`. From here, it is just a matter of writing down the desired code for the page.
 
 Here is where all the magic happens: `add_action( 'wp_footer', 'age_wine_message' );`, this snippet is loaded on the footer of the page.
 

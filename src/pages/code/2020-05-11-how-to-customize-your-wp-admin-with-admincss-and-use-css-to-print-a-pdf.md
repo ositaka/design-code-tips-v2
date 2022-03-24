@@ -1,20 +1,21 @@
 ---
 templateKey: code-post
-title: How to customize your /wp-admin with admin.css
+title: How to customize your /wp-admin with admin.css, and use CSS to print a PDF
 date: 2021-04-09 00:00
-featuredpost: false
+featuredpost: true
 featuredImage: /assets/wordpress.png
-description: Learn how to customize your /wp-admin with admin.css
+description: Learn how to customize your /wp-admin with admin.css and how to style the WooCommerce's "Overview analytics" page to be printed as PDF.
 tags:
+  - PDF
   - Web Development
   - WooCommerce
 ---
 
 This post is helpful if you want to customize your `/wp-admin` with your own `admin.css` file.
 
-## Adding the code first to your functions.php
+## Adding the code first to your `functions.php`
 
-Depending on how deep you want the customization to the admin dashboard, you might be interested in using an **[extra plugin](https://wordpress.org/plugins/user-role-editor/) to set `user roles`**. With this plugin you will be able to set specific CSS to each user role, for instance, `Shop Manager`.
+Depending on how deep you want the customization to the admin dashboard, you might be interested in using an **[extra plugin](https://wordpress.org/plugins/user-role-editor/) to set `user roles`**. With this plugin, you will be able to set specific CSS to each user role, for instance, `Shop Manager`.
 
 To keep things easy for the copy/paste, I will just provide one script. You must add this code on your `functions.php` file.
 
@@ -51,9 +52,9 @@ function admin_style() {
 add_action( 'admin_enqueue_scripts', 'admin_style' );
 ```
 
-## admin.css — a "real world scenario" example
+## `admin.css` — a "real world scenario" example
 
-While writing the first part of the post, I realized it might be interesting to see an example of a live website I've developed. So, I just did it. The code bellow is the admin.css file of an online-shop (around 100 products).
+While writing the first part of the post, I realized it might be interesting to see an example of a live website I have developed. Therefore, I just did it. The code below is the admin.css file of an online-shop (around 100 products).
 
 ```css
 #wp-admin-bar-wp-logo,
@@ -221,11 +222,11 @@ While writing the first part of the post, I realized it might be interesting to 
 }
 ```
 
-> If you pay attention to the likes 136-145, you'll spot a fade-in transition on each page transition ;)
+> If you pay attention to the likes 136-145, you will spot a fade-in transition on each page transition ;)
 
 You can use the **`.role-shop_manager`** selector to customize the `/wp-admin`.
 
-For a last snippet I've got here an advanced example in how your own `admin.css` file it might be your best friend for literally "printing" the wp-admin dashboard. This code is actually the continuity of the last snippet. In this example, this is helpful if the shop manager whants to **print the shop "Overview" analytics**.
+file might be your best friend for literally "printing" the wp-admin dashboard. This code is actually the continuity of the last snippet. In this example, this is helpful if the shop manager wants to **print the shop "Overview" analytics page**.
 
 ```css
 /* Print "Overview" from Analytics */
@@ -259,11 +260,20 @@ For a last snippet I've got here an advanced example in how your own `admin.css`
   .woocommerce-layout__main {
     margin: 0 !important;
   }
+
   table * {
     font-size: 8pt !important;
     padding: 3px !important;
   }
 }
 ```
+
+Below you can see how the manager sees the "Overview analytics" page, after applying the CSS above.
+
+![WooCommerce "Overview analytics" page](/media/woocommerce__overview-example.png)
+
+And, finally, the desired result. To be able to print the "Overview analytics" page or save it as a PDF (2 pages).
+
+![WooCommerce "Overview analytics" page printed as PDF](/media/woocommerce__overview-example__printed.png)
 
 Hope this might be helpful to someone else, as well it helps me.

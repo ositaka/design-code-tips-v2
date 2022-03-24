@@ -11,7 +11,7 @@ tags:
   - Animation
 ---
 
-I am using a `sessionStorage` item to set a cookie, in case the intro has been already played or in case you are not visiting the `home` page.
+I am using a `sessionStorage` item to set a cookie when the browser plays the intro for the first time. Like this, we do not borrow the visitors by playing it multiple times, or just play it when they visit the `home` page.
 
 ```js
 <!-- intro -->

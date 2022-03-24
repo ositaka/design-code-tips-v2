@@ -1,6 +1,6 @@
 ---
 templateKey: code-post
-title: "WooCommerce: Check if products on cart have a specific tag and remove them if they can't be shipped to the customer country"
+title: "WooCommerce: Check if products on cart have a specific tag, and remove them if they can't be shipped to the customer country"
 date: 2021-04-20 21:56
 featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
@@ -13,11 +13,11 @@ tags:
 
 ## Check if products on cart have a specific tag: `#bottle-wine`
 
-I've been looking for a way of removing specific products if they can't be shipped to the customer country.
+I have been looking for a way of removing specific products if they can't be shipped to the customer country.
 
-Initially, I've came up with a long code with AJAX calls, but that solution was far from perfect. After a few months, I had to add a few more products like those one and I had to sharp the code I had before. After looking for new solutions, I've came up with the following one bellow.
+Initially, I have come up with a long code with AJAX calls, but that solution was far from perfect. After a few months, I had to add a few more products like those ones and I had to sharpen the code I had before. After looking for new solutions, I have come up with the following one below.
 
-As you can see, I've mixed two different sources and finally got it working right.
+As you can see, I have mixed two different sources and finally got it working right.
 
 ```php
 /**

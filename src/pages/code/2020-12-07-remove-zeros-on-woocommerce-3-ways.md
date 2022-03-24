@@ -12,9 +12,9 @@ tags:
   - JavaScript
 ---
 
-## 1st way — Remove the Zeros globally (front-end/backend)
+## First way — Remove the Zeros globally (front-end/backend)
 
-This first approach is the "official" WooCommerce approach from the docs. However, in a situation you want to have the Zeros on the backend, for generated Invoice PDFs, for instance, the 2nd option it will be more appropriated.
+This first approach is the "official" WooCommerce approach from the docs. However, in a situation where you want to have the "zeros" on the backend, for generated Invoice PDFs, for instance, the second option will be more appropriate.
 
 ```php
 /**
@@ -23,7 +23,7 @@ This first approach is the "official" WooCommerce approach from the docs. Howeve
 add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
 ```
 
-## 2nd way — Removing ".00" with JavaScript (front-end only)
+## Second way — Removing ".00" with JavaScript (front-end only)
 
 ```php
 add_action( 'wp_footer', 'remove_zeros' );
@@ -43,7 +43,7 @@ function remove_zeros() {
 }
 ```
 
-## 3rd way — Create a function to make it work properly (on front-end only)
+## Third way — Create a function to make it work properly (on front-end only)
 
 After some help on Slack, I got the following snippet, the best one:
 

@@ -2,13 +2,12 @@
 templateKey: code-post
 title: How to add extra "Local Pickup" fields for shipping methods in WooCommerce?
 date: 2020-11-06 23:08
-featuredpost: false
+featuredpost: true
 featuredImage: /assets/woocommerce-logo.png
-description: Learn how to add extra fields options for the "Local Pickup" shipping methods on WooCommerce's Cart and Checkout page.
+description: Learn how to add extra fields’ options for the "Local Pickup" shipping methods on WooCommerce's Cart and Checkout page.
 tags:
   - Web Development
   - WooCommerce
-video: test.mp4
 ---
 
 This post is helpful if you want to add extra options on "Local Pickup" shipping methods. You must add this code on your `functions.php` file.
@@ -23,7 +22,7 @@ function carrier_settings(){
         'targeted_methods' => array('local_pickup:9','local_pickup:4'), // Your targeted shipping method(s) in this array
         'field_id'         => 'carrier_name', // Field Id
         'field_type'       => 'select', // Field type
-        'field_label'      => '', // Leave empty value if the first option has a text (see below).
+        'field_label'      => '', // Leave an empty value if the first option has a text (see below).
         'label_name'       => __("Pickup location and time:","woocommerce"), // for validation and as meta key for orders
         'field_options'    => array(
              // The option displayed at first ( or keep an empty value '',)
@@ -178,6 +177,8 @@ function admin_order_display_carrier_company( $order ) {
 }
 ```
 
+## Display carrier company after shipping line everywhere (orders and emails)
+
 ```php
 // Display carrier company after shipping line everywhere (orders and emails)
 add_filter( 'woocommerce_get_order_item_totals', 'display_carrier_company_on_order_item_totals', 1000, 3 );
@@ -212,10 +213,10 @@ function display_carrier_company_on_order_item_totals( $total_rows, $order, $tax
 
 Source: <https://stackoverflow.com/questions/63191513/extra-carrier-field-for-shipping-methods-in-woocommerce-cart-and-checkout>
 
-## Hide delivery section on checkout page if "local pickup" is chosen
+## Hide delivery section on checkout page, if the user chooses a "local pickup"
 
 ```php
-// hide delivery section on checkout page if "local pickup" is chosen
+// Hide delivery section on checkout page, if the user chooses a "local pickup"
 add_action( 'woocommerce_after_checkout_form', 'disable_delivery_section_on_checkout_form' );
 
 function disable_delivery_section_on_checkout_form( $available_gateways ) {

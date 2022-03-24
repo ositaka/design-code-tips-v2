@@ -10,9 +10,9 @@ tags:
   - CSS
 ---
 
-In this snippet you can see an example I've made to replace the default text of a "Download PDF" button.
+In this snippet, you can see an example I have made to replace the default text of a "Download PDF" button.
 
-This might be a good solution if you don't have any other way of replacing text on your website. Here, I am replacing the English text with the Portuguese correspondent text.
+This might be a good solution if you do not have any other way of replacing text on your website. Here, I am replacing the English text with the Portuguese correspondent text.
 
 ```css
 a.download-lnk-pdf {
@@ -25,4 +25,4 @@ a.download-lnk-pdf:before {
 }
 ```
 
-Please note that you can also archive this text replacement with JavaScript, but it requires a lot more of effort.
+Please note that you can also archive this text replacement with JavaScript, but it requires a lot more effort.
