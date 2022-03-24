@@ -15,18 +15,18 @@ The function bellow allows you to change all texts, titles or strings found on W
 
 ```php
 function change_texts_by_hand( $translated_text, $text, $domain ) {
+    switch ($translated_text) {
+        case 'Additional Information':
+            $translated_text = __('Details afhaling', 'woocommerce');
+            break;
+        case 'Order Tracking':
+            $translated_text = __('Uw bestelling', 'woocommerce');
+            break;
+    }
+    return $translated_text;
+}
 
-	  switch ($translated_text) {
-		case 'Additional Information':
-		  $translated_text = __('Details afhaling', 'woocommerce');
-		  break;
-		case 'Order Tracking':
-		  $translated_text = __('Uw bestelling', 'woocommerce');
-		  break;
-	  }
-	return $translated_text;
-  }
-  add_filter( 'gettext', 'change_texts_by_hand', 20, 3 );
+add_filter( 'gettext', 'change_texts_by_hand', 20, 3 );
 ```
 
 # When to use it?

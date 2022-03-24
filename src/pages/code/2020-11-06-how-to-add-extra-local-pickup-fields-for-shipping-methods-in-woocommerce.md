@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: How to add extra "Local Pickup" fields for shipping methods in WooCommerce?
 date: 2020-11-06 23:08
@@ -248,4 +248,4 @@ function disable_delivery_section_on_checkout_form( $available_gateways ) {
          });
       </script>
    <?php
-```
+``` -->

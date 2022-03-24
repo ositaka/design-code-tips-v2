@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: "WooCommerce: Check if products on cart have a specific tag and remove them if they can't be shipped to the customer country"
 date: 2021-04-20 21:56
@@ -63,4 +63,4 @@ function checking_and_removing_items( $cart ) {
 }
 ```
 
-Have in mind for this code to work, you have to add `#bottle-wine` (in this case) as a **product tag**.
+Have in mind for this code to work, you have to add `#bottle-wine` (in this case) as a **product tag**. -->

@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: How to add thumbnails on WooCommerce's Grouped Products
 date: 2021-08-31 12:04
@@ -50,4 +50,4 @@ With this solution we are changing the core files of WooCommerce, which means yo
 
 If you have a solution for this particular case, please let me know and I am more than happy to share it with everybody.
 
-[The source for this "bonus" was found here](https://stackoverflow.com/questions/28922171/woocommerce-is-it-possible-to-add-variable-products-to-a-grouped-product/54949123#54949123).
+[The source for this "bonus" was found here](https://stackoverflow.com/questions/28922171/woocommerce-is-it-possible-to-add-variable-products-to-a-grouped-product/54949123#54949123). -->

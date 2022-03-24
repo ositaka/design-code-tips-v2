@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: How to customize your /wp-admin with admin.css
 date: 2021-04-09 00:00
@@ -266,4 +266,4 @@ For a last snippet I've got here an advanced example in how your own `admin.css`
 }
 ```
 
-Hope this might be helpful to someone else, as well it helps me.
+Hope this might be helpful to someone else, as well it helps me. -->

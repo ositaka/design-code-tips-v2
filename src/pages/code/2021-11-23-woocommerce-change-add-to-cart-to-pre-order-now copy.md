@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: 'WooCommerce: Change default "Add to Cart" button text to "Pre-order Now"'
 date: 2021-11-23 10:22
@@ -36,4 +36,4 @@ function change_add_to_cart_to_pre_order( $button_text, $product ) {
 }
 ```
 
-Hope this might be helpful to someone else, as well it helps me.
+Hope this might be helpful to someone else, as well it helps me. -->

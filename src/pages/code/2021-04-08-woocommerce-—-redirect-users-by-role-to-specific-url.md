@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: 'WooCommerce: Redirect users by role to specific URL'
 date: 2021-04-08 12:25
@@ -52,4 +52,4 @@ function shop_manager_login_redirect( $redirect_to, $request, $user ) {
     return $redirect_to;
 }
 add_filter( 'login_redirect', 'shop_manager_login_redirect', 10, 3 );
-```
+``` -->

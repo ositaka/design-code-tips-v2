@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: Remove zeros on WooCommerce (3 ways)
 date: 2020-12-07 16:41
@@ -55,4 +55,4 @@ function conditionally_trim_zeros( $trim ) {
 	return $trim;
 }
 add_filter( 'woocommerce_price_trim_zeros', 'conditionally_trim_zeros' );
-```
+``` -->

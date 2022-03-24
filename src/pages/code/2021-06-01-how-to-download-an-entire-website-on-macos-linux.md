@@ -1,4 +1,4 @@
----
+<!-- ---
 templateKey: code-post
 title: How to download an entire website on MacOS/Linux
 date: 2021-06-01 14:06
@@ -16,4 +16,4 @@ Simple type the following command line on your `terminal`:
 
 ```shell
 wget -r https://example.com
-```
+``` -->
