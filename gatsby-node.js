@@ -53,7 +53,7 @@ exports.createPages = ({ actions, graphql }) => {
     let codetags = []
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach((edge) => {
-      const isCodePost = edge.node.frontmatter.templateKey == 'code-post'
+      // const isCodePost = edge.node.frontmatter.templateKey == 'code-post'
 
       if (isCodePost) {
         if (_.get(edge, `node.frontmatter.tags`)) {
