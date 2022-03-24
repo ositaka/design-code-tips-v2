@@ -53,7 +53,6 @@ export const CodeTagPageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: {in: [$tag]}, templateKey: {eq: "code-post"}} }
     ) {
