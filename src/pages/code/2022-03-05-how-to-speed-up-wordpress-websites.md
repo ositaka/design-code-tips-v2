@@ -7,7 +7,7 @@ featuredImage: https://img.youtube.com/vi/BrY6a-lsLp8/0.jpg
 description: Please have in mind this video is just explaining a "core concept" to speed up WordPress websites.
 tags:
   - Performance
-  - Web-dev
+  - Web Development
   - WordPress
 ---
 

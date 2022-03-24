@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
 description: Remove zeros on WooCommerce (3 ways)
 tags:
-  - Web-dev
+  - Web Development
   - WooCommerce
   - PHP
   - JavaScript

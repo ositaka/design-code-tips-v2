@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
 description: How to add HTML content on a specific page-id on WordPress?
 tags:
-  - Web-dev
+  - Web Development
   - WooCommerce
   - JavaScript
 ---

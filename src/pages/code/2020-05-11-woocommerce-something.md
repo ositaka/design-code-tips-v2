@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/wordpress.png
 description: Learn how to customize your /wp-admin with admin.css
 tags:
-  - Web-dev
+  - Web Development
   - WooCommerce
 ---
 

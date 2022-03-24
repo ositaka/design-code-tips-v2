@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
 description: How to change specific texts, titles, terms and strings "by hand" on WordPress or WooCommerce? Find it out on this post.
 tags:
-  - Web-dev
+  - Web Development
   - WooCommerce
   - PHP
 ---

@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/wordpress.png
 description: In this post you will learn how to change the default WooCommerce's "Add to Cart" button text to something else. In this example the new text will be "Pre-order now".
 tags:
-  - Web-dev
+  - Web Development
   - WooCommerce
 ---
 

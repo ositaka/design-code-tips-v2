@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
 description: Learn how to add extra fields options for the "Local Pickup" shipping methods on WooCommerce's Cart and Checkout page.
 tags:
-  - Web-dev
+  - Web Development
   - WooCommerce
 video: test.mp4
 ---

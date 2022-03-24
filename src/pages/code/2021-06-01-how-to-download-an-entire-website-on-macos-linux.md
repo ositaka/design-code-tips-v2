@@ -8,7 +8,7 @@ description: |
   Simple type the following command line on your terminal:
   wget -r https://example.com
 tags:
-  - Web-dev
+  - Web Development
   - Bash
 ---
 

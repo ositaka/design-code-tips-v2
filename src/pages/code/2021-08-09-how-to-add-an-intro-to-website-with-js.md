@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/js.png
 description: How to add an intro to website with JS
 tags:
-  - Web-dev
+  - Web Development
   - JavaScript
   - Animation
 ---

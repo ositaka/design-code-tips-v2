@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/js.png
 description: This snippet is a great solution to change the SRC of an <img> html element with vanilla js.
 tags:
-  - Web-dev
+  - Web Development
   - JavaScript
 ---
 

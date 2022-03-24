@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
 description: Discover how to add thumbnails on WooCommerce's Grouped Products. And, on the "Bonus" section you can find out how to show every single variation of a Variable Product.
 tags:
-  - Web-dev
+  - Web Development
   - PHP
   - WooCommerce
 ---

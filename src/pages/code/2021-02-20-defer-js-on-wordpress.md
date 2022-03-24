@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/woocommerce-logo.png
 description: Defer JavaScript on WordPress and make your website load 10x faster.
 tags:
-  - Web-dev
+  - Web Development
   - PHP
   - WordPress
   - JavaScript

@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/css.png
 description: Replace text with CSS only. Please note this solution is not ideal if you are making an extremely accessible website. Is merely visual.
 tags:
-  - Web-dev
+  - Web Development
   - CSS
 ---
 

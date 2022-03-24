@@ -6,7 +6,7 @@ featuredpost: false
 featuredImage: /assets/css.png
 description: How to customise the Scrollbar with CSS (WebKit)
 tags:
-  - Web-dev
+  - Web Development
   - CSS
 ---
 
