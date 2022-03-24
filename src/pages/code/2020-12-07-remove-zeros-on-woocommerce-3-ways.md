@@ -3,7 +3,7 @@ templateKey: code-post
 title: Remove zeros on WooCommerce (3 ways)
 date: 2020-12-07 16:41
 featuredpost: false
-featuredImage: /assets/woocommerce-logo.png
+featuredimage: /assets/woocommerce-logo.png
 description: Remove zeros on WooCommerce (3 ways)
 tags:
   - Web Development

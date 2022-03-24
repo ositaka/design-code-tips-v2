@@ -3,7 +3,7 @@ templateKey: code-post
 title: How to add an intro to website with JS
 date: 2021-08-09 14:55
 featuredpost: false
-featuredImage: /assets/js.png
+featuredimage: /assets/js.png
 description: How to add an intro to website with JS
 tags:
   - Web Development

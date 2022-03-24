@@ -3,7 +3,7 @@ templateKey: code-post
 title: How to change specific texts and strings "by hand" on WordPress
 date: 2020-11-15 13:30
 featuredpost: false
-featuredImage: /assets/woocommerce-logo.png
+featuredimage: /assets/woocommerce-logo.png
 description: How to change specific texts, titles, terms and strings "by hand" on WordPress or WooCommerce? Find it out on this post.
 tags:
   - Web Development

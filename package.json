@@ -9,7 +9,6 @@
     "@stayradiated/gatsby-remark-video": "^2.4.0",
     "gatsby": "^4.0.0",
     "gatsby-plugin-feed-generator": "^2.0.5",
-    "gatsby-plugin-gatsby-cloud": "^4.10.1",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^4.10.0",

@@ -3,7 +3,7 @@ templateKey: code-post
 title: How to speed up WordPress websites
 date: 2022-03-05 10:22
 featuredpost: false
-featuredImage: /assets/wordpress.png
+featuredimage: /assets/wordpress.png
 description: Please have in mind this video is just explaining a "core concept" to speed up WordPress websites. Your website will not be drastically faster just because you activate X, Y or Z plugin.
 tags:
   - Performance

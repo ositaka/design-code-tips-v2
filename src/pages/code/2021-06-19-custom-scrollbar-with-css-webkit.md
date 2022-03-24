@@ -3,7 +3,7 @@ templateKey: code-post
 title: Custom Scrollbar with CSS (WebKit)
 date: 2021-06-19 14:29
 featuredpost: false
-featuredImage: /assets/css.png
+featuredimage: /assets/css.png
 description: How to customize the Scrollbar with CSS (WebKit)
 tags:
   - Web Development

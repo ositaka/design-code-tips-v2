@@ -3,7 +3,7 @@ templateKey: code-post
 title: Replace text with CSS only
 date: 2021-05-03 11:20
 featuredpost: false
-featuredImage: /assets/css.png
+featuredimage: /assets/css.png
 description: Replace text with CSS only. Please note this solution is not ideal if you are making an extremely accessible website. Is merely visual.
 tags:
   - Web Development

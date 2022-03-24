@@ -3,7 +3,7 @@ templateKey: code-post
 title: How to scale a SVG with CSS only
 date: 2021-08-23 12:25
 featuredpost: false
-featuredImage: /assets/css.png
+featuredimage: /assets/css.png
 description: Learn how to scale automatically a SVG with CSS.
 tags:
   - CSS

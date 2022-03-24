@@ -3,7 +3,7 @@ templateKey: code-post
 title: Defer JS on WordPress
 date: 2021-02-20 15:16
 featuredpost: false
-featuredImage: /assets/woocommerce-logo.png
+featuredimage: /assets/woocommerce-logo.png
 description: Defer JavaScript on WordPress and make your website load 10x faster.
 tags:
   - Web Development
