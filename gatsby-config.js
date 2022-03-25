@@ -87,10 +87,11 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-highlight-code`,
+            resolve: `gatsby-remark-vscode`,
             options: {
-              terminal: 'carbon',
-            },
+              // theme: 'Abyss' // Or install your favorite theme from GitHub
+              theme: 'Abyss'
+            }
           },
           {
             resolve: 'gatsby-remark-external-links',

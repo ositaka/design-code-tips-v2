@@ -1,0 +1,19 @@
+hr {
+  margin: 6rem 0;
+}
+
+.video-frame {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.video-frame video {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

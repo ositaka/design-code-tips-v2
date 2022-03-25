@@ -209,9 +209,9 @@ function display_carrier_company_on_order_item_totals( $total_rows, $order, $tax
 }
 ```
 
----
-
 Source: <https://stackoverflow.com/questions/63191513/extra-carrier-field-for-shipping-methods-in-woocommerce-cart-and-checkout>
+
+---
 
 ## Hide delivery section on checkout page, if the user chooses a "local pickup"
 

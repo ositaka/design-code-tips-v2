@@ -61,8 +61,10 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}media/og-image.jpg`}
         />
       </Helmet>
-      <Navbar open={isMenuOpen} toggle={toggleBurger} />
-      <div className="container">{children}</div>
+      <div className="wrapper">
+        <Navbar open={isMenuOpen} toggle={toggleBurger} />
+        <div className="container">{children}</div>
+      </div>
       <Footer />
     </div>
   );

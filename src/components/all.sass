@@ -1,3 +1,5 @@
+@import './other.css'
+  
 @font-face 
   font-family: "Operator Mono Medium Italic"
   src: url("../fonts/operator-mono__medium-italic.woff2")
@@ -175,7 +177,7 @@ body,
 button,
 input,
 textarea
-  font-family: "Quicksand", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  font-family: "Quicksand", sans-serif
   font-size: 1.5rem
   line-height: 2.4rem
 
@@ -204,18 +206,25 @@ html
   hyphens: auto
   line-height: 1
   margin: auto
-  max-width: 94.5%
   -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
   @include tablet
     font-size: calc(100vw / 1024 * 10)
   @include phone
     font-size: calc(100vw / 460 * 10)
+
+body
+  margin: 0
 
 img,
 picture,
 video
   max-width: 100%
   
+.wrapper
+  max-width: 93.6%
+  margin: auto
+
 .navbar
   align-items: center
   display: flex
@@ -234,7 +243,9 @@ video
     margin: 0 2.9rem
     text-decoration: none
   .navbar-item.active
-    border-bottom: 10px solid white
+    border-bottom-width: 6px
+    border-bottom-style: solid
+    padding-bottom: 0.5rem
 
   .navbar-col
     width: 15%
@@ -298,7 +309,12 @@ video
       display: flex
       flex-direction: column
       justify-content: space-between
+      height: 100%
       .post-info
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
         padding: 2.9rem 3.8rem 3rem
         .post-title
           margin-bottom: 2rem
@@ -306,7 +322,6 @@ video
         .post-details
           display: flex
           justify-content: space-between
-          -webkit-font-smoothing: none
           .post-date
             font-size: 1.2rem
             font-weight: $font-regular
@@ -324,9 +339,7 @@ video
               display: inline
               a
                 margin-left: 0.5rem
-  .card
-    .post
-      height: calc(100% - 5.9rem)
+
   .card.has-image
     .post
       height: auto
@@ -377,26 +390,53 @@ video
   a:hover
     text-decoration: underline
 
-hr
-  margin: 6rem!important
-  
+footer
+  background: red
 
 
 
 // Typography
 h1, h2, h3, h4, h5, h6
   margin: 0
-.title-h1
+.title-h1,
+.single-post h1
   font-size: 4.76rem
+  letter-spacing: -0.08rem
   line-height: 5.92rem
-.title-h2
+.title-h2,
+.single-post h3
   font-size: 2.38rem
   line-height: 3.4rem
   font-weight: $font-regular
-.title-h3
+.title-h3,
+.single-post h2
   font-size: 2.765rem
   line-height: 3.5rem
 
+.single-post h3,
+.single-post a
+  font-weight: $font-bold
+
+.single-post h2,
+.single-post h3
+  margin-top: 6rem
+
+.single-post p
+  font-size: 2.1rem
+  line-height: 3.6rem
+  margin-bottom: 3.4rem
+
+.single-post
+  margin: 0 auto 18rem
+  max-width: 1000px
+  img,
+  video
+    border-radius: 1rem
+  .taglist
+    list-style: none
+    li
+      display: inline-block
+      margin-right: 3rem
 
 
 // Themes
@@ -411,6 +451,8 @@ h1, h2, h3, h4, h5, h6
   a,
   .navbar-item
     color: $dark__text-color
+  .navbar-item.active
+    border-bottom-color: $dark__text-color
   .card
     background: $dark__background-lighter
 
@@ -425,5 +467,7 @@ h1, h2, h3, h4, h5, h6
   a,
   .navbar-item
     color: $light__text-color
+  .navbar-item.active
+    border-bottom-color: $light__text-color
   .card
     background: $light__background-lighter

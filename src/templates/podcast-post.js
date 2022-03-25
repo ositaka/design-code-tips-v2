@@ -32,7 +32,7 @@ export const PodcastPostTemplate = ({
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <h2>Tags</h2>
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
