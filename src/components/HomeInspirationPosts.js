@@ -19,9 +19,8 @@ class HomeInspirationPostsTemplate extends React.Component {
                 className="card has-image"
               >
                 <article
-                  className={`post ${
-                    post.frontmatter.featuredpost ? 'is-featured' : ''
-                  }`}
+                  className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''
+                    }`}
                 >
                   <div className="post-image">
                     {post.frontmatter.featuredimage ? (
@@ -78,11 +77,6 @@ export default function HomeInspirationPosts() {
     <StaticQuery
       query={graphql`
         query HomeInspirationPostsQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { templateKey: { eq: "inspiration-post" } } }

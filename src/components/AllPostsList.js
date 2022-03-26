@@ -18,9 +18,8 @@ class AllPostsListTemplate extends React.Component {
               <li key={post.id} className="list-post">
                 <Link to={post.fields.slug}>
                   <article
-                    className={`post ${
-                      post.frontmatter.featuredpost ? 'is-featured' : ''
-                    }`}
+                    className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''
+                      }`}
                   >
                     <div className="post-info">
                       <h3 className="post-title title-h3">
@@ -31,7 +30,7 @@ class AllPostsListTemplate extends React.Component {
                           {post.frontmatter.date}
                         </span>
                         {post.frontmatter.tags &&
-                        post.frontmatter.tags.length ? (
+                          post.frontmatter.tags.length ? (
                           <ul className="post-tags">
                             {post.frontmatter.tags.map((tag) => (
                               <li key={tag + `tag`}>#{tag}</li>
@@ -83,7 +82,6 @@ export default function AllPostsList() {
                 }
               }
             }
-            limit: 1000
           ) {
             edges {
               node {

@@ -20,9 +20,8 @@ class HomePodcastPostsTemplate extends React.Component {
                   className="card has-image"
                 >
                   <article
-                    className={`post ${
-                      post.frontmatter.featuredpost ? 'is-featured' : ''
-                    }`}
+                    className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''
+                      }`}
                   >
                     <div className="post-image">
                       {post.frontmatter.featuredimage ? (
@@ -51,7 +50,7 @@ class HomePodcastPostsTemplate extends React.Component {
                           {post.frontmatter.date}
                         </span>
                         {post.frontmatter.tags &&
-                        post.frontmatter.tags.length ? (
+                          post.frontmatter.tags.length ? (
                           <ul className="post-tags">
                             {post.frontmatter.tags.map((tag) => (
                               <li key={tag + `tag`}>#{tag}</li>
@@ -83,11 +82,6 @@ export default function HomePodcastPosts() {
     <StaticQuery
       query={graphql`
         query HomePodcastPostsQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
           allMarkdownRemark(
             sort: { order: ASC, fields: [frontmatter___date] }
             filter: {
