@@ -60,7 +60,7 @@ module.exports = {
               maxWidth: 2048,
               withWebp: true,
               tracedSVG: true,
-              loading: "lazy",
+              loading: 'lazy',
             },
           },
           {
@@ -90,8 +90,8 @@ module.exports = {
             resolve: `gatsby-remark-vscode`,
             options: {
               // theme: 'Abyss' // Or install your favorite theme from GitHub
-              theme: 'Abyss'
-            }
+              theme: 'Abyss',
+            },
           },
           {
             resolve: 'gatsby-remark-external-links',
@@ -160,8 +160,8 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   html: edge.node.html,
-                };
-              });
+                }
+              })
             },
           },
         ],
@@ -200,6 +200,7 @@ module.exports = {
   ],
   // Fix Netlify deloy error/failure
   flags: {
-    PARALLEL_QUERY_RUNNING: true
-  }
-};
+    FAST_DEV: true,
+    PARALLEL_QUERY_RUNNING: true,
+  },
+}

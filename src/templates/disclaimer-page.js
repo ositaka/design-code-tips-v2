@@ -1,12 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
 
 // eslint-disable-next-line
-export const DisclaimerPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+export const DisclaimerPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+}) => {
+  const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
@@ -23,17 +27,17 @@ export const DisclaimerPageTemplate = ({ title, content, contentComponent }) => 
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 DisclaimerPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-};
+}
 
 const DisclaimerPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
@@ -43,14 +47,14 @@ const DisclaimerPage = ({ data }) => {
         content={post.html}
       />
     </Layout>
-  );
-};
+  )
+}
 
 DisclaimerPage.propTypes = {
   data: PropTypes.object.isRequired,
-};
+}
 
-export default DisclaimerPage;
+export default DisclaimerPage
 
 export const disclaimerPageQuery = graphql`
   query DisclaimerPage($id: String!) {
@@ -61,4 +65,4 @@ export const disclaimerPageQuery = graphql`
       }
     }
   }
-`;
+`

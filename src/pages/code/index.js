@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react'
 
-import Layout from "../../components/Layout";
-import CodePosts from "../../components/CodePosts";
-import CodeTags from "../../components/CodeTags";
+import Layout from '../../components/Layout'
+import CodePosts from '../../components/CodePosts'
+import CodeTags from '../../components/CodeTags'
 
 export default class CodeIndexPage extends React.Component {
   render() {
@@ -20,6 +20,6 @@ export default class CodeIndexPage extends React.Component {
           </section>
         </div>
       </Layout>
-    );
+    )
   }
 }

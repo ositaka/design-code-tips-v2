@@ -46,8 +46,6 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-
-
     // Tag pages:
     let tags = []
     // let codetags = []
@@ -66,7 +64,6 @@ exports.createPages = ({ actions, graphql }) => {
       }
 
       // }
-
     })
     // Eliminate duplicate tags
     tags = _.uniq(tags)
@@ -131,10 +128,10 @@ exports.createSchemaCustomization = ({ actions }) => {
           query: {
             filter: {
               absolutePath: {
-                eq: filePath
-              }
-            }
-          }
+                eq: filePath,
+              },
+            },
+          },
         })
 
         if (!fileNode) {
@@ -142,8 +139,8 @@ exports.createSchemaCustomization = ({ actions }) => {
         }
 
         return fileNode
-      }
-    })
+      },
+    }),
   })
 
   const typeDefs = `

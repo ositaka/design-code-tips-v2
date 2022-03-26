@@ -15,8 +15,9 @@ class HomeToolsPostsTemplate extends React.Component {
             posts.map(({ node: post }) => (
               <div className="is-parent column is-6" key={post.id}>
                 <article
-                  className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
-                    }`}
+                  className={`blog-list-item tile is-child box notification ${
+                    post.frontmatter.featuredpost ? 'is-featured' : ''
+                  }`}
                 >
                   <header>
                     {post.frontmatter.featuredimage ? (
@@ -66,7 +67,6 @@ HomeToolsPosts.propTypes = {
   }),
 }
 
-
 export default function HomeToolsPosts() {
   return (
     <StaticQuery
@@ -79,7 +79,12 @@ export default function HomeToolsPosts() {
           }
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "tools-post" }, featuredpost: { eq: true } } }
+            filter: {
+              frontmatter: {
+                templateKey: { eq: "tools-post" }
+                featuredpost: { eq: true }
+              }
+            }
             limit: 6
           ) {
             edges {
@@ -110,7 +115,9 @@ export default function HomeToolsPosts() {
           }
         }
       `}
-      render={(data, count) => <HomeToolsPostsTemplate data={data} count={count} />}
+      render={(data, count) => (
+        <HomeToolsPostsTemplate data={data} count={count} />
+      )}
     />
-  );
+  )
 }

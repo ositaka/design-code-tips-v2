@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react'
 
-import Layout from "../../components/Layout";
-import ToolsPosts from "../../components/ToolsPosts";
-import ToolsTags from "../../components/ToolsTags";
+import Layout from '../../components/Layout'
+import ToolsPosts from '../../components/ToolsPosts'
+import ToolsTags from '../../components/ToolsTags'
 
 export default class ToolsIndexPage extends React.Component {
   render() {
@@ -20,6 +20,6 @@ export default class ToolsIndexPage extends React.Component {
           </section>
         </div>
       </Layout>
-    );
+    )
   }
 }

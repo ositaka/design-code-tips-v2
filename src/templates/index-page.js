@@ -1,20 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import { kebabCase } from "lodash";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, graphql } from 'gatsby'
+import { kebabCase } from 'lodash'
 
-import Layout from "../components/Layout";
-import HomeLatestPosts from "../components/HomeLatestPosts";
-import HomeInspirationPosts from "../components/HomeInspirationPosts";
-import HomeToolsPosts from "../components/HomeToolsPosts";
-import HomePodcastPosts from "../components/HomePodcastPosts";
+import Layout from '../components/Layout'
+import HomeLatestPosts from '../components/HomeLatestPosts'
+import HomeInspirationPosts from '../components/HomeInspirationPosts'
+import HomeToolsPosts from '../components/HomeToolsPosts'
+import HomePodcastPosts from '../components/HomePodcastPosts'
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({
-  heading,
-  tags
-}) => {
-
+export const IndexPageTemplate = ({ heading, tags }) => {
   return (
     <div>
       <div className="page-title">
@@ -22,9 +18,7 @@ export const IndexPageTemplate = ({
       </div>
       <section className="section">
         <div className="section-title">
-          <h2 className="title-h2 secondary-font">
-            Latest posts
-          </h2>
+          <h2 className="title-h2 secondary-font">Latest posts</h2>
           <Link to="/all-posts" className="section-title-link">
             View all
           </Link>
@@ -33,9 +27,7 @@ export const IndexPageTemplate = ({
       </section>
       <section className="section">
         <div className="section-title">
-          <h2 className="title-h2 secondary-font">
-            Latest on inspiration
-          </h2>
+          <h2 className="title-h2 secondary-font">Latest on inspiration</h2>
           <Link to="/inspiration" className="section-title-link">
             View all
           </Link>
@@ -44,9 +36,7 @@ export const IndexPageTemplate = ({
       </section>
       <section className="section">
         <div className="section-title">
-          <h2 className="title-h2 secondary-font">
-            Featured free tools
-          </h2>
+          <h2 className="title-h2 secondary-font">Featured free tools</h2>
           <Link to="/tools" className="section-title-link">
             View all
           </Link>
@@ -55,9 +45,7 @@ export const IndexPageTemplate = ({
       </section>
       <section className="section">
         <div className="section-title">
-          <h2 className="title-h2 secondary-font">
-            Featured podcasts
-          </h2>
+          <h2 className="title-h2 secondary-font">Featured podcasts</h2>
           <Link to="/podcasts" className="section-title-link">
             View all
           </Link>
@@ -80,9 +68,9 @@ export const IndexPageTemplate = ({
           ))}
         </ul>
       </section>
-    </div >
-  );
-};
+    </div>
+  )
+}
 
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
@@ -90,10 +78,10 @@ IndexPageTemplate.propTypes = {
   allMarkdownRemark: PropTypes.shape({
     edges: PropTypes.array,
   }),
-};
+}
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter } = data.markdownRemark
   const { group } = data.allMarkdownRemark
 
   return (
@@ -104,8 +92,8 @@ const IndexPage = ({ data }) => {
         tags={group}
       />
     </Layout>
-  );
-};
+  )
+}
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -118,8 +106,7 @@ IndexPage.propTypes = {
   }),
 }
 
-
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -136,4 +123,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { kebabCase } from "lodash";
+import { kebabCase } from 'lodash'
 
 class CodeTagsTemplate extends React.Component {
   render() {
@@ -11,9 +11,7 @@ class CodeTagsTemplate extends React.Component {
     return (
       <>
         <div className="section-title">
-          <h2 className="title-h2 secondary-font">
-            Browse all code's tags
-          </h2>
+          <h2 className="title-h2 secondary-font">Browse all code's tags</h2>
         </div>
         <ul className="tags-list">
           {tags.map((tag) => (
@@ -37,15 +35,14 @@ CodeTags.propTypes = {
   }),
 }
 
-
 export default function CodeTags() {
   return (
     <StaticQuery
       query={graphql`
         query CodeTagsQuery {
           allMarkdownRemark(
-            sort: {order: DESC, fields: [frontmatter___date]}
-            filter: {frontmatter: {templateKey: {eq: "code-post"}}}
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "code-post" } } }
           ) {
             group(field: frontmatter___tags) {
               fieldValue
@@ -56,5 +53,5 @@ export default function CodeTags() {
       `}
       render={(data, count) => <CodeTagsTemplate data={data} count={count} />}
     />
-  );
+  )
 }

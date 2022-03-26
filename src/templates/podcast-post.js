@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
+import { Helmet } from 'react-helmet'
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
 
 // eslint-disable-next-line
 export const PodcastPostTemplate = ({
@@ -16,17 +16,20 @@ export const PodcastPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      {helmet || ""}
+      {helmet || ''}
       <article className="single-post">
-        <h1 className="title-h1">
-          {title}
-        </h1>
+        <h1 className="title-h1">{title}</h1>
         <p>{description}</p>
-        <p>Link to podcast: <Link to={link} target="_blank" rel="noopener noreferrer">{link}</Link></p>
+        <p>
+          Link to podcast:{' '}
+          <Link to={link} target="_blank" rel="noopener noreferrer">
+            {link}
+          </Link>
+        </p>
         <PostContent content={content} />
         {tags && tags.length ? (
           <div style={{ marginTop: `4rem` }}>
@@ -42,8 +45,8 @@ export const PodcastPostTemplate = ({
         ) : null}
       </article>
     </section>
-  );
-};
+  )
+}
 
 PodcastPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -51,10 +54,10 @@ PodcastPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-};
+}
 
 const PodcastPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
@@ -76,16 +79,16 @@ const PodcastPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  );
-};
+  )
+}
 
 PodcastPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-};
+}
 
-export default PodcastPost;
+export default PodcastPost
 
 export const pageQuery = graphql`
   query PodcastPostByID($id: String!) {
@@ -101,4 +104,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

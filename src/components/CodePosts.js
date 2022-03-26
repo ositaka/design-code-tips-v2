@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
 class CodePostsTemplate extends React.Component {
@@ -16,21 +16,21 @@ class CodePostsTemplate extends React.Component {
           {posts &&
             posts.map(({ node: post }) => (
               <Link to={post.fields.slug} key={post.id} className="card">
-                <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
-                  <div className='post-info'>
+                <article
+                  className={`post ${
+                    post.frontmatter.featuredpost ? 'is-featured' : ''
+                  }`}
+                >
+                  <div className="post-info">
                     <h3 className="post-title title-h3">
                       {post.frontmatter.title}
                     </h3>
-                    <div className='post-details'>
-                      <span className="post-date">
-                        {post.frontmatter.date}
-                      </span>
+                    <div className="post-details">
+                      <span className="post-date">{post.frontmatter.date}</span>
                       {post.frontmatter.tags && post.frontmatter.tags.length ? (
                         <ul className="post-tags">
                           {post.frontmatter.tags.map((tag) => (
-                            <li key={tag + `tag`}>
-                              #{tag}
-                            </li>
+                            <li key={tag + `tag`}>#{tag}</li>
                           ))}
                         </ul>
                       ) : null}
@@ -53,7 +53,6 @@ CodePosts.propTypes = {
   }),
 }
 
-
 export default function CodePosts() {
   return (
     <StaticQuery
@@ -65,8 +64,8 @@ export default function CodePosts() {
             }
           }
           allMarkdownRemark(
-            sort: {order: DESC, fields: [frontmatter___date]}
-            filter: {frontmatter: {templateKey: {eq: "code-post"}}}
+            sort: { order: DESC, fields: [frontmatter___date] }
+            filter: { frontmatter: { templateKey: { eq: "code-post" } } }
           ) {
             edges {
               node {
@@ -89,5 +88,5 @@ export default function CodePosts() {
       `}
       render={(data, count) => <CodePostsTemplate data={data} count={count} />}
     />
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import * as React from "react";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
-import { Link, graphql } from "gatsby";
-import Layout from "../../../components/Layout";
+import * as React from 'react'
+import { kebabCase } from 'lodash'
+import { Helmet } from 'react-helmet'
+import { Link, graphql } from 'gatsby'
+import Layout from '../../../components/Layout'
 
 const CodeTagsPage = ({
   data: {
@@ -19,7 +19,7 @@ const CodeTagsPage = ({
         <div className="columns">
           <div
             className="column is-10 is-offset-1"
-            style={{ marginBottom: "6rem" }}
+            style={{ marginBottom: '6rem' }}
           >
             <h1 className="title is-size-2 is-bold-light">Tags</h1>
             <ul className="taglist">
@@ -36,9 +36,9 @@ const CodeTagsPage = ({
       </div>
     </section>
   </Layout>
-);
+)
 
-export default CodeTagsPage;
+export default CodeTagsPage
 
 export const codeTagsPageQuery = graphql`
   query codeTagsPageQuery {
@@ -48,8 +48,8 @@ export const codeTagsPageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
-      filter: {frontmatter: {templateKey: {eq: "code-post"}}}
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "code-post" } } }
       limit: 1000
     ) {
       group(field: frontmatter___tags) {
@@ -58,4 +58,4 @@ export const codeTagsPageQuery = graphql`
       }
     }
   }
-`;
+`

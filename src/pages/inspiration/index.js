@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react'
 
-import Layout from "../../components/Layout";
-import InspirationPosts from "../../components/InspirationPosts";
-import InspirationTags from "../../components/InspirationTags";
+import Layout from '../../components/Layout'
+import InspirationPosts from '../../components/InspirationPosts'
+import InspirationTags from '../../components/InspirationTags'
 
 export default class InspirationIndexPage extends React.Component {
   render() {
@@ -20,6 +20,6 @@ export default class InspirationIndexPage extends React.Component {
           </section>
         </div>
       </Layout>
-    );
+    )
   }
 }

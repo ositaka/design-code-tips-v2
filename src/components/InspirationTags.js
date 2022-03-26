@@ -37,7 +37,6 @@ InspirationTags.propTypes = {
   }),
 }
 
-
 export default function InspirationTags() {
   return (
     <StaticQuery
@@ -59,7 +58,9 @@ export default function InspirationTags() {
           }
         }
       `}
-      render={(data, count) => <InspirationTagsTemplate data={data} count={count} />}
+      render={(data, count) => (
+        <InspirationTagsTemplate data={data} count={count} />
+      )}
     />
-  );
+  )
 }

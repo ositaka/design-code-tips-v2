@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
 class AllPostsListTemplate extends React.Component {
@@ -17,21 +17,24 @@ class AllPostsListTemplate extends React.Component {
             posts.map(({ node: post }) => (
               <li key={post.id} className="list-post">
                 <Link to={post.fields.slug}>
-                  <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
-                    <div className='post-info'>
+                  <article
+                    className={`post ${
+                      post.frontmatter.featuredpost ? 'is-featured' : ''
+                    }`}
+                  >
+                    <div className="post-info">
                       <h3 className="post-title title-h3">
                         {post.frontmatter.title}
                       </h3>
-                      <div className='post-details'>
+                      <div className="post-details">
                         <span className="post-date">
                           {post.frontmatter.date}
                         </span>
-                        {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                        {post.frontmatter.tags &&
+                        post.frontmatter.tags.length ? (
                           <ul className="post-tags">
                             {post.frontmatter.tags.map((tag) => (
-                              <li key={tag + `tag`}>
-                                #{tag}
-                              </li>
+                              <li key={tag + `tag`}>#{tag}</li>
                             ))}
                           </ul>
                         ) : null}
@@ -40,8 +43,7 @@ class AllPostsListTemplate extends React.Component {
                   </article>
                 </Link>
               </li>
-            ))
-          }
+            ))}
         </ul>
       </>
     )
@@ -56,7 +58,6 @@ AllPostsList.propTypes = {
   }),
 }
 
-
 export default function AllPostsList() {
   return (
     <StaticQuery
@@ -69,7 +70,19 @@ export default function AllPostsList() {
           }
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { in: ["code-post", "design-post", "inspiration-post", "podcast-post", "tools-post"] } } }
+            filter: {
+              frontmatter: {
+                templateKey: {
+                  in: [
+                    "code-post"
+                    "design-post"
+                    "inspiration-post"
+                    "podcast-post"
+                    "tools-post"
+                  ]
+                }
+              }
+            }
             limit: 1000
           ) {
             edges {
@@ -91,7 +104,9 @@ export default function AllPostsList() {
           }
         }
       `}
-      render={(data, count) => <AllPostsListTemplate data={data} count={count} />}
+      render={(data, count) => (
+        <AllPostsListTemplate data={data} count={count} />
+      )}
     />
-  );
+  )
 }

@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import MailchimpForm from "../components/MailchimpForm";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
+import MailchimpForm from '../components/MailchimpForm'
 
 // eslint-disable-next-line
 export const SubscribePageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+  const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
@@ -25,17 +25,17 @@ export const SubscribePageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 SubscribePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-};
+}
 
 const SubscribePage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
@@ -45,14 +45,14 @@ const SubscribePage = ({ data }) => {
         content={post.html}
       />
     </Layout>
-  );
-};
+  )
+}
 
 SubscribePage.propTypes = {
   data: PropTypes.object.isRequired,
-};
+}
 
-export default SubscribePage;
+export default SubscribePage
 
 export const subscribePageQuery = graphql`
   query SubscribePage($id: String!) {
@@ -63,4 +63,4 @@ export const subscribePageQuery = graphql`
       }
     }
   }
-`;
+`

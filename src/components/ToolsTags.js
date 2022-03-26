@@ -12,9 +12,7 @@ class ToolsTagsTemplate extends React.Component {
       <>
         <>
           <div className="section-title">
-            <h2 className="title-h2 secondary-font">
-              Browse all tools's tags
-            </h2>
+            <h2 className="title-h2 secondary-font">Browse all tools's tags</h2>
           </div>
           <ul className="tags-list">
             {tags.map((tag) => (
@@ -39,7 +37,6 @@ ToolsTags.propTypes = {
   }),
 }
 
-
 export default function ToolsTags() {
   return (
     <StaticQuery
@@ -58,5 +55,5 @@ export default function ToolsTags() {
       `}
       render={(data, count) => <ToolsTagsTemplate data={data} count={count} />}
     />
-  );
+  )
 }

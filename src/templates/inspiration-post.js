@@ -1,11 +1,11 @@
-import React from "react";
-import { useEffect } from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react'
+import { useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
+import { Helmet } from 'react-helmet'
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
 
 // eslint-disable-next-line
 export const InspirationPostTemplate = ({
@@ -16,22 +16,20 @@ export const InspirationPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   useEffect(() => {
     const video = document.getElementsByTagName('video')[0]
     video.muted = false
     video.disablePictureInPicture = true
-    video.controlsList = "nodownload noremoteplayback noplaybackrate"
+    video.controlsList = 'nodownload noremoteplayback noplaybackrate'
   })
 
   return (
     <section className="section">
-      {helmet || ""}
+      {helmet || ''}
       <article className="single-post">
-        <h1 className="title-h1">
-          {title}
-        </h1>
+        <h1 className="title-h1">{title}</h1>
         <p>{description}</p>
         <PostContent content={content} />
         {tags && tags.length ? (
@@ -48,8 +46,8 @@ export const InspirationPostTemplate = ({
         ) : null}
       </article>
     </section>
-  );
-};
+  )
+}
 
 InspirationPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -57,10 +55,10 @@ InspirationPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-};
+}
 
 const InspirationPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
@@ -81,16 +79,16 @@ const InspirationPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  );
-};
+  )
+}
 
 InspirationPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-};
+}
 
-export default InspirationPost;
+export default InspirationPost
 
 export const pageQuery = graphql`
   query InspirationPostByID($id: String!) {
@@ -105,4 +103,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

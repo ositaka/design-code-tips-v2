@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react'
 
-import Layout from "../../components/Layout";
-import DesignPosts from "../../components/DesignPosts";
-import DesignTags from "../../components/DesignTags";
+import Layout from '../../components/Layout'
+import DesignPosts from '../../components/DesignPosts'
+import DesignTags from '../../components/DesignTags'
 
 export default class DesignIndexPage extends React.Component {
   render() {
@@ -20,6 +20,6 @@ export default class DesignIndexPage extends React.Component {
           </section>
         </div>
       </Layout>
-    );
+    )
   }
 }

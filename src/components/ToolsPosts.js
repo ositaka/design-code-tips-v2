@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
@@ -18,8 +18,9 @@ class ToolsPostsTemplate extends React.Component {
             posts.map(({ node: post }) => (
               <div className="is-parent column is-6" key={post.id}>
                 <article
-                  className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
-                    }`}
+                  className={`blog-list-item tile is-child box notification ${
+                    post.frontmatter.featuredpost ? 'is-featured' : ''
+                  }`}
                 >
                   <header>
                     {post.frontmatter.featuredimage ? (
@@ -69,7 +70,6 @@ ToolsPosts.propTypes = {
   }),
 }
 
-
 export default function ToolsPosts() {
   return (
     <StaticQuery
@@ -114,5 +114,5 @@ export default function ToolsPosts() {
       `}
       render={(data, count) => <ToolsPostsTemplate data={data} count={count} />}
     />
-  );
+  )
 }

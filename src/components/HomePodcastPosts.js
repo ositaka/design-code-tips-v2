@@ -14,9 +14,17 @@ class HomePodcastPostsTemplate extends React.Component {
           <div className="cards-list four-columns">
             {posts &&
               posts.map(({ node: post }) => (
-                <Link to={post.fields.slug} key={post.id} className="card has-image">
-                  <article className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
-                    <div className='post-image'>
+                <Link
+                  to={post.fields.slug}
+                  key={post.id}
+                  className="card has-image"
+                >
+                  <article
+                    className={`post ${
+                      post.frontmatter.featuredpost ? 'is-featured' : ''
+                    }`}
+                  >
+                    <div className="post-image">
                       {post.frontmatter.featuredimage ? (
                         <div className="featured-thumbnail">
                           <PreviewCompatibleImage
@@ -34,20 +42,19 @@ class HomePodcastPostsTemplate extends React.Component {
                         </div>
                       ) : null}
                     </div>
-                    <div className='post-info'>
+                    <div className="post-info">
                       <h3 className="post-title title-h3">
                         {post.frontmatter.title}
                       </h3>
-                      <div className='post-details'>
+                      <div className="post-details">
                         <span className="post-date">
                           {post.frontmatter.date}
                         </span>
-                        {post.frontmatter.tags && post.frontmatter.tags.length ? (
+                        {post.frontmatter.tags &&
+                        post.frontmatter.tags.length ? (
                           <ul className="post-tags">
                             {post.frontmatter.tags.map((tag) => (
-                              <li key={tag + `tag`}>
-                                #{tag}
-                              </li>
+                              <li key={tag + `tag`}>#{tag}</li>
                             ))}
                           </ul>
                         ) : null}
@@ -71,7 +78,6 @@ HomePodcastPosts.propTypes = {
   }),
 }
 
-
 export default function HomePodcastPosts() {
   return (
     <StaticQuery
@@ -84,7 +90,12 @@ export default function HomePodcastPosts() {
           }
           allMarkdownRemark(
             sort: { order: ASC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "podcast-post" }, featuredpost: { eq: true } } }
+            filter: {
+              frontmatter: {
+                templateKey: { eq: "podcast-post" }
+                featuredpost: { eq: true }
+              }
+            }
             limit: 4
           ) {
             edges {
@@ -106,7 +117,6 @@ export default function HomePodcastPosts() {
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                   link
@@ -116,7 +126,9 @@ export default function HomePodcastPosts() {
           }
         }
       `}
-      render={(data, count) => <HomePodcastPostsTemplate data={data} count={count} />}
+      render={(data, count) => (
+        <HomePodcastPostsTemplate data={data} count={count} />
+      )}
     />
-  );
+  )
 }

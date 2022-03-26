@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { kebabCase } from "lodash";
+import { kebabCase } from 'lodash'
 
 class DesignTagsTemplate extends React.Component {
   render() {
@@ -11,9 +11,7 @@ class DesignTagsTemplate extends React.Component {
     return (
       <>
         <div className="section-title">
-          <h2 className="title-h2 secondary-font">
-            Browse all design's tags
-          </h2>
+          <h2 className="title-h2 secondary-font">Browse all design's tags</h2>
         </div>
         <ul className="tags-list">
           {tags.map((tag) => (
@@ -37,7 +35,6 @@ DesignTags.propTypes = {
   }),
 }
 
-
 export default function DesignTags() {
   return (
     <StaticQuery
@@ -56,5 +53,5 @@ export default function DesignTags() {
       `}
       render={(data, count) => <DesignTagsTemplate data={data} count={count} />}
     />
-  );
+  )
 }
