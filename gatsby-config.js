@@ -199,7 +199,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
   ],
   // Fix Netlify deloy error/failure
-  flags: {
-    PARALLEL_QUERY_RUNNING: true
-  }
+  // flags: {
+  //   PARALLEL_QUERY_RUNNING: true
+  // }
 };
