@@ -1,13 +1,12 @@
 ---
 templateKey: design-post
-title: This is my test
+title: Post example in "Design"
 date: 2022-03-24T19:28:37.629Z
-description: I hope this it will work
 featuredpost: false
-featuredimage: /media/apple-touch-icon.png
-link: /#test
+featuredimage: /media/products-grid1.jpg
+description: This is just a placeholder post
 tags:
-  - teste
+  - placeholder
+link: /#test
 ---
-
-This is my body
+More content to be added on this section soon.
