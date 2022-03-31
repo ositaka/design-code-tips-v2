@@ -4,13 +4,13 @@ title: >
   QR Code Generator
 date: 2020-03-15T15:04:10.000Z
 featuredpost: true
-featuredimage: /media/qr-code-generator.png
 description: >
   Free Online QR Code Generator to make your own QR Codes. Supports Dynamic Codes, Tracking, Analytics, Free text, vCards and more.
 link: https://www.the-qrcode-generator.com/
 tags:
   - Online
   - QR Code / Bar Code
+featuredimage: /media/qr-code-generator.png
 ---
 
 [![QR Code Generator (site overview)](/media/qr-code-generator.png)](https://www.the-qrcode-generator.com/ "Go to QR Code Generator's website")

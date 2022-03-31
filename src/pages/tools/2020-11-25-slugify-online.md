@@ -4,13 +4,13 @@ title: >
   Slugify Online: Clean URL Slug Generator
 date: 2020-11-25T15:04:10.000Z
 featuredpost: true
-featuredimage: /media/chemex.jpg
 description: >
   Smart, fast and easy to use online tool built to generate search engine friendly and user-friendly URL slugs.
 link: https://slugify.online/
 tags:
   - Online
   - Web
+featuredimage: /media/chemex.jpg
 ---
 
 [![Slugify Online (site overview)](/media/chemex.jpg)](https://slugify.online/ "Go to Slugify Online's website")

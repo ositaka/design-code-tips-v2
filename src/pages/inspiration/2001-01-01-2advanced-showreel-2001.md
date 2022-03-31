@@ -4,11 +4,11 @@ title: >
   2Advanced Studios — Showreel 2001
 date: 2001-01-01T15:04:10.000Z
 featuredpost: false
-featuredimage: /media/2advanced__showreel-2001.jpg
 description: >
   An old showreel of 2Advanced Studios, that has inspired me quite a lot in my teenage years.
 tags:
   - Video
+featuredimage: /media/2advanced__showreel-2001.jpg
 ---
 
 `video({ title="2Advanced Studios — Showreel 2001", src="/media/2advanced__showreel-2001.mp4" })`

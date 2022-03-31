@@ -4,11 +4,11 @@ title: >
   Make Me Pulse — Showreel 2020
 date: 2020-03-04T15:04:10.000Z
 featuredpost: false
-featuredimage: /media/makemepulse__showreel-2020.jpg
 description: >
   The showreel video of makemepulse.com, to showcase their featured projects and work on a gorgeous video.
 tags:
   - Video
+featuredimage: /media/makemepulse__showreel-2020.jpg
 ---
 
 `video({ title="Make Me Pulse — Showreel 2020", src="/media/makemepulse__showreel-2020.mp4" })`

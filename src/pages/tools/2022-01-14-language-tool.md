@@ -4,13 +4,13 @@ title: >
   LanguageTool: Your writing assistant
 date: 2022-01-14T11:26:10.000Z
 featuredpost: true
-featuredimage: /media/language-tool.png
 description: >
   LanguageTool’s multilingual grammar, style, and spell checker is used by millions of people around the world
 link: https://languagetool.org/
 tags:
   - Online
   - Web
+featuredimage: /media/language-tool.png
 ---
 
 [![LanguageTool (site overview)](/media/language-tool.png)](https://languagetool.org/ "Go to LanguageTool's website")

@@ -4,11 +4,11 @@ title: >
   Bürocratik — Showreel 2019
 date: 2019-10-25T15:04:10.000Z
 featuredpost: false
-featuredimage: /media/burocratik__showreel-2019.jpg
 description: >
   The showreel video of burocratik.com, to showcase their featured projects and work on a gorgeous video.
 tags:
   - Video
+featuredimage: /media/burocratik__showreel-2019.jpg
 ---
 
 `video({ title="Bürocratik — Showreel 2019", src="/media/burocratik__showreel-2019.mp4" })`

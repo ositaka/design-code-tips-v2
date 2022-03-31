@@ -4,11 +4,11 @@ title: >
   2Advanced Studios — Flash website in 2003
 date: 2003-03-03T15:04:10.000Z
 featuredpost: false
-featuredimage: /media/2advanced-flash-website-v4-2003.jpg
 description: >
   An old flash website (v4) of 2advanced.com, that has inspired me quite a lot in my teenage years.
 tags:
   - Website
+featuredimage: /media/2advanced-flash-website-v4-2003.jpg
 ---
 
 `video({ title="2Advanced Studios — Flash website in 2003", src="/media/2advanced-flash-website-v4-2003.mp4" })`

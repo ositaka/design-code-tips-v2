@@ -4,13 +4,13 @@ title: >
   BreakBeat Science — A Podcast for Dancers
 date: 2019-10-22T18:54:35.463Z
 featuredpost: true
-featuredimage: /media/breakbeat-science.jpg
 description: >
   A podcast to give you energy for moving and dancing, if you are a breakbeat fan.
 link: https://podcasts.apple.com/us/podcast/future-funk-squad-presents-breakbeat-science/id1484470546
 tags:
   - Music
   - Podcast
+featuredimage: /media/breakbeat-science.jpg
 ---
 
 [![MongoDB Podcast (cover)](/media/breakbeat-science.jpg)](https://podcasts.apple.com/us/podcast/future-funk-squad-presents-breakbeat-science/id1484470546 'Go to MongoDB Podcast website')

@@ -4,11 +4,11 @@ title: >
   Advanced Team — Showreel 2021
 date: 2021-11-22T15:04:10.000Z
 featuredpost: false
-featuredimage: /media/advanced-team__showreel-2021.jpg
 description: >
   The showreel video of Advanced Team, to showcase their featured projects and work on a gorgeous video.
 tags:
   - Video
+featuredimage: /media/advanced-team__showreel-2021.jpg
 ---
 
 `video({ title="Advanced Team — Showreel 2021", src="/media/advanced-team__showreel-2021.mp4" })`

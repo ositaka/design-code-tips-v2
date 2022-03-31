@@ -4,11 +4,11 @@ title: >
   Duall Studio — Showreel 2018
 date: 2018-04-09T15:04:10.000Z
 featuredpost: false
-featuredimage: /media/duallstudio__showreel-2018.jpg
 description: >
   The showreel video of duallstudio.com, to showcase their featured projects and work on a gorgeous video.
 tags:
   - Video
+featuredimage: /media/duallstudio__showreel-2018.jpg
 ---
 
 `video({ title="Duall Studio — Showreel 2018", src="/media/duallstudio__showreel-2018.mp4" })`
