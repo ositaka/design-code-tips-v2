@@ -4,7 +4,6 @@ title: >
   How to download an entire website
 date: 2021-06-01T19:28:37.629Z
 featuredpost: false
-featuredimage: /assets/command-line.png
 description: >
   See how to download an entire website on MacOS/Linux and Windows
 tags:

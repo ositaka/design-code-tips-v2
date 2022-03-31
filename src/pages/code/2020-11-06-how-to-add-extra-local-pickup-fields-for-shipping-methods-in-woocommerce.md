@@ -4,7 +4,6 @@ title: >
   How to add extra "Local Pickup" fields for shipping methods in WooCommerce?
 date: 2020-11-06T23:08:37.629Z
 featuredpost: true
-featuredimage: /assets/woocommerce-logo.png
 description: >
   Learn how to add extra fields’ options for the "Local Pickup" shipping methods on WooCommerce's Cart and Checkout page.
 tags:

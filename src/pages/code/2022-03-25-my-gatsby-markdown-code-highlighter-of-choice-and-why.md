@@ -4,7 +4,6 @@ title: >
   My Gatsby Markdown Code Highlighting of Choice and Why
 date: 2022-03-25T19:28:37.629Z
 featuredpost: false
-featuredimage: /assets/wordpress.png
 description: >
   Find out on this post which code highlighting I am using on the design-code.tips website and why.
 tags:

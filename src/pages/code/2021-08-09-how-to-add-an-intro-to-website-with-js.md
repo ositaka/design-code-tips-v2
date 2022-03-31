@@ -4,7 +4,6 @@ title: >
   How to add an intro to website with JS
 date: 2021-08-09T19:28:37.629Z
 featuredpost: false
-featuredimage: /assets/js.png
 description: >
   How to add an intro to website with JS
 tags:

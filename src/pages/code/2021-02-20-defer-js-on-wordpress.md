@@ -4,7 +4,6 @@ title: >
   Defer JS on WordPress
 date: 2021-02-20T19:28:37.629Z
 featuredpost: false
-featuredimage: /assets/woocommerce-logo.png
 description: >
   Defer JavaScript on WordPress and make your website load 10x faster.
 tags:

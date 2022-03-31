@@ -4,7 +4,6 @@ title: >
   Replace text with CSS only
 date: 2021-05-03T19:28:37.629Z
 featuredpost: false
-featuredimage: /assets/css.png
 description: >
   Replace text with CSS only. Please note this solution is not ideal if you are making an extremely accessible website. Is merely visual.
 tags:

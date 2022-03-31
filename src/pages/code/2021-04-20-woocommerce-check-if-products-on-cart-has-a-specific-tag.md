@@ -4,7 +4,6 @@ title: >
   WooCommerce: Check if products on cart have a specific tag, and remove them if they can't be shipped to the customer country
 date: 2021-04-20T19:28:37.629Z
 featuredpost: false
-featuredimage: /assets/woocommerce-logo.png
 description: >
   Check if WooCommerce products on cart have a specific tag, for example "Bottle-Wine", and remove them if they can't be shipped to the customer country.
 tags:

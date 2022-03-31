@@ -4,7 +4,6 @@ title: >
   How to add thumbnails on WooCommerce's Grouped Products
 date: 2021-08-31T19:28:37.629Z
 featuredpost: false
-featuredimage: /assets/woocommerce-logo.png
 description: >
   Discover how to add thumbnails on WooCommerce's Grouped Products. In addition, on the "Bonus" section you can find out how to show every single variation of a Variable Product.
 tags:
