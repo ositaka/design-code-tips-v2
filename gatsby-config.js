@@ -59,7 +59,7 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 2048,
               withWebp: true,
-              tracedSVG: true,
+              // tracedSVG: true,
               loading: 'lazy',
             },
           },
@@ -200,7 +200,7 @@ module.exports = {
   ],
   // Fix Netlify deloy error/failure
   flags: {
-    FAST_DEV: true,
-    PARALLEL_QUERY_RUNNING: true,
+    // FAST_DEV: true,
+    // PARALLEL_QUERY_RUNNING: true,
   },
 }
