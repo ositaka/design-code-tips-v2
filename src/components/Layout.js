@@ -9,9 +9,7 @@ import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 import { useDarkMode } from './ThemeSwitcher'
-deckDeckGoHighlightElement()
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
