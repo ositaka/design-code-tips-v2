@@ -10,7 +10,7 @@ link: https://slugify.online/
 tags:
   - Online
   - Web
-featuredimage: /media/chemex.jpg
+appicon: /media/appicon__slugify-online.png
 ---
 
 [![Slugify Online (site overview)](/media/chemex.jpg)](https://slugify.online/ "Go to Slugify Online's website")

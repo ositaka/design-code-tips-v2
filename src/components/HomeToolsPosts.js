@@ -13,44 +13,40 @@ class HomeToolsPostsTemplate extends React.Component {
         <div className="cards-list two-columns">
           {posts &&
             posts.map(({ node: post }) => (
-              <div className="is-parent column is-6" key={post.id}>
+              <Link
+                to={post.fields.slug}
+                key={post.id}
+                className="card has-image"
+              >
                 <article
-                  className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
+                  className={`post ${post.frontmatter.featuredpost ? 'is-featured' : ''
                     }`}
                 >
-                  <header>
-                    {post.frontmatter.featuredimage ? (
+                  <div className="post-image">
+                    {post.frontmatter.appicon ? (
                       <div className="featured-thumbnail">
                         <PreviewCompatibleImage
                           imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                            image: post.frontmatter.appicon,
+                            alt: `app icon for the tool ${post.frontmatter.title}`,
                             width:
-                              post.frontmatter.featuredimage.childImageSharp
+                              post.frontmatter.appicon.childImageSharp
                                 .gatsbyImageData.width,
                             height:
-                              post.frontmatter.featuredimage.childImageSharp
+                              post.frontmatter.appicon.childImageSharp
                                 .gatsbyImageData.height,
                           }}
                         />
                       </div>
                     ) : null}
-                    <div className="post-meta">
-                      <h3>
-                        <Link
-                          className="title has-text-primary is-size-4"
-                          to={post.fields.slug}
-                        >
-                          {post.frontmatter.title}
-                        </Link>
-                      </h3>
-                      <p className="subtitle is-size-5 is-block">
-                        {post.frontmatter.description}
-                      </p>
-                    </div>
-                  </header>
+                  </div>
+                  <div className="post-info">
+                    <h3 className="post-title title-h3">
+                      {post.frontmatter.title}
+                    </h3>
+                  </div>
                 </article>
-              </div>
+              </Link>
             ))}
         </div>
       </>
@@ -93,7 +89,7 @@ export default function HomeToolsPosts() {
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
                   featuredpost
-                  featuredimage {
+                  appicon {
                     childImageSharp {
                       gatsbyImageData(
                         width: 120

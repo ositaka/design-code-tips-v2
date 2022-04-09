@@ -9,8 +9,9 @@ description: >
 link: https://changelog.com/podcast/
 tags:
   - Open Source
+  - Podcast
   - Web Development
-featuredimage: /media/the-changelog.png
+featuredimage: /media/podcast__the-changelog.png
 ---
 
-[![The Changelog Podcast (cover)](/media/the-changelog.png)](https://changelog.com/podcast/ 'Go to The Changelog Podcast website')
+[![The Changelog Podcast (cover)](/media/podcast__the-changelog.png)](https://changelog.com/podcast/ 'Go to The Changelog Podcast website')

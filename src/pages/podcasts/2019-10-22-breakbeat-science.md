@@ -10,10 +10,10 @@ link: https://podcasts.apple.com/us/podcast/future-funk-squad-presents-breakbeat
 tags:
   - Music
   - Podcast
-featuredimage: /media/breakbeat-science.jpg
+featuredimage: /media/podcast__breakbeat-science.jpg
 ---
 
-[![MongoDB Podcast (cover)](/media/breakbeat-science.jpg)](https://podcasts.apple.com/us/podcast/future-funk-squad-presents-breakbeat-science/id1484470546 'Go to MongoDB Podcast website')
+[![MongoDB Podcast (cover)](/media/podcast__breakbeat-science.jpg)](https://podcasts.apple.com/us/podcast/future-funk-squad-presents-breakbeat-science/id1484470546 'Go to MongoDB Podcast website')
 
 ## FUTURE FUNK SQUAD presents BREAKBEAT SCIENCE
 

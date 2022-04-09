@@ -11,10 +11,11 @@ tags:
   - CSS
   - Learning
   - DevTools
+  - Podcast
   - Web Development
-featuredimage: /media/the-css-podcast.jpg
+featuredimage: /media/podcast__the-css-podcast.jpg
 ---
 
-[![The CSS Podcast (cover)](/media/the-css-podcast.jpg)](https://thecsspodcast.libsyn.com/ "Go to The CSS Podcast's website")
+[![The CSS Podcast (cover)](/media/podcast__the-css-podcast.jpg)](https://thecsspodcast.libsyn.com/ "Go to The CSS Podcast's website")
 
 > Cascading Style Sheets (CSS) is the web’s core styling language. For web developers, It’s one of the quickest technologies to get started with, but one of the hardest to master. Follow Una Kravets and Adam Argyle, Developer Advocates from Google, who gleefully breakdown complex aspects of CSS into digestible episodes covering everything from accessibility to z-index.

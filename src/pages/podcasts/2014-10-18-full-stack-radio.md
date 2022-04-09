@@ -12,8 +12,13 @@ tags:
   - Frameworks
   - JavaScript
   - Learning
+  - Podcast
   - Web Development
-featuredimage: /media/full-stack-radio.jpg
+featuredimage: /media/podcast__full-stack-radio.jpg
 ---
 
-[![Full Stack Radio (cover)](/media/full-stack-radio.jpg)](https://fullstackradio.com/ "Go to Full Stack Radio's Podcast website")
+[![Full Stack Radio (cover)](/media/podcast__full-stack-radio.jpg)](https://fullstackradio.com/ "Go to Full Stack Radio's Podcast website")
+
+## Favorite's & Recommended Episodes
+
+- To be added soon.

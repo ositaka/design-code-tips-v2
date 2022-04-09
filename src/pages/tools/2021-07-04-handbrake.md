@@ -13,10 +13,10 @@ tags:
   - Open Source
   - Software
   - Compression Tools
-featuredimage: /media/handbrake.png
+appicon: /media/appicon__handbrake.png
 ---
 
-![handbrake](/media/handbrake.png)
+![handbrake](/media/tools__handbrake.png)
 
 ## What is HandBrake?
 

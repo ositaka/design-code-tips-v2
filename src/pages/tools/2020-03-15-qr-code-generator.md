@@ -10,10 +10,10 @@ link: https://www.the-qrcode-generator.com/
 tags:
   - Online
   - QR Code / Bar Code
-featuredimage: /media/qr-code-generator.png
+appicon: /media/appicon__qr-code-generator.png
 ---
 
-[![QR Code Generator (site overview)](/media/qr-code-generator.png)](https://www.the-qrcode-generator.com/ "Go to QR Code Generator's website")
+[![QR Code Generator (site overview)](/media/tools__qr-code-generator.png)](https://www.the-qrcode-generator.com/ "Go to QR Code Generator's website")
 
 ## What is a QR Code?
 

@@ -23,17 +23,17 @@ class ToolsPostsTemplate extends React.Component {
                   }`}
                 >
                   <header>
-                    {post.frontmatter.featuredimage ? (
+                    {post.frontmatter.appicon ? (
                       <div className="featured-thumbnail">
                         <PreviewCompatibleImage
                           imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                            image: post.frontmatter.appicon,
+                            alt: `app icon for the tool ${post.frontmatter.title}`,
                             width:
-                              post.frontmatter.featuredimage.childImageSharp
+                              post.frontmatter.appicon.childImageSharp
                                 .gatsbyImageData.width,
                             height:
-                              post.frontmatter.featuredimage.childImageSharp
+                              post.frontmatter.appicon.childImageSharp
                                 .gatsbyImageData.height,
                           }}
                         />
@@ -96,7 +96,7 @@ export default function ToolsPosts() {
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
                   featuredpost
-                  featuredimage {
+                  appicon {
                     childImageSharp {
                       gatsbyImageData(
                         width: 120

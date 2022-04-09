@@ -12,8 +12,9 @@ tags:
   - Frameworks
   - JavaScript
   - Learning
+  - Podcast
   - Web Development
-featuredimage: /media/openhive-js.jpg
+featuredimage: /media/podcast__openhive-js.jpg
 ---
 
 [![OpenHive.JS (cover)](/media/openhive-js.jpg)](https://anchor.fm/openhivejs "Go to OpenHive.JS's Podcast website")

@@ -10,10 +10,10 @@ link: https://languagetool.org/
 tags:
   - Online
   - Web
-featuredimage: /media/language-tool.png
+appicon: /media/appicon__language-tool.png
 ---
 
-[![LanguageTool (site overview)](/media/language-tool.png)](https://languagetool.org/ "Go to LanguageTool's website")
+[![LanguageTool (site overview)](/media/tools__language-tool.png)](https://languagetool.org/ "Go to LanguageTool's website")
 
 This tool is my spell checker of choice. With a great design and simplicity of usage, you will "enhance" all your texts from now on.
 
