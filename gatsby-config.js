@@ -200,6 +200,8 @@ module.exports = {
   ],
   // Fix Netlify deloy error/failure
   flags: {
+    FAST_DEV: true,
+    PARALLEL_QUERY_RUNNING: true,
     // FAST_DEV: true,
     // PARALLEL_QUERY_RUNNING: true,
   },
