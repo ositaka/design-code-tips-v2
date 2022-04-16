@@ -4,7 +4,7 @@
         <title>Design &amp; Code (tips)</title>
         <link>https://www.design-code.tips</link>
         <description>This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.</description>
-        <lastBuildDate>Fri, 15 Apr 2022 08:15:02 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 16 Apr 2022 12:30:17 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>GatsbyJS</generator>
         <copyright>All rights reserved 2022, Nuno Marques</copyright>
