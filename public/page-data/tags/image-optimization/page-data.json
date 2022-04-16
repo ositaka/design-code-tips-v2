@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/image-optimization/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/tools/2020-03-14-tinypng/"},"frontmatter":{"title":"--- TO DO --- TinyPNG – JPEG, PNG & WebP image compression\n"}}}]}},"pageContext":{"tag":"Image Optimization"}},
+    "staticQueryHashes": ["4080856488"]}

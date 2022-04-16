@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/software/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/tools/2021-07-04-handbrake/"},"frontmatter":{"title":"HandBrake: Open Source Video Transcoder\n"}}},{"node":{"fields":{"slug":"/tools/2018-06-10-figma/"},"frontmatter":{"title":"--- TO DO --- Figma\n"}}}]}},"pageContext":{"tag":"Software"}},
+    "staticQueryHashes": ["4080856488"]}
