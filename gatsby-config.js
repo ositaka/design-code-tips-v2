@@ -59,7 +59,7 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 2048,
               withWebp: true,
-              // tracedSVG: true,
+              tracedSVG: true,
               loading: 'lazy',
             },
           },
