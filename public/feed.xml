@@ -4,7 +4,7 @@
         <title>Design &amp; Code (tips)</title>
         <link>https://www.design-code.tips</link>
         <description>This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.</description>
-        <lastBuildDate>Sat, 16 Apr 2022 12:30:17 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 18 Apr 2022 09:20:07 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>GatsbyJS</generator>
         <copyright>All rights reserved 2022, Nuno Marques</copyright>
@@ -3886,6 +3886,147 @@
 </style>]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[GraphQL.FM — A Podcast for Developers
+]]></title>
+            <link>https://www.design-code.tips/podcasts/2020-09-12-graphql-fm/</link>
+            <guid>https://www.design-code.tips/podcasts/2020-09-12-graphql-fm/</guid>
+            <pubDate>Sat, 12 Sep 2020 15:04:10 GMT</pubDate>
+            <content:encoded><![CDATA[<p><a href="https://podcasts.apple.com/us/podcast/graphql-fm/id1531763208" title="Go to GraphQL.FM&#x27;s Podcast website" target="_blank" rel="noopener"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1920px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAADNklEQVQ4y41UTWjcVRB/0W5AERJQei1e7M2DIrZ60It4ihoPCnqIB1Hag6AiiiSgIg20pQqpNnF3k2yaNGAbAknjRzbqtnQ3CfybsGu26e6azW5bNx+bbNj/due9efPmrfzzRawpODyG92bmx8wbfjOido9Y653/yn528e+ITUVsgXiparKuybq8VLVAlng34D7gWs2uSXKKeHaejjmmKWqaonTsuvd0inZN3j+ztSbrYjAlj4xi3aA5OMrtN/hMyhz6CcWgPHIZAzdN1t1bvNgt2CyUsT0ODb0g/OS7xBdyWx4e+5seGQbhh4ZePBE3C+Xd4sXWjVcl+lOyMQSiS4o+c2hMtydsAWxR4TdzfPgXJfo8V2MI/SlelVv5NjOzJacoj46A6IQD3Sj67VNh/NThhYotgGqdsc/9jmIAHuwG0SmPjpBTrLHdLtsqgx1JqA+CCEgRooZhfjNKg4v8V8VmK+ZSnlum6LER6SUPQn0QO5JWmm0wLwMej4H4Hup7UJzXL0V02yxfX+P5DU5umESJvk5Q01UtLsBDvSDO4fEYL8E22GTK6vUJEOfA141igJ4c53di3JWxFW2rxAOL/P40PTOBoq/q66yKs6p5wmTKe8Cvhj3wgW4lQvrhYWqZtO9OUnuCziTNKxF6+5p+fAxfGNcnE7rVUa+FTXoXXLiL713bBAehLqhEr24c0s0R/MyhwawJZkx0xd6pct7lZTBTK/jFjMm5O3+WpE4lwOch4eCAevlX89UcT6/xostZ10QKuj/D8xsUvm2cVc5XsCfFZdzpNluMLcvDF/GDmF0Brmgzt05Di3g6oT6cxNNx3Z+h0RwnS2Y0r7vmcTi7xbNtklAR5Jcz2HIFT8Xx2z914Kb6ZEr3pTmxbi7m9OeO19FHz8sHArLNoZXqHpJsikoU5ck4hTLmj4K5nDcfz1Jn2nyXIvEj1HVVRYf0BdRH05gq7aHnzlTYWk1F7qj+tHrxZxA/oPDT879Rc1SLkPT1yCeG5IlZdWPdGrvvVHlK58swlpNtjnrrqn42TE+H1RtXoNWB8Vt6+e49I73/MtCuUukSJz2GqXRJu/J/LQPPvd8W2tf+D7i07gCkUcEbAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/afb8d5a009b80725672a992a6949b439/bd5dd/podcast__graphql-fm.webp 512w,
+/static/afb8d5a009b80725672a992a6949b439/a9a89/podcast__graphql-fm.webp 1024w,
+/static/afb8d5a009b80725672a992a6949b439/882b9/podcast__graphql-fm.webp 1920w"
+              sizes="(max-width: 1920px) 100vw, 1920px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/afb8d5a009b80725672a992a6949b439/01e7c/podcast__graphql-fm.png 512w,
+/static/afb8d5a009b80725672a992a6949b439/2bef9/podcast__graphql-fm.png 1024w,
+/static/afb8d5a009b80725672a992a6949b439/29114/podcast__graphql-fm.png 1920w"
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/afb8d5a009b80725672a992a6949b439/29114/podcast__graphql-fm.png"
+            alt="GraphQL.FM&#39;s Podcast (cover)"
+            title="GraphQL.FM&#39;s Podcast (cover)"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+    </span></a></p>
+<p>You can <a href="https://twitch.tv/graphqlfm/schedule" title="Go to Twitch channel" target="_blank" rel="noopener">see the upcoming shows on GraphQL.FM's Twitch channel</a></p>
+<h2>Favorite's &#x26; Recommended Episodes</h2>
+<ul>
+<li><a href="https://podcasts.apple.com/us/podcast/the-state-of-graphql-with-dan-schafer/id1531763208?i=1000491225442" target="_blank" rel="noopener">The State of GraphQL with Dan Schafer</a></li>
+<li><a href="https://podcasts.apple.com/us/podcast/graphql-shopify/id1531763208?i=1000491225444" target="_blank" rel="noopener">GraphQL @ Shopify</a></li>
+<li><a href="https://podcasts.apple.com/us/podcast/apollo-federation/id1531763208?i=1000491225443" target="_blank" rel="noopener">Apollo Federation</a></li>
+<li><a href="https://podcasts.apple.com/us/podcast/tony-marc-about-documentation-resiliency-the-future/id1531763208?i=1000495478162" target="_blank" rel="noopener">Tony &#x26; Marc about documentation, resiliency &#x26; the future of GraphQL</a></li>
+<li><a href="https://podcasts.apple.com/us/podcast/graphql-misconceptions-with-shruti-kapoor/id1531763208?i=1000500393460" target="_blank" rel="noopener">GraphQL Misconceptions with Shruti Kapoor</a></li>
+<li><a href="https://podcasts.apple.com/us/podcast/graphql-uber/id1531763208?i=1000501798788" target="_blank" rel="noopener">GraphQL @ Uber</a></li>
+</ul>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+</style>]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[OpenHive.JS — A Podcast for Developers
 ]]></title>
             <link>https://www.design-code.tips/podcasts/2020-06-08-openhive-js/</link>
@@ -6111,6 +6252,140 @@ To read QR Codes with a smartphone, you can just use the default camera app.</p>
 </style>]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Voice of Design — A Podcast for Designers
+]]></title>
+            <link>https://www.design-code.tips/podcasts/2018-05-16-voice-of-design/</link>
+            <guid>https://www.design-code.tips/podcasts/2018-05-16-voice-of-design/</guid>
+            <pubDate>Wed, 16 May 2018 15:04:10 GMT</pubDate>
+            <content:encoded><![CDATA[<p><a href="https://vod.podbean.com/" title="Go to Voice of Design&#x27;s Podcast website" target="_blank" rel="noopener"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1920px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEA0lEQVQ4yz2SO0s7TRSHF0UUNN5CYi4m2czsZi9ukt1JYi6vuibRmNtu4oKJIlgp2AmCIKi1X8CvYGNhIVoJ4qXx1gii2FiIIrEQwXhpZP5kF96nm4Hnd86ZM8TU1JSqquVyWVGUcrmsaVqpVFJVVVGUbDYry3I4HM7qjOuk0+lkMinrENlsdmxsrFAoqKpaKpWKxWI2m83n84Y5PDwsimJIJxqNFovFXC6XyWTSOkQymSwUCpqmqao6MTGRTqdHRkYCgQBCKBaLDQ4Ochzn9XpJkoQQplIpo4WMDjE5OTk1NaVpWrlcHh8fT6VSyWQyEAiwLBsKhSRJ4jgOQkjTtM1mkySpVCrlcrlCoZDP54np6elKpWL4hpzJZIaGhqLRqCiKgUBAEAS32w0hNBKN6RRFUVW1IVer1XK5PDY29p9OIpEYGRlBCFkslt7eXoqiPB6PxWKhKKqrq4uiKEVRNB1iaGhIluWlpaX19fWZmZn5+fnl5eXFxcVQKLSwsLCysqKqaigUmp2drVark5OTDMMEg8Fisdho20hdXV3FGL++vl5fX2OMHx8fz87Ofn5+7u7uMMabm5vPz8+/v7+3t7efn5+lUsnn8yGEiIGBAZqmw+FwrVbDGF9eXv79/T08PHx/f9fr9YODA4zx3d3d6+vr5+fnyckJxnhvb89ut3u9XoJhGJZl3W739vY2xvjq6url5WV3d/fv7+/t7W1nZwdjXKvV3t/fPz4+Tk9PMcYXFxdWq7W3t5cAAJAkCQCYm5vDGH99fR0dHVUqla+vr4+Pj+PjY4zx4eHh09NTvV43jltbWx0dHWazuSG73W6E0ODg4P7+fq1WW1tbs9vtGxsb9/f3Nzc35+fnsizv7e3d3t4eHBxsb28zDNPf3+9wOIj+/n4AAEJoeHg4Go2m0+lIJBKPx/1+vyzLmqbF4/GBgQFJkiKRiCzLHMcBAFiWBQAQbreb53mappPJZCwWC4fDsiynUqlwOJzL5URRNG5GR0cRQoqiZDIZn88HISRJkhAEIZFIiKLo8/n6+voAADzPi6LI6ng8HmOxDofD6/UihHieZ1lWkqRgMEhACHme5ziO1wnoxGIxURT9fn8wGIzH47FYDEJosVgAAIIgIIQkSWIYhmBZlqIos9ns8XgcDofH44EQOp3Orq4ui8VCkiTLshzHCYJgRAuCQNM0RVE0TTdeGwDQ2dnZ19dnt9shhCaTqbm5ubW1tampqaWlpb29HQDQ09MDIfT7/T6fz6gHIWx8EqfTabPZjLxIJEJRlN1u7+7ubtJpa2uzWq09PT1Op5NlWYZhjLIN+f+uAAB+vx8hZGzepWMymbq7u10uF0mSZrPZarW6XC6r1cowDM/z/wBuGG/JrobYJgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/3323ac9a54535cfb7c692e1306abedb0/bd5dd/podcast__voice-of-design.webp 512w,
+/static/3323ac9a54535cfb7c692e1306abedb0/a9a89/podcast__voice-of-design.webp 1024w,
+/static/3323ac9a54535cfb7c692e1306abedb0/882b9/podcast__voice-of-design.webp 1920w"
+              sizes="(max-width: 1920px) 100vw, 1920px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/3323ac9a54535cfb7c692e1306abedb0/01e7c/podcast__voice-of-design.png 512w,
+/static/3323ac9a54535cfb7c692e1306abedb0/2bef9/podcast__voice-of-design.png 1024w,
+/static/3323ac9a54535cfb7c692e1306abedb0/29114/podcast__voice-of-design.png 1920w"
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/3323ac9a54535cfb7c692e1306abedb0/29114/podcast__voice-of-design.png"
+            alt="Voice of Design&#39;s Podcast (cover)"
+            title="Voice of Design&#39;s Podcast (cover)"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+    </span></a></p>
+<!-- ## Favorite's & Recommended Episodes
+
+- TO BE WRITTEN -- -->
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+</style>]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Duall Studio — Showreel 2018
 ]]></title>
             <link>https://www.design-code.tips/inspiration/2018-04-09-duallstudio-showreel-2018/</link>
@@ -6869,6 +7144,147 @@ To read QR Codes with a smartphone, you can just use the default camera app.</p>
 <h2>Favorite's &#x26; Recommended Episodes</h2>
 <ul>
 <li>To be added soon.</li>
+</ul>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+</style>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[10web — A Podcast for Developers
+]]></title>
+            <link>https://www.design-code.tips/podcasts/2014-01-28-10web/</link>
+            <guid>https://www.design-code.tips/podcasts/2014-01-28-10web/</guid>
+            <pubDate>Tue, 28 Jan 2014 15:04:10 GMT</pubDate>
+            <content:encoded><![CDATA[<p><a href="http://10web.pt/category/programas/" title="Go to GraphQL.FM&#x27;s Podcast website" target="_blank" rel="noopener"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1920px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmklEQVQ4y9WTO4vCQBSF/YFWvgrRgI1oNLWgggoiwqAoKVKIBB8JRjvRVP4KS6PCGEGMohYmjGN0FjbiutFlWbbZvcUww9yPe84ZxkF+UY4/A1/f63n/g8k25nq9Xi6XL2Gr2zAMRVE0TSOEYIyXyyWEECGk67phGN9MbjabHo9HFMXVapVOp0OhEEVRyWRyvV4/y/mAIYQsy1IU5ff7eZ4HALhcLkmSOp1Oo9F4Sd7g8/nMMEwwGEwkEoFAAADAMEw4HN5utwihR8G2CB2WvW63u1gsRFH0er3ZbDYajcbjcU3TjsfjnbEye+Rvsq2Ldrvt8/lyuRxN05FIZLPZ2PLf7Xb7/f5+vMGmaRJCBEFwu90sy8ZisUKhoKrqbDZTVXU+n4/HY0VRhsNhtVqFEL6Y3Gq1nE5nvV6XZXkymVQqlVQqVSwWOY7LZDLlcrlUKgEA8vm8rut2uN/v0zQtCALGmBDS6/UGgwHP89PptFarybI8Go04jpMkyer/9M6maSKEDoeDZelxxRgjhAghp9PJ8vinftU/gd8AnB9Gm8cwfY0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/8f3957cf9672bd6e20ff139623680e81/bd5dd/podcast__10web.webp 512w,
+/static/8f3957cf9672bd6e20ff139623680e81/a9a89/podcast__10web.webp 1024w,
+/static/8f3957cf9672bd6e20ff139623680e81/882b9/podcast__10web.webp 1920w"
+              sizes="(max-width: 1920px) 100vw, 1920px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/8f3957cf9672bd6e20ff139623680e81/01e7c/podcast__10web.png 512w,
+/static/8f3957cf9672bd6e20ff139623680e81/2bef9/podcast__10web.png 1024w,
+/static/8f3957cf9672bd6e20ff139623680e81/29114/podcast__10web.png 1920w"
+            sizes="(max-width: 1920px) 100vw, 1920px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/8f3957cf9672bd6e20ff139623680e81/29114/podcast__10web.png"
+            alt="GraphQL.FM&#39;s Podcast (cover)"
+            title="GraphQL.FM&#39;s Podcast (cover)"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+    </span></a></p>
+<h2>Favorite's &#x26; Recommended Episodes</h2>
+<ul>
+<li><a href="https://10web.pt/programas/programa-1-desenvolvimento-de-front-end-andre-luis/" target="_blank" rel="noopener">Programa 1 – Desenvolvimento de Front-end – André Luis</a></li>
+<li><a href="https://10web.pt/programas/programa-3-negocios-wordpress-nuno-morgadinho/" target="_blank" rel="noopener">Programa 3 – Negócios WordPress – Nuno Morgadinho</a></li>
+<li><a href="https://10web.pt/programas/programa-6-aplicacoes-mobile-e-gestao-de-projectos-pedro-varela/" target="_blank" rel="noopener">Programa 6 – Aplicações Mobile e Gestão de Projectos – Pedro Varela</a></li>
+<li><a href="https://10web.pt/programas/pedro-martins-farfetch-commerce/" target="_blank" rel="noopener">Programa 17 – Pedro Martins – Farfetch e o futuro do e-commerce</a></li>
+<li><a href="https://10web.pt/programas/programa-18-frederico-carvalho-dicas-super-ninja-marketing-digital/" target="_blank" rel="noopener">Programa 18 – Frederico Carvalho – Dicas super ninja de marketing digital</a></li>
+<li><a href="https://10web.pt/programas/programa-19-pedro-teixeira-offline-first-progressive-web-apps/" target="_blank" rel="noopener">Programa 19 – Pedro Teixeira – Offline-first e progressive web apps</a></li>
+<li><a href="https://10web.pt/programas/web-agency-series-adriano-esteves-from-burocratik/" target="_blank" rel="noopener">Web Agency series – Adriano Esteves from Bürocratik</a></li>
 </ul>
 <style class="grvsc-styles">
   .grvsc-container {
