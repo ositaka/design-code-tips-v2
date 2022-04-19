@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/word-press/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/code/2022-03-05-how-to-speed-up-wordpress-websites/"},"frontmatter":{"title":"How to speed up WordPress websites\n"}}},{"node":{"fields":{"slug":"/code/2021-02-20-defer-js-on-wordpress/"},"frontmatter":{"title":"Defer JS on WordPress\n"}}},{"node":{"fields":{"slug":"/podcasts/2014-01-28-10web/"},"frontmatter":{"title":"10web — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"WordPress"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/code/2022-03-05-how-to-speed-up-wordpress-websites/"},"frontmatter":{"title":"How to speed up WordPress websites\n"}}},{"node":{"fields":{"slug":"/code/2021-02-20-defer-js-on-wordpress/"},"frontmatter":{"title":"Defer JS on WordPress\n"}}},{"node":{"fields":{"slug":"/podcasts/10web/"},"frontmatter":{"title":"10web — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"WordPress"}},
     "staticQueryHashes": ["4080856488"]}

@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/ja-mstack/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/podcasts/2019-07-12-thats-my-jamstack/"},"frontmatter":{"title":"That's my JAMstack — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/2018-08-16-opensource-underdogs/"},"frontmatter":{"title":"Open Source Underdogs — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"JAMstack"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/podcasts/thats-my-jamstack/"},"frontmatter":{"title":"That's my JAMstack — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/opensource-underdogs/"},"frontmatter":{"title":"Open Source Underdogs — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"JAMstack"}},
     "staticQueryHashes": ["4080856488"]}

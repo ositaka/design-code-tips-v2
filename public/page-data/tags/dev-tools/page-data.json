@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/dev-tools/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/2020-03-12-the-css-podcast/"},"frontmatter":{"title":"The CSS Podcast — For Web Developers\n"}}}]}},"pageContext":{"tag":"DevTools"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/the-css-podcast/"},"frontmatter":{"title":"The CSS Podcast — For Web Developers\n"}}}]}},"pageContext":{"tag":"DevTools"}},
     "staticQueryHashes": ["4080856488"]}

@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/graph-ql/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/2020-09-12-graphql-fm/"},"frontmatter":{"title":"GraphQL.FM — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"GraphQL"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/graphql-fm/"},"frontmatter":{"title":"GraphQL.FM — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"GraphQL"}},
     "staticQueryHashes": ["4080856488"]}

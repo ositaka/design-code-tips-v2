@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/accessibility/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/2020-11-11-podrocket/"},"frontmatter":{"title":"PodRocket — A web development podcast from LogRocket\n"}}}]}},"pageContext":{"tag":"Accessibility"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/podrocket/"},"frontmatter":{"title":"PodRocket — A web development podcast from LogRocket\n"}}}]}},"pageContext":{"tag":"Accessibility"}},
     "staticQueryHashes": ["4080856488"]}

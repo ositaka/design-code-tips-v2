@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/frameworks/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/podcasts/2020-06-08-openhive-js/"},"frontmatter":{"title":"OpenHive.JS — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/2017-08-22-syntax-fm/"},"frontmatter":{"title":"Syntax — A Podcast for Web Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/2014-10-18-full-stack-radio/"},"frontmatter":{"title":"Full Stack Radio — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"Frameworks"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/podcasts/openhive-js/"},"frontmatter":{"title":"OpenHive.JS — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/syntax-fm/"},"frontmatter":{"title":"Syntax — A Podcast for Web Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/full-stack-radio/"},"frontmatter":{"title":"Full Stack Radio — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"Frameworks"}},
     "staticQueryHashes": ["4080856488"]}

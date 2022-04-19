@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/usability/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/podcasts/syntax-fm/"},"frontmatter":{"title":"Syntax — A Podcast for Web Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/boadworld-ux-show/"},"frontmatter":{"title":"The Boagworld UX Show\n"}}}]}},"pageContext":{"tag":"Usability"}},
+    "staticQueryHashes": ["4080856488"]}
