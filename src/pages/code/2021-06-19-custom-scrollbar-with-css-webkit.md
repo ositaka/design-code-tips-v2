@@ -13,7 +13,8 @@ tags:
 
 ```css
 ::-webkit-scrollbar {
-  width: 0.625rem;
+  height: 0.625rem; /* horizontal scrollbar */
+  width: 0.625rem; /* vertical scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {

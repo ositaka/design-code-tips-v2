@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/user-experience/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/podcasts/10web/"},"frontmatter":{"title":"10web — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/boadworld-ux-show/"},"frontmatter":{"title":"The Boagworld UX Show\n"}}}]}},"pageContext":{"tag":"User Experience"}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/code/2022-04-21-code-examples-of-the-mediacreators-nodejs-website/"},"frontmatter":{"title":"Code Examples of the Media Creators (NodeJS) website\n"}}},{"node":{"fields":{"slug":"/podcasts/10web/"},"frontmatter":{"title":"10web — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/boadworld-ux-show/"},"frontmatter":{"title":"The Boagworld UX Show\n"}}}]}},"pageContext":{"tag":"User Experience"}},
     "staticQueryHashes": ["4080856488"]}

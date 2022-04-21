@@ -173,6 +173,14 @@ $large-desktop-width: 1600px
   @media (min-width: #{$large-desktop-width})
     @content
 
+::-webkit-scrollbar
+  height: 0.625rem
+  width: 0.625rem
+::-webkit-scrollbar-thumb
+  background: rgba(140, 140, 140, 100)
+::-webkit-scrollbar-track
+  background: rgba(80, 80, 80, 100)
+
 body,
 button,
 input,

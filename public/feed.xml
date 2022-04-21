@@ -4,7 +4,7 @@
         <title>Design &amp; Code (tips)</title>
         <link>https://www.design-code.tips</link>
         <description>This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.</description>
-        <lastBuildDate>Tue, 19 Apr 2022 16:43:34 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 21 Apr 2022 21:36:54 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>GatsbyJS</generator>
         <copyright>All rights reserved 2022, Nuno Marques</copyright>
@@ -401,6 +401,159 @@
     opacity: 0.7;
   }
   
+</style>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Code Examples of the Media Creators (NodeJS) website
+]]></title>
+            <link>https://www.design-code.tips/code/2022-04-21-code-examples-of-the-mediacreators-nodejs-website/</link>
+            <guid>https://www.design-code.tips/code/2022-04-21-code-examples-of-the-mediacreators-nodejs-website/</guid>
+            <pubDate>Thu, 21 Apr 2022 19:28:37 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>1 — Internet Connection Examples (<code>4g</code> + <code>3g</code>/<code>slow-2g</code>)</h2>
+<p>On this chapter we can find a few examples of code, tought to take the most advantage of the user's internet connection type. These connection types can vary from <code>4g</code>, <code>3g</code>, <code>2g</code> and <code>slow-2g</code>. For the sake of simplicity, we are going to ignore the <code>2g</code> one and use <code>slow-2g</code> instead, as it is the slowest internet connection (GPRS).</p>
+<p>Have in mind that, by default, Prismic already serves all the images with a rasonable quality/compression ratio. As a plus, it serves already all the images with a <code>.webp</code> and it converts <code>.gif</code> files to animated <code>.webp</code> files. The images end-up by having a good final file size served from Prismic.</p>
+<p>We use the <code>.pug</code> as template engine to make use of it's magic on serving dynamic data, with NodeJS. To achieve this, we set a JavaScript cookie on the <code>base.pug</code> file, after checking the user's connection type as the very beginning of the request. This "internet connection check-test" it runs every type the user navigates betwen pages.</p>
+<p>As a good example for this use case scenario is, for instance, on a indoor market, where the internet connection is not so good and it's changing quite frequently betwen <code>3g</code> and <code>slow-2g</code>. With this approach, we can quickly serve more compressed images, that will take less time to be loaded. This will give a better experience to the user and will keep the user motivated to wait a bit more, but not give it up. We show a background color on all images, based on its main color, picked by hand, to keep the branding aspect in mind.</p>
+<h3>1.1 — Video example (with Image fallback)</h3>
+<p>The desired element on this media object is the html element <code>&#x3C;video></code> and is only served when the <strong>user</strong> is on a <code>4g</code> connection. Case the user is on a bad connection type, for instance <code>3g</code> or <code>slow-2g</code>, an <code>&#x3C;img></code> html element will be served.</p>
+<h4>Notes</h4>
+<ol>
+<li>
+<p>in order to get even a better performance, and page load speed, we are using <code>.replace('?auto=compress,format', '?q=30')</code> to request a 70% optimized image, from the image processor of Prismic: <a href="https://prismic.io/blog/prismic-image-optimization-imgix" title="See official post on Prismic.io" target="_blank" rel="noopener"><code>imgix</code></a>.</p>
+</li>
+<li>
+<p>for desktop devices, is better to set a maximum size of 1200px wide, by using <code>&#x26;w=1200</code> at the end of the quality parameter fron the previous point.</p>
+</li>
+<li>
+<p>for mobile devices the default <code>width</code> of all the images are <strong>480px</strong>, because is heigher than the default 360px screen phone's width. This is helpful, because it serves a better image for high DPI screens, without the need for using a <code>@2x</code> image. In our case, the most important is the overall <a href="https://design-code.tips/tags/performance/" target="_blank" rel="noopener">Performance of the website</a>.</p>
+</li>
+</ol>
+<h4>Example code — Video on <code>4g</code> only</h4>
+<pre class="grvsc-container abyss" data-language="pug" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk7">figure</span><span class="mtk6">.home__hero__media</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk7">picture</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk15 mtki">if</span><span class="mtk1"> (connection </span><span class="mtk7">===</span><span class="mtk1"> </span><span class="mtk11">&#39;4g&#39;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk7">video</span><span class="mtk1">(</span><span class="mtk6">preload</span><span class="mtk1">=</span><span class="mtk11">&quot;auto&quot;</span><span class="mtk1"> </span><span class="mtk6">playsinline</span><span class="mtk1"> </span><span class="mtk6">loop</span><span class="mtk1"> </span><span class="mtk6">muted</span><span class="mtk1"> </span><span class="mtk6">disablepictureinpicture</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk6">srcset</span><span class="mtk1">=</span><span class="mtk11">`</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">          ${</span><span class="mtk1">home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_mobile.url</span><span class="mtk11">} 768w,</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">          ${</span><span class="mtk1">home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_desktop.url</span><span class="mtk11">} 769w</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">        `</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk15 mtki">else</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk15 mtki">if</span><span class="mtk1"> (</span><span class="mtk7">typeof</span><span class="mtk1">(home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_preview.phone) </span><span class="mtk7">!==</span><span class="mtk1"> </span><span class="mtk11">&#39;undefined&#39;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk7">source</span><span class="mtk1">(</span><span class="mtk6">media</span><span class="mtk1">=</span><span class="mtk11">&#39;(max-width: 768px)&#39;</span><span class="mtk1"> </span><span class="mtk6">srcset</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_preview.phone.url.</span><span class="mtk6">replace</span><span class="mtk1">(</span><span class="mtk11">&#39;?auto=compress,format&#39;</span><span class="mtk1">, </span><span class="mtk11">&#39;?q=30&#39;</span><span class="mtk1">)</span><span class="mtk11">}`</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk7">source</span><span class="mtk1">(</span><span class="mtk6">media</span><span class="mtk1">=</span><span class="mtk11">&#39;(min-width: 769px)&#39;</span><span class="mtk1"> </span><span class="mtk6">srcset</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_preview.url.</span><span class="mtk6">replace</span><span class="mtk1">(</span><span class="mtk11">&#39;?auto=compress,format&#39;</span><span class="mtk1">, </span><span class="mtk11">&#39;?q=30&amp;w=1200&#39;</span><span class="mtk1">)</span><span class="mtk11">}`</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk7">img</span><span class="mtk1">(</span><span class="mtk6">alt</span><span class="mtk1">=home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_preview.alt </span><span class="mtk6">data-src</span><span class="mtk1">=home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_preview.url </span><span class="mtk6">height</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_preview.dimensions.height</span><span class="mtk11">}`</span><span class="mtk1"> </span><span class="mtk6">width</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">home.data.video[</span><span class="mtk4">0</span><span class="mtk1">].video_preview.dimensions.width</span><span class="mtk11">}`</span><span class="mtk1">)</span></span></span></code></pre>
+<h3>1.2 — Image example (<code>4g</code> vs <code>3g</code>/<code>slow-2g</code>)</h3>
+<p>Ideally, with <code>4g</code>, we serve a more sharped image (without any compression) and we use <code>.replace('?auto=compress,format', '')</code> to replace the default auto-compressed file from Prismic's CDN (with <a href="https://prismic.io/blog/prismic-image-optimization-imgix" title="See official post on Prismic.io" target="_blank" rel="noopener"><code>imgix</code></a>).</p>
+<p>If the user is on a bad connection (<code>3g</code> or <code>slow-2g</code>), we serve a 70% optimized image from the request to the Prismic CDN (with <a href="https://prismic.io/blog/prismic-image-optimization-imgix" title="See official post on Prismic.io" target="_blank" rel="noopener"><code>imgix</code></a>).</p>
+<h4>Example code — Sharper images on <code>4g</code></h4>
+<pre class="grvsc-container abyss" data-language="pug" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk7">figure</span><span class="mtk6">.home__projects__item__media</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk7">picture</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk15 mtki">if</span><span class="mtk1"> (</span><span class="mtk7">typeof</span><span class="mtk1">(project.project_image.phone) </span><span class="mtk7">!==</span><span class="mtk1"> </span><span class="mtk11">&#39;undefined&#39;</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk7">source</span><span class="mtk1">(</span><span class="mtk6">media</span><span class="mtk1">=</span><span class="mtk11">&#39;(max-width: 768px)&#39;</span><span class="mtk1"> </span><span class="mtk6">srcset</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">connection </span><span class="mtk7">===</span><span class="mtk1"> </span><span class="mtk11">&#39;4g&#39;</span><span class="mtk1"> </span><span class="mtk7">?</span><span class="mtk1"> project.project_image.phone.url </span><span class="mtk7">:</span><span class="mtk1"> project.project_image.phone.url.</span><span class="mtk6">replace</span><span class="mtk1">(</span><span class="mtk11">&#39;?auto=compress,format&#39;</span><span class="mtk1">, </span><span class="mtk11">&#39;?q=30&#39;</span><span class="mtk1">)</span><span class="mtk11">}`</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk7">source</span><span class="mtk1">(</span><span class="mtk6">media</span><span class="mtk1">=</span><span class="mtk11">&#39;(min-width: 769px)&#39;</span><span class="mtk1"> </span><span class="mtk6">srcset</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">connection </span><span class="mtk7">===</span><span class="mtk1"> </span><span class="mtk11">&#39;4g&#39;</span><span class="mtk1"> </span><span class="mtk7">?</span><span class="mtk1"> project.project_image.url.</span><span class="mtk6">replace</span><span class="mtk1">(</span><span class="mtk11">&#39;?auto=compress,format&#39;</span><span class="mtk1">, </span><span class="mtk11">&#39;&#39;</span><span class="mtk1">) </span><span class="mtk7">:</span><span class="mtk1"> project.project_image.url.</span><span class="mtk6">replace</span><span class="mtk1">(</span><span class="mtk11">&#39;?auto=compress,format&#39;</span><span class="mtk1">, </span><span class="mtk11">&#39;?q=30&amp;w=1200&#39;</span><span class="mtk1">)</span><span class="mtk11">}`</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk7">img</span><span class="mtk6">.home__projects__item__media__image</span><span class="mtk1">(</span><span class="mtk6">alt</span><span class="mtk1">=project.project_image.alt </span><span class="mtk6">data-src</span><span class="mtk1">=project.project_image.url.</span><span class="mtk6">replace</span><span class="mtk1">(</span><span class="mtk11">&#39;?auto=compress,format&#39;</span><span class="mtk1">, </span><span class="mtk11">&#39;&#39;</span><span class="mtk1">) </span><span class="mtk6">height</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">project.project_image.dimensions.height</span><span class="mtk11">}`</span><span class="mtk1"> </span><span class="mtk6">width</span><span class="mtk1">=</span><span class="mtk11">`${</span><span class="mtk1">project.project_image.dimensions.width</span><span class="mtk11">}`</span><span class="mtk1">)</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"></span></span></code></pre>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .abyss { background-color: #000c18; }
+  .abyss .mtki { font-style: italic; }
+  .abyss .mtk7 { color: #225588; }
+  .abyss .mtk6 { color: #DDBB88; }
+  .abyss .mtk1 { color: #6688CC; }
+  .abyss .mtk15 { color: #9966B8; }
+  .abyss .mtk11 { color: #22AA44; }
+  .abyss .mtk4 { color: #F280D0; }
+  .abyss .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
 </style>]]></content:encoded>
         </item>
         <item>
@@ -1884,7 +2037,8 @@
             <guid>https://www.design-code.tips/code/2021-06-19-custom-scrollbar-with-css-webkit/</guid>
             <pubDate>Sat, 19 Jun 2021 19:28:37 GMT</pubDate>
             <content:encoded><![CDATA[<pre class="grvsc-container abyss" data-language="css" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk6">::-webkit-scrollbar</span><span class="mtk1"> {</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk15 mtki">width</span><span class="mtk1">: </span><span class="mtk4">0.625</span><span class="mtk7">rem</span><span class="mtk1">;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk15 mtki">height</span><span class="mtk1">: </span><span class="mtk4">0.625</span><span class="mtk7">rem</span><span class="mtk1">; </span><span class="mtk3">/* horizontal scrollbar */</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk15 mtki">width</span><span class="mtk1">: </span><span class="mtk4">0.625</span><span class="mtk7">rem</span><span class="mtk1">; </span><span class="mtk3">/* vertical scrollbar */</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk6">::-webkit-scrollbar-thumb</span><span class="mtk1"> {</span></span></span>
@@ -1990,6 +2144,7 @@
   .abyss .mtk15 { color: #9966B8; }
   .abyss .mtk4 { color: #F280D0; }
   .abyss .mtk7 { color: #225588; }
+  .abyss .mtk3 { color: #384887; }
   .abyss .grvsc-line-highlighted::before {
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
