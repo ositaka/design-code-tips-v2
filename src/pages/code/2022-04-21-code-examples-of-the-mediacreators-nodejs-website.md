@@ -34,7 +34,7 @@ As a good example for this use case scenario is, for instance, on an indoor mark
 
 The following JavaScript code is executed on the `<head>` HTML element, right after the SEO metatags. This code snippet it will add to check the user's internet connection with the help of `navigator.connection?.effectiveType`.
 
-Browser compatibility: **Chrome based browsers** and **Opera** only. No support for Safari.
+Browser compatibility: **Chrome based browsers** and **Opera** only. No support for Safari. In case the browser doesn't support `navigator.connection.effectiveType` we will just serve the `4g` assets.
 
 ```pug
 //- Check Internet Connection
@@ -124,7 +124,7 @@ The desired element on this media object is the HTML element `<video>` and is on
 ```pug
 figure.home__hero__media
   picture(height=`${home.data.video[0].video_preview.dimensions.height}` width=`${home.data.video[0].video_preview.dimensions.width}` style=`background-color: ${home.data.video[0].background_color}`)
-    if (connection === '4g')
+    if (connection === '4g' || connection === 'undefined')
       video(preload="auto" playsinline loop muted disablepictureinpicture
         srcset=`
           ${home.data.video[0].video_mobile.url} 768w,
@@ -144,7 +144,7 @@ figure.home__hero__media
 figure.work_page__full-screen__media
   picture(height=`${section.primary.image.dimensions.height}` width=`${section.primary.image.dimensions.width}` style=`background-color: ${section.primary.background_color}`)
     //- is video && is on 4g
-    if (section.primary.is_video === true && connection === '4g')
+    if (section.primary.is_video === true && (connection === '4g' || connection === 'undefined'))
       video(preload="auto" playsinline loop muted disablepictureinpicture
         srcset=`
           ${section.primary.video_mobile.url} 768w,
@@ -160,8 +160,8 @@ figure.work_page__full-screen__media
     //- is image
     else
       if (typeof(section.primary.image.phone) !== 'undefined')
-        source(media='(max-width: 768px)' srcset=`${connection === '4g' ? section.primary.image.phone.url : section.primary.image.phone.url.replace('?auto=compress,format', '?q=30&auto=compress,format')}`)
-        source(media='(min-width: 769px)' srcset=`${connection === '4g' ? section.primary.image.url.replace('?auto=compress,format', '') : section.primary.image.url.replace('?auto=compress,format', '?q=30&w=1200&auto=compress,format')}`)
+        source(media='(max-width: 768px)' srcset=`${connection === '4g' || connection === 'undefined' ? section.primary.image.phone.url : section.primary.image.phone.url.replace('?auto=compress,format', '?q=30&auto=compress,format')}`)
+        source(media='(min-width: 769px)' srcset=`${connection === '4g' || connection === 'undefined' ? section.primary.image.url.replace('?auto=compress,format', '') : section.primary.image.url.replace('?auto=compress,format', '?q=30&w=1200&auto=compress,format')}`)
       img(alt=section.primary.image.alt data-src=section.primary.image.url.replace('?auto=compress,format', '') height=`${section.primary.image.dimensions.height}` width=`${section.primary.image.dimensions.width}`)
 ```
 
@@ -177,8 +177,8 @@ If the user is on a bad connection (`3g` or `slow-2g`), we serve a 70% optimized
 figure.home__projects__item__media
   picture(height=`${project.project_image.dimensions.height}` width=`${project.project_image.dimensions.width}` style=`background-color: ${project.background_color}`)
     if (typeof(project.project_image.phone) !== 'undefined')
-      source(media='(max-width: 768px)' srcset=`${connection === '4g' ? project.project_image.phone.url : project.project_image.phone.url.replace('?auto=compress,format', '?q=30&auto=compress,format')}`)
-      source(media='(min-width: 769px)' srcset=`${connection === '4g' ? project.project_image.url.replace('?auto=compress,format', '') : project.project_image.url.replace('?auto=compress,format', '?q=30&w=1200&auto=compress,format')}`)
+      source(media='(max-width: 768px)' srcset=`${connection === '4g' || connection === 'undefined' ? project.project_image.phone.url : project.project_image.phone.url.replace('?auto=compress,format', '?q=30&auto=compress,format')}`)
+      source(media='(min-width: 769px)' srcset=`${connection === '4g' || connection === 'undefined' ? project.project_image.url.replace('?auto=compress,format', '') : project.project_image.url.replace('?auto=compress,format', '?q=30&w=1200&auto=compress,format')}`)
     img.home__projects__item__media__image(alt=project.project_image.alt data-src=project.project_image.url.replace('?auto=compress,format', '') height=`${project.project_image.dimensions.height}` width=`${project.project_image.dimensions.width}`)
 
 ```
@@ -193,7 +193,7 @@ figure.services__projects__item__media
     img.services__projects__item__media__image(
       alt=project.project_image.alt
       data-src=`
-        ${connection === '4g' ?
+        ${connection === '4g' || connection === 'undefined' ?
           project.project_image.url.replace('?auto=compress,format', isPhone ? '?w=480' : '?w=900' )
         :
           project.project_image.url.replace('?auto=compress,format', isPhone ? '?q=30&w=360&auto=compress,format' : '?q=30&w=600&auto=compress,format')}`
