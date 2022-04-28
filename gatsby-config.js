@@ -90,7 +90,14 @@ module.exports = {
             resolve: `gatsby-remark-vscode`,
             options: {
               // theme: 'Abyss' // Or install your favorite theme from GitHub
-              theme: 'Abyss',
+              theme: 'Default Dark+',
+              inlineCode: {
+                marker: '•',
+                theme: {
+                  default: 'Default Light+',
+                  dark: 'Default Dark+'
+                }
+              }
             },
           },
           {

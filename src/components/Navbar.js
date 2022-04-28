@@ -55,8 +55,8 @@ const Navbar = ({ open, toggle }) => {
           data-target="navMenu"
           role="menuitem"
           tabIndex={0}
-          // onKeyPress={() => toggleHamburger()}
-          // onClick={() => toggleHamburger()}
+        // onKeyPress={() => toggleHamburger()}
+        // onClick={() => toggleHamburger()}
         >
           <span />
           <span />
@@ -65,7 +65,7 @@ const Navbar = ({ open, toggle }) => {
       </div>
       <div
         id="navMenu"
-        // className={`navbar-col navbar-menu ${this.state.navBarActiveClass}`}
+      // className={`navbar-col navbar-menu ${this.state.navBarActiveClass}`}
       >
         <Link
           className="navbar-item"
@@ -129,7 +129,7 @@ const Navbar = ({ open, toggle }) => {
       <div className="navbar-col navbar-secondary">
         <a
           className="navbar-item"
-          href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -140,7 +140,7 @@ const Navbar = ({ open, toggle }) => {
         </a>
         <a
           className="navbar-item"
-          href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -151,7 +151,7 @@ const Navbar = ({ open, toggle }) => {
         </a>
         <a
           className="navbar-item"
-          href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >

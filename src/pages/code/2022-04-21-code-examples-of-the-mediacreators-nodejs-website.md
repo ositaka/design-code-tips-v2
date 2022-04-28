@@ -30,11 +30,11 @@ We use the [PugJS](https://pugjs.org/api/getting-started.html) as template engin
 
 As a good example for this use case scenario is, for instance, on an indoor market, where the internet connection is not so good, and it's changing quite frequently between `3g` and `slow-2g`. With this approach, we can quickly serve more compressed images, that will take less time to be loaded. This will give a better experience to the user and will keep the user motivated to wait a bit more, but not give it up. We show a background color on all images, based on its main color, picked by hand, to keep the branding aspect in mind.
 
-### 1.1 — Check user's internet connection type with JavaScript & server the appropriated media files with ExpressJS
+### 1.1 — Check user's internet connection type with JavaScript & serve the appropriated media files with ExpressJS
 
 The following JavaScript code is executed on the `<head>` HTML element, right after the SEO metatags. This code snippet it will add to check the user's internet connection with the help of `navigator.connection?.effectiveType`.
 
-Browser compatibility: **Chrome based browsers** and **Opera** only. No support for Safari. In case the browser doesn't support `navigator.connection.effectiveType` we will just serve the `4g` assets.
+Browser compatibility: **Chrome based browsers** and **Opera** only. [No support for Safari, Firefox and IE](https://caniuse.com/?search=effectiveType). In case the browser doesn't support `navigator.connection.effectiveType` we will just serve the `4g` assets.
 
 ```pug
 //- Check Internet Connection
@@ -403,3 +403,190 @@ export default class {
   }
 }
 ```
+
+## 3 — Web Animations (with CSS & JavaScript)
+
+Web animations can be one of the hardest topics in performance. You can simply use CSS transitions and animations or mimic the same effect with JavaScript, but you will be able to take more advantage (performance-wise) and control when you combine these two technologies.
+
+JavaScript is great to detect when the animated elements are visible on the screen and to set `data-attributes` in these elements, to be able to control the animation state (show, hide or move elements). To achieve this goal, we must use an [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to check when the element is visible on the screen. Then, with CSS we can animate the desired elements.
+
+With the above approach, the browser will be able to generate much smoother animations, keeping the performance always in mind. When using CSS to animate the elements, instead of JavaScript, the browser gives a much higher FPS (Frames Per Second), comparing to the FPS obtained with JavaScript.
+
+We can also set different animations types or behavious for desktops, tablets or phones. Sometimes, the older phone models can have a very slow FPS; in this case, we can simply ignore specific animations with CSS and just let them run on "high-performance" devices. Please see point number **4** to see how this is possible.
+
+Now, let's take a look how we managed our animations at [www.mediacreators.studio](https://www.mediacreators.studio) website
+
+### 3.1 — CSS Base Animations
+
+By using animated CSS `transform`, we can mimic the JavaScript behavior, but for that we have to add an extra class `.in-view`. You can see how in the point **3.2**.
+
+```scss
+// animations.scss
+* {
+  span span {
+    transform: translateY(200%) rotateY(-20deg) rotateZ(20deg) skewX(30deg);
+    transition: none;
+    will-change: transform;
+  }
+
+  &.in-view span span {
+    transform: translateY(0%) rotateY(0deg) rotateZ(0deg) skewX(0deg);
+    transition: transform 1.4s $ease-mc;
+  }
+}
+
+[data-animation='link'] {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: max-content;
+}
+
+[data-animation='link'] span {
+  display: inline-block;
+  transform-origin: center center 0.5em;
+  vertical-align: middle;
+}
+
+[data-animation='label'],
+[data-animation='paragraph'],
+[data-animation='title'],
+[data-animation='chain'] {
+  span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}
+```
+
+### 3.2 — JavaScript exemplo of our `Title.js` animation
+
+The `Title` animations are called via an HTML data-attribute: `data-animation="title"`. This is how the animation is called via JS and CSS.
+
+Please pay attention to the `animateIn()` and `animateOut()` functions. You will see the following line: `classList.add('in-view')` and `classList.remove('in-view')`. Here is where the magic happens with the CSS animation.
+
+```js
+import Animation from 'classes/Animation';
+import { calculate, split } from 'utils/text';
+
+export default class Title extends Animation {
+  constructor({ element, elements }) {
+    super({
+      element,
+      elements,
+    });
+
+    // divides the title into words, so we can animate each word individually
+    split({ element: this.element, append: true });
+    split({ element: this.element, append: true });
+
+    this.elementLinesSpans = this.element.querySelectorAll('span span');
+  }
+
+  animateIn() {
+    this.element.classList.add('in-view');
+
+    this.element.querySelectorAll('span span').forEach((element, index) => {
+      element.style.transitionDelay = `${index + index + index + index}0ms`;
+    });
+  }
+
+  animateOut() {
+    this.element.classList.remove('in-view');
+  }
+
+  onResize() {
+    this.elementLines = calculate(this.elementLinesSpans);
+  }
+}
+```
+
+## 4 — Checking the Performance on all Devices (`low-performance` vs `high-performance`)
+
+Performance is not just a matter in measuring the internet connection speed and serve the appropriated files or assets. To get a great performance on the overall experience, you must check if the user is on a `high-performance` or `low-performance` device. Then, according to the obtained result, we can show less animations, for example, or even don't show animations at all.
+
+### 4.1 — Highjacking the scroll-bar
+
+This performance check is very helpfull in case you are _hijacking_ the scroll-bar with JavaScript.
+
+"Highjacking the scroll-bar with JavaScript" means that the website is not really scrolling, but instead, is the JavaScript that is moving the content shown on the screen, according to the user's scroll via the mouse input.
+
+### 4.1.1 — Why Highjacking the scroll-bar?
+
+Although hijacking the scroll-bar is considering a "nightmare" in user experience field, if you are like Nuno, who had used Windows computers for more than 15 years, you would also feel _extremely amazed_ when you would open a website with a _smooth scroll-bar_ behavior. Doesn't it feel _so good_ when you would scroll your mouse wheel and the page would, somehow by magic, _smoothly slide_ or _float_ to a new section? This is certainly an ignored point for those users who were lucky enough to have Macintosh computers with those elite _Magic Mouses_, which would do this "scrolling magic" by default. _(For the record: Nuno has been using a Mac computer for the last 3 years and he really knows what he's talking about.)_
+
+With all this in mind, is time now to avoid bad performance issues because of the "smooth scroll-bar" use. To achieve this, we will show bellow how we managed our performance test check. We will run a quick performance check to see if the user's device **has at least 4 CPU-Cores** and a class is added on the `html` element.
+
+```js
+checkPerformance() {
+  // Check Device's Performance
+  navigator.hardwareConcurrency <= 4 && navigator.userAgent.indexOf('Win') > 0 ?
+    document.documentElement.classList.add('low-performance') :
+    document.documentElement.classList.add('high-performance')
+}
+```
+
+After this check we can decide where to add a smooth scroll-bar behavior and where to avoid it.
+
+**All touch screens, special phone devices, have this smooth scroll-bar feature disabled**, because of performance issues. The native scroll on touch devices is much better than any attempt made by JavaScript smooth scroll-bars.
+
+### 4.1.2 — Controlling the scroll with the Keyboard
+
+If we are "highjacking" the scroll-bar, we have to be able to let the user use his usual input methods to controll the scrolling of any web page.
+
+These input methods are:
+
+- **Space bar**: moves the page **down**, according to the height of the screen (for instance, 1080px);
+- **Shift + Space bar**: moves the page **up**, according to the height of the screen (for instance, 1080px);
+- **Arrow key Down**: moves the page **down**, but just a tiny bit;
+- **Arrow key Up**: moves the page **up**, but just a tiny bit;
+
+The last two methods, as they don't really have a default value defined. In our case, we devide the screen's height by 3, to be able to move just a "tiny bit" the page down/up, but still it's a higher value than the default's behavior. Here's the code line for that: `this.scroll.target = this.scroll.target + window.innerHeight / 3;`
+
+```js
+if (this.elements.wrapper) {
+  /** Check for Key Presses */
+  // check if keypress is outside of any input/textarea element first
+  document.body.onkeydown = (event) => {
+    // scroll down
+    if (
+      event.target.matches('input') || event.target.matches('textarea')
+        ? false
+        : event.key === ' ' && !event.shiftKey
+    ) {
+      this.scroll.target = this.scroll.target + window.innerHeight;
+    }
+    // scroll up
+    if (
+      event.target.matches('input') || event.target.matches('textarea')
+        ? false
+        : event.key === ' ' && event.shiftKey
+    ) {
+      this.scroll.target = this.scroll.target - window.innerHeight;
+    }
+    if (
+      event.target.matches('input') || event.target.matches('textarea')
+        ? false
+        : event.key === 'ArrowDown'
+    ) {
+      this.scroll.target = this.scroll.target + window.innerHeight / 3;
+    }
+    if (
+      event.target.matches('input') || event.target.matches('textarea')
+        ? false
+        : event.key === 'ArrowUp'
+    ) {
+      this.scroll.target = this.scroll.target - window.innerHeight / 3;
+    }
+  };
+
+  this.elements.wrapper.style[
+    this.transformPrefix
+  ] = `translate3d(0, -${Math.floor(this.scroll.current)}px, 0)`;
+  this.elements.wrapper.style.willChange = `transform`;
+}
+```
+
+Please note that we are using the CSS `translate3d()` method to force the page to be move via the GPU instead of the CPU. This is a much better benefit for the user, because the scroll is handled by the GPU, while the CPU is already busy handling all the necessary JavaScript to run the page.
