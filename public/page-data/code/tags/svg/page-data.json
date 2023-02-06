@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-code-tags-js",
-    "path": "/code/tags/svg/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/code/2021-08-23-how-to-scale-a-svg-with-css-only/"},"frontmatter":{"title":"How to scale a SVG with CSS only\n","templateKey":"code-post"}}}]}},"pageContext":{"tag":"SVG"}},
-    "staticQueryHashes": ["4080856488"]}

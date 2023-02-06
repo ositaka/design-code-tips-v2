@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/qr-code-bar-code/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/tools/2020-03-15-qr-code-generator/"},"frontmatter":{"title":"QR Code Generator\n"}}}]}},"pageContext":{"tag":"QR Code / Bar Code"}},
-    "staticQueryHashes": ["4080856488"]}

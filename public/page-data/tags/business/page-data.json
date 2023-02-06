@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/business/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/podcasts/voice-of-design/"},"frontmatter":{"title":"Voice of Design — A Podcast for Designers\n"}}},{"node":{"fields":{"slug":"/podcasts/mudo/"},"frontmatter":{"title":"Mudo — A Podcast for Creatives"}}},{"node":{"fields":{"slug":"/podcasts/the-futur/"},"frontmatter":{"title":"The Futur — A Podcast for the Business of Design\n"}}}]}},"pageContext":{"tag":"Business"}},
-    "staticQueryHashes": ["4080856488"]}

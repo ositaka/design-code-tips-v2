@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/compression-tools/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/tools/2021-07-04-handbrake/"},"frontmatter":{"title":"HandBrake: Open Source Video Transcoder\n"}}},{"node":{"fields":{"slug":"/tools/2020-03-14-tinypng/"},"frontmatter":{"title":"--- TO DO --- TinyPNG – JPEG, PNG & WebP image compression\n"}}}]}},"pageContext":{"tag":"Compression Tools"}},
-    "staticQueryHashes": ["4080856488"]}

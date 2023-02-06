@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/type-script/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/syntax-fm/"},"frontmatter":{"title":"Syntax — A Podcast for Web Developers\n"}}}]}},"pageContext":{"tag":"TypeScript"}},
-    "staticQueryHashes": ["4080856488"]}

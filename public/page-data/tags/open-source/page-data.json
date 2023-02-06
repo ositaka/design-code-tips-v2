@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/open-source/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":5,"edges":[{"node":{"fields":{"slug":"/tools/2021-07-04-handbrake/"},"frontmatter":{"title":"HandBrake: Open Source Video Transcoder\n"}}},{"node":{"fields":{"slug":"/podcasts/podrocket/"},"frontmatter":{"title":"PodRocket — A web development podcast from LogRocket\n"}}},{"node":{"fields":{"slug":"/podcasts/javascript-jabber/"},"frontmatter":{"title":"Javascript Jabber — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/the-changelog/"},"frontmatter":{"title":"The Changelog — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/stackoverflow/"},"frontmatter":{"title":"The Stack Overflow — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"Open Source"}},
-    "staticQueryHashes": ["4080856488"]}

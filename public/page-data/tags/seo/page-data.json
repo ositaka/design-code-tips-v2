@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/seo/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/10web/"},"frontmatter":{"title":"10web — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"SEO"}},
-    "staticQueryHashes": ["4080856488"]}

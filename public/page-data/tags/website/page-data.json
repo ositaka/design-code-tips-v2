@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/website/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/inspiration/2003-03-03-2advanced-flash-website-v4-2003/"},"frontmatter":{"title":"2Advanced Studios — Flash website in 2003\n"}}},{"node":{"fields":{"slug":"/inspiration/2002-02-02-neostream-interactive-flash-website-2002/"},"frontmatter":{"title":"Neostream Interactive — Flash website in 2002\n"}}}]}},"pageContext":{"tag":"Website"}},
-    "staticQueryHashes": ["4080856488"]}

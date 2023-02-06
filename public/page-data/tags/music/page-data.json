@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/music/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/breakbeat-science/"},"frontmatter":{"title":"BreakBeat Science — A Podcast for Dancers\n"}}}]}},"pageContext":{"tag":"Music"}},
-    "staticQueryHashes": ["4080856488"]}

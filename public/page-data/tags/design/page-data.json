@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/design/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":6,"edges":[{"node":{"fields":{"slug":"/podcasts/podrocket/"},"frontmatter":{"title":"PodRocket — A web development podcast from LogRocket\n"}}},{"node":{"fields":{"slug":"/tools/2018-06-10-figma/"},"frontmatter":{"title":"--- TO DO --- Figma\n"}}},{"node":{"fields":{"slug":"/podcasts/voice-of-design/"},"frontmatter":{"title":"Voice of Design — A Podcast for Designers\n"}}},{"node":{"fields":{"slug":"/podcasts/mudo/"},"frontmatter":{"title":"Mudo — A Podcast for Creatives"}}},{"node":{"fields":{"slug":"/podcasts/the-futur/"},"frontmatter":{"title":"The Futur — A Podcast for the Business of Design\n"}}},{"node":{"fields":{"slug":"/podcasts/boadworld-ux-show/"},"frontmatter":{"title":"The Boagworld UX Show\n"}}}]}},"pageContext":{"tag":"Design"}},
-    "staticQueryHashes": ["4080856488"]}

@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-code-tags-js",
-    "path": "/code/tags/performance/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/code/2022-04-21-code-examples-of-the-mediacreators-nodejs-website/"},"frontmatter":{"title":"Code Examples of the Media Creators (NodeJS) website\n","templateKey":"code-post"}}},{"node":{"fields":{"slug":"/code/2022-03-25-my-gatsby-markdown-code-highlighter-of-choice-and-why/"},"frontmatter":{"title":"My Gatsby Markdown Code Highlighting of Choice and Why\n","templateKey":"code-post"}}},{"node":{"fields":{"slug":"/code/2022-03-05-how-to-speed-up-wordpress-websites/"},"frontmatter":{"title":"How to speed up WordPress websites\n","templateKey":"code-post"}}}]}},"pageContext":{"tag":"Performance"}},
-    "staticQueryHashes": ["4080856488"]}

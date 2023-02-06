@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/web/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":5,"edges":[{"node":{"fields":{"slug":"/tools/2022-01-14-language-tool/"},"frontmatter":{"title":"LanguageTool: Your writing assistant\n"}}},{"node":{"fields":{"slug":"/tools/2021-07-04-handbrake/"},"frontmatter":{"title":"HandBrake: Open Source Video Transcoder\n"}}},{"node":{"fields":{"slug":"/tools/2020-11-25-slugify-online/"},"frontmatter":{"title":"Slugify Online: Clean URL Slug Generator\n"}}},{"node":{"fields":{"slug":"/tools/2019-03-12-httrack/"},"frontmatter":{"title":"HTTrack — Website Copier\n"}}},{"node":{"fields":{"slug":"/tools/2020-03-14-tinypng/"},"frontmatter":{"title":"--- TO DO --- TinyPNG – JPEG, PNG & WebP image compression\n"}}}]}},"pageContext":{"tag":"Web"}},
-    "staticQueryHashes": ["4080856488"]}
