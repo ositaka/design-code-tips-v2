@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/online/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":6,"edges":[{"node":{"fields":{"slug":"/tools/2022-01-14-language-tool/"},"frontmatter":{"title":"LanguageTool: Your writing assistant\n"}}},{"node":{"fields":{"slug":"/tools/2020-11-25-slugify-online/"},"frontmatter":{"title":"Slugify Online: Clean URL Slug Generator\n"}}},{"node":{"fields":{"slug":"/tools/2020-03-15-qr-code-generator/"},"frontmatter":{"title":"QR Code Generator\n"}}},{"node":{"fields":{"slug":"/tools/2019-03-12-httrack/"},"frontmatter":{"title":"HTTrack — Website Copier\n"}}},{"node":{"fields":{"slug":"/tools/2020-03-14-tinypng/"},"frontmatter":{"title":"--- TO DO --- TinyPNG – JPEG, PNG & WebP image compression\n"}}},{"node":{"fields":{"slug":"/tools/2018-06-10-figma/"},"frontmatter":{"title":"--- TO DO --- Figma\n"}}}]}},"pageContext":{"tag":"Online"}},
+    "staticQueryHashes": ["4080856488"]}

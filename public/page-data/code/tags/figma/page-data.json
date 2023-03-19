@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-code-tags-js",
+    "path": "/code/tags/figma/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/code/2020-01-13-svg-animation-explained/"},"frontmatter":{"title":"--- TO DO --- SVG Animation explained\n","templateKey":"code-post"}}}]}},"pageContext":{"tag":"Figma"}},
+    "staticQueryHashes": ["4080856488"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/databases/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/mongodb/"},"frontmatter":{"title":"MongoDB — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"Databases"}},
+    "staticQueryHashes": ["4080856488"]}

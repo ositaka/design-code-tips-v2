@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-code-tags-js",
+    "path": "/code/tags/pug-js/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/code/2022-04-21-code-examples-of-the-mediacreators-nodejs-website/"},"frontmatter":{"title":"Code Examples of the Media Creators (NodeJS) website\n","templateKey":"code-post"}}}]}},"pageContext":{"tag":"PugJS"}},
+    "staticQueryHashes": ["4080856488"]}

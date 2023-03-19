@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-code-tags-js",
+    "path": "/code/tags/pdf/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/code/2020-05-11-how-to-customize-your-wp-admin-with-admincss-and-use-css-to-print-a-pdf/"},"frontmatter":{"title":"How to customize your /wp-admin with admin.css, and use CSS to print a PDF\n","templateKey":"code-post"}}}]}},"pageContext":{"tag":"PDF"}},
+    "staticQueryHashes": ["4080856488"]}

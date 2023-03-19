@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/placeholder/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/design/2022-03-24-this-is-my-test/"},"frontmatter":{"title":"Post example in \"Design\""}}}]}},"pageContext":{"tag":"placeholder"}},
+    "staticQueryHashes": ["4080856488"]}

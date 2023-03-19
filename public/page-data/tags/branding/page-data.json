@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/branding/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/podcasts/the-futur/"},"frontmatter":{"title":"The Futur — A Podcast for the Business of Design\n"}}}]}},"pageContext":{"tag":"Branding"}},
+    "staticQueryHashes": ["4080856488"]}

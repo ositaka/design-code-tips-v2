@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/learning/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":6,"edges":[{"node":{"fields":{"slug":"/podcasts/openhive-js/"},"frontmatter":{"title":"OpenHive.JS — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/the-css-podcast/"},"frontmatter":{"title":"The CSS Podcast — For Web Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/syntax-fm/"},"frontmatter":{"title":"Syntax — A Podcast for Web Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/the-futur/"},"frontmatter":{"title":"The Futur — A Podcast for the Business of Design\n"}}},{"node":{"fields":{"slug":"/podcasts/full-stack-radio/"},"frontmatter":{"title":"Full Stack Radio — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/boadworld-ux-show/"},"frontmatter":{"title":"The Boagworld UX Show\n"}}}]}},"pageContext":{"tag":"Learning"}},
+    "staticQueryHashes": ["4080856488"]}

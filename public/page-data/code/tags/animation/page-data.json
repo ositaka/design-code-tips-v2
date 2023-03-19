@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-code-tags-js",
+    "path": "/code/tags/animation/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/code/2021-08-09-how-to-add-an-intro-to-website-with-js/"},"frontmatter":{"title":"How to add an intro to website with JS\n","templateKey":"code-post"}}}]}},"pageContext":{"tag":"Animation"}},
+    "staticQueryHashes": ["4080856488"]}

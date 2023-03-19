@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/portuguese/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/podcasts/mudo/"},"frontmatter":{"title":"Mudo — A Podcast for Creatives"}}},{"node":{"fields":{"slug":"/podcasts/10web/"},"frontmatter":{"title":"10web — A Podcast for Developers\n"}}}]}},"pageContext":{"tag":"Portuguese"}},
+    "staticQueryHashes": ["4080856488"]}

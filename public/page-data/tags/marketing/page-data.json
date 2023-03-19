@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/marketing/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Design & Code (tips)"}},"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/podcasts/the-futur/"},"frontmatter":{"title":"The Futur — A Podcast for the Business of Design\n"}}},{"node":{"fields":{"slug":"/podcasts/10web/"},"frontmatter":{"title":"10web — A Podcast for Developers\n"}}},{"node":{"fields":{"slug":"/podcasts/boadworld-ux-show/"},"frontmatter":{"title":"The Boagworld UX Show\n"}}}]}},"pageContext":{"tag":"Marketing"}},
+    "staticQueryHashes": ["4080856488"]}
