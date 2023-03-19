@@ -66,7 +66,7 @@ const TemplateWrapper = ({ children }) => {
         <Navbar open={isMenuOpen} toggle={toggleBurger} />
         <div className="container">{children}</div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
