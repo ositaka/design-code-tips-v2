@@ -7,6 +7,10 @@ import Toggle from './Toggle'
 const Navbar = ({ open, toggle }) => {
   const [theme, toggleTheme] = useDarkMode()
 
+  const toggleHamburger = () => {
+
+  }
+
   return (
     <nav
       id="header"
@@ -51,21 +55,22 @@ const Navbar = ({ open, toggle }) => {
         </Link>
         {/* Hamburger menu */}
         <div
-          // className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+          className={`navbar-burger burger ${open ? 'opened' : 'closed'}`}
           data-target="navMenu"
           role="menuitem"
           tabIndex={0}
-        // onKeyPress={() => toggleHamburger()}
-        // onClick={() => toggleHamburger()}
+          onKeyPress={() => toggle}
+          onClick={() => toggle}
         >
           <span />
           <span />
           <span />
         </div>
       </div>
+
       <div
         id="navMenu"
-      // className={`navbar-col navbar-menu ${this.state.navBarActiveClass}`}
+        className={`${open ? 'opened' : 'closed'}`}
       >
         <Link
           className="navbar-item"
@@ -124,7 +129,7 @@ const Navbar = ({ open, toggle }) => {
             Form Examples
           </Link> */}
         <Toggle theme={theme} toggleTheme={toggleTheme} />
-        <button onClick={toggle}>{open ? 'opened' : 'closed'}</button>
+        <button id="menuToggle" onClick={toggle}>Menu</button>
       </div>
       <div className="navbar-col navbar-secondary">
         <a
